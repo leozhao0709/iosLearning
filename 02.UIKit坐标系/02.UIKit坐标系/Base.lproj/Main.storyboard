@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_2_UIKit坐标系" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzf-Pm-U6N">
+                                <rect key="frame" x="67" y="28" width="247" height="239"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjt-ll-hv2">
+                                        <rect key="frame" x="63" y="18" width="120" height="30"/>
+                                        <state key="normal" title="修改父控件为红色"/>
+                                        <connections>
+                                            <action selector="changeFatherViewColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEN-eY-CrX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVL-ro-pvP">
+                                        <rect key="frame" x="48" y="64" width="150" height="30"/>
+                                        <state key="normal" title="修改父控件为随机颜色"/>
+                                        <connections>
+                                            <action selector="changeFatherColorRnadom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cwY-Gl-eN7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0h-Ty-uIV">
+                                <rect key="frame" x="67" y="310" width="124" height="30"/>
+                                <state key="normal" title="创建一个View出来"/>
+                                <connections>
+                                    <action selector="createView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9JH-8b-YTq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXh-xC-rmG">
+                                <rect key="frame" x="67" y="355" width="199" height="30"/>
+                                <state key="normal" title="创建一个View出来并且动一下"/>
+                                <connections>
+                                    <action selector="createViewAndMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rcc-CG-0Kd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18237084625780187" green="1" blue="0.91467757601902511" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="whiteView" destination="hzf-Pm-U6N" id="gBy-td-2WI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="387.5"/>
+        </scene>
+    </scenes>
+</document>
