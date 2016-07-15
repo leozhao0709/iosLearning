@@ -17,12 +17,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let yellowViewWidth = CGFloat(80)
-        let yellowViewHeight = CGFloat(95)
+        let yellowViewWidth: CGFloat = 80
+        let yellowViewHeight: CGFloat = 95
         
         
         //计算间距
-        let margin = CGFloat(self.view.frame.size.width - CGFloat(kColumn) * yellowViewWidth)/CGFloat(kColumn + 1)
+        let margin: CGFloat = (self.view.frame.size.width - CGFloat(kColumn) * yellowViewWidth)/(CGFloat(kColumn) + 1)
         
         for j in 0..<kRow {
             for i in 0..<kColumn {
