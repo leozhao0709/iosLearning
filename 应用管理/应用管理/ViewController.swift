@@ -11,6 +11,13 @@ import UIKit
 let kColumn = 3
 let kRow = 4
 
+//定义imageview Y值
+let kTopY: CGFloat = 5
+
+//定义imageView的宽高
+let imageViewWidth: CGFloat = 45;
+let imageViewHeight: CGFloat = 45;
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -26,6 +33,7 @@ class ViewController: UIViewController {
         
         for j in 0..<kRow {
             for i in 0..<kColumn {
+                //添加背景view
                 let yellowViewX = margin * CGFloat(i+1) + CGFloat(i) * yellowViewWidth
                 let yellowViewY = CGFloat(j + 1) * margin + CGFloat(j) * yellowViewHeight
                 
@@ -36,6 +44,24 @@ class ViewController: UIViewController {
                 yellowView.backgroundColor = UIColor.yellowColor()
                 
                 self.view.addSubview(yellowView)
+                
+                /**
+                 添加imageView内的控件
+                 */
+                
+                /**
+                 1.添加imageView
+                 */
+                
+                //宽高
+                
+                let imageViewX: CGFloat = (yellowViewWidth - imageViewWidth)/2
+                let iconImageView = UIImageView(frame: CGRectMake(imageViewX, kTopY, imageViewWidth, imageViewHeight))
+                
+                iconImageView.backgroundColor = UIColor.redColor()
+                
+                yellowView.addSubview(iconImageView)
+                
             }
         }
         
