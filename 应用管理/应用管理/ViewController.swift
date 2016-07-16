@@ -62,6 +62,37 @@ class ViewController: UIViewController {
                 
                 yellowView.addSubview(iconImageView)
                 
+                /**
+                 label
+                 */
+                let labelY = CGRectGetMaxY(iconImageView.frame) + kTopY/2
+                let nameLabel = UILabel(frame: CGRectMake(0, labelY, yellowViewWidth, 15) )
+                
+                nameLabel.text = "abc";
+                
+                nameLabel.textAlignment = NSTextAlignment.Center
+                
+                /**
+                 设置字体
+                 public class func systemFontOfSize(fontSize: CGFloat) -> UIFont
+                 public class func boldSystemFontOfSize(fontSize: CGFloat) -> UIFont
+                 public class func italicSystemFontOfSize(fontSize: CGFloat) -> UIFont
+                 */
+                nameLabel.font = UIFont.italicSystemFontOfSize(CGFloat(15))
+                
+                yellowView.addSubview(nameLabel)
+                
+                
+                /**
+                 button
+                 */
+                let buttonWidth: CGFloat = imageViewWidth + 10
+                let buttonHeight: CGFloat = 20
+                let buttonX: CGFloat = (yellowViewWidth - buttonWidth)/2
+                let buttonY: CGFloat = CGRectGetMaxY(nameLabel.frame)
+                
+                let downloadButton = UIButton(frame: CGRectMake())
+                
             }
         }
         
