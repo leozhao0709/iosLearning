@@ -12,6 +12,7 @@
 		D42E42E01D38C6ED00666189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42E42DE1D38C6ED00666189 /* Main.storyboard */; };
 		D42E42E21D38C6ED00666189 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42E42E11D38C6ED00666189 /* Assets.xcassets */; };
 		D42E42E51D38C6ED00666189 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42E42E31D38C6ED00666189 /* LaunchScreen.storyboard */; };
+		D452039B1D3A07F30084A250 /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = D452039A1D3A07F30084A250 /* app.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D42E42E11D38C6ED00666189 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D42E42E41D38C6ED00666189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D42E42E61D38C6ED00666189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D452039A1D3A07F30084A250 /* app.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D42E42DE1D38C6ED00666189 /* Main.storyboard */,
 				D42E42E11D38C6ED00666189 /* Assets.xcassets */,
 				D42E42E31D38C6ED00666189 /* LaunchScreen.storyboard */,
+				D452039A1D3A07F30084A250 /* app.plist */,
 				D42E42E61D38C6ED00666189 /* Info.plist */,
 			);
 			path = "应用管理";
@@ -123,6 +126,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D452039B1D3A07F30084A250 /* app.plist in Resources */,
 				D42E42E51D38C6ED00666189 /* LaunchScreen.storyboard in Resources */,
 				D42E42E21D38C6ED00666189 /* Assets.xcassets in Resources */,
 				D42E42E01D38C6ED00666189 /* Main.storyboard in Resources */,
@@ -289,6 +293,7 @@
 				D42E42EB1D38C6ED00666189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

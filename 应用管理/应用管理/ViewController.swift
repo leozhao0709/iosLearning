@@ -89,9 +89,31 @@ class ViewController: UIViewController {
                 let buttonWidth: CGFloat = imageViewWidth + 10
                 let buttonHeight: CGFloat = 20
                 let buttonX: CGFloat = (yellowViewWidth - buttonWidth)/2
-                let buttonY: CGFloat = CGRectGetMaxY(nameLabel.frame)
+                let buttonY: CGFloat = CGRectGetMaxY(nameLabel.frame) + kTopY/2
                 
-                let downloadButton = UIButton(frame: CGRectMake())
+                let downloadButton = UIButton(frame: CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight))
+                
+                /**
+                 设置button属性
+                 设置background image, image, title 一定要分状态设置
+                 
+                 默认
+                 高亮
+                 被选中 --> 设置button的selected属性为YES
+                 被禁用 －－> 设置button为enabled
+                 */
+                
+                //背景图片
+                
+                downloadButton.setBackgroundImage(UIImage(named: "buttongreen"), forState: UIControlState.Normal)
+                
+                downloadButton.setBackgroundImage(UIImage(named: "buttongreen_highlighted"), forState: UIControlState.Highlighted)
+                
+                //文字
+                downloadButton.setTitle("下载", forState: UIControlState.Normal)
+                downloadButton.titleLabel?.font = UIFont.systemFontOfSize(15)
+                
+                yellowView.addSubview(downloadButton)
                 
             }
         }
