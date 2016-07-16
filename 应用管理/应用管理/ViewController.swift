@@ -19,6 +19,12 @@ let imageViewWidth: CGFloat = 45;
 let imageViewHeight: CGFloat = 45;
 
 class ViewController: UIViewController {
+    
+    var dataArray: NSArray {
+        let path = NSBundle.mainBundle().pathForResource("app.plist", ofType: nil)
+            
+        return NSArray(contentsOfFile: path!)!
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +32,7 @@ class ViewController: UIViewController {
         
         let yellowViewWidth: CGFloat = 80
         let yellowViewHeight: CGFloat = 95
-        
-        
+
         //计算间距
         let margin: CGFloat = (self.view.frame.size.width - CGFloat(kColumn) * yellowViewWidth)/(CGFloat(kColumn) + 1)
         
@@ -53,12 +58,18 @@ class ViewController: UIViewController {
                  1.添加imageView
                  */
                 
+                //取出数组中对应的字典
+                let dict = self.dataArray[j*kColumn + i] as! [String: AnyObject]
+                print(dict)
+                
                 //宽高
                 
                 let imageViewX: CGFloat = (yellowViewWidth - imageViewWidth)/2
                 let iconImageView = UIImageView(frame: CGRectMake(imageViewX, kTopY, imageViewWidth, imageViewHeight))
                 
-                iconImageView.backgroundColor = UIColor.redColor()
+//                iconImageView.backgroundColor = UIColor.redColor()
+                
+                iconImageView.image = UIImage(named: (dict["icon"] as? String)!)
                 
                 yellowView.addSubview(iconImageView)
                 
@@ -68,7 +79,7 @@ class ViewController: UIViewController {
                 let labelY = CGRectGetMaxY(iconImageView.frame) + kTopY/2
                 let nameLabel = UILabel(frame: CGRectMake(0, labelY, yellowViewWidth, 15) )
                 
-                nameLabel.text = "abc";
+                nameLabel.text = dict["name"] as? String
                 
                 nameLabel.textAlignment = NSTextAlignment.Center
                 
@@ -111,7 +122,7 @@ class ViewController: UIViewController {
                 
                 //文字
                 downloadButton.setTitle("下载", forState: UIControlState.Normal)
-                downloadButton.titleLabel?.font = UIFont.systemFontOfSize(15)
+                downloadButton.titleLabel?.font = UIFont.systemFontOfSize(13)
                 
                 yellowView.addSubview(downloadButton)
                 
