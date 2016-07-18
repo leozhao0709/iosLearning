@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var dataArray: [HeroModel] {
+    @IBOutlet weak var tableView: UITableView!
+    
+    lazy var dataArray: [HeroModel] = {
         let path = NSBundle.mainBundle().pathForResource("heros.plist", ofType: nil)
         
         let tempArray = NSArray(contentsOfFile: path!)
@@ -24,11 +26,16 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         
         return heroArray
-    }
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.delegate = self
+        
+        tableView.editing = true
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,9 +71,27 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         cell!.accessoryType = .DisclosureIndicator
         
-        NSLog("-------\(unsafeAddressOf(cell!))")
+//        NSLog("-------\(unsafeAddressOf(cell!))")
         
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true;
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete {
+            self.dataArray.removeAtIndex(indexPath.row)
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        
+        return .Delete
     }
     
     override func prefersStatusBarHidden() -> Bool {
