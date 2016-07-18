@@ -80,6 +80,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell!
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let alert = UIAlertController(title: "编辑", message: nil, preferredStyle: .Alert)
+        
+        alert.addTextFieldWithConfigurationHandler { (textField: UITextField) in
+            textField.placeholder = "英雄名字"
+            textField.text = self.dataArray[indexPath.row].name
+        }
+        
+        let cancelAction = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
+        
+        let okAction = UIAlertAction(title: "确定", style: .Default) { (action: UIAlertAction) in
+            let textField = (alert.textFields?.first)! as UITextField
+            let newName = textField.text
+            
+            self.dataArray[indexPath.row].name = newName
+            
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true;
     }
