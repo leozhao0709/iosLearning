@@ -17,4 +17,10 @@ class HeroModel: NSObject {
         super.init()
         self.setValuesForKeysWithDictionary(dict as! [String: AnyObject])
     }
+    
+    init(name: String) {
+        super.init()
+        
+        self.name = name
+    }
 }

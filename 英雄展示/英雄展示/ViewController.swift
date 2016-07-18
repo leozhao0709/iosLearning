@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableView.delegate = self
         
-        tableView.editing = true
+//        tableView.editing = true
     
     }
 
@@ -63,8 +63,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let heroModel = self.dataArray[indexPath.row]
         
-        cell!.imageView?.image = UIImage(named: heroModel.icon!)
+        cell?.imageView?.image = nil
         
+        if let name = heroModel.icon {
+            cell!.imageView?.image = UIImage(named: name)
+        }
+     
         cell!.textLabel?.text = heroModel.name!
         
         cell!.detailTextLabel?.text = heroModel.intro
@@ -84,9 +88,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if editingStyle == .Delete {
             self.dataArray.removeAtIndex(indexPath.row)
-            self.tableView.reloadData()
+//            self.tableView.reloadData()
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
         
+        else if(editingStyle == .Insert)
+        {
+            let model = HeroModel(name: "黔愚")
+            
+            self.dataArray.insert(model, atIndex: indexPath.row)
+            
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+        }
+        
+    }
+    
+    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "卡擦掉"
     }
     
     func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
