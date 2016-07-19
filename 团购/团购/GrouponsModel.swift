@@ -18,4 +18,11 @@ class GrouponsModel: NSObject {
         super.init()
         self.setValuesForKeysWithDictionary(dict as! [String : AnyObject])
     }
+    
+    init(icon: String, title: String, price: String) {
+        super.init()
+        self.icon = icon
+        self.title = title
+        self.price = price
+    }
 }

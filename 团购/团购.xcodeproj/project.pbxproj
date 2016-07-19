@@ -14,6 +14,9 @@
 		D45C22E91D3DC2F400781EA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45C22E71D3DC2F400781EA4 /* LaunchScreen.storyboard */; };
 		D45C22F11D3DEF5300781EA4 /* tgs.plist in Resources */ = {isa = PBXBuildFile; fileRef = D45C22F01D3DEF5300781EA4 /* tgs.plist */; };
 		D45C22F31D3DEF8B00781EA4 /* GrouponsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C22F21D3DEF8B00781EA4 /* GrouponsModel.swift */; };
+		D45C22F51D3DF70300781EA4 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C22F41D3DF70300781EA4 /* BannerView.swift */; };
+		D45C22FA1D3E09BF00781EA4 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D45C22F91D3E09BF00781EA4 /* FooterView.xib */; };
+		D45C22FC1D3E0B6E00781EA4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C22FB1D3E0B6E00781EA4 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		D45C22EA1D3DC2F400781EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45C22F01D3DEF5300781EA4 /* tgs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tgs.plist; sourceTree = "<group>"; };
 		D45C22F21D3DEF8B00781EA4 /* GrouponsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrouponsModel.swift; sourceTree = "<group>"; };
+		D45C22F41D3DF70300781EA4 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		D45C22F91D3E09BF00781EA4 /* FooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
+		D45C22FB1D3E0B6E00781EA4 /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +64,10 @@
 		D45C22DD1D3DC2F400781EA4 /* 团购 */ = {
 			isa = PBXGroup;
 			children = (
+				D45C22F81D3DF74200781EA4 /* View */,
+				D45C22F71D3DF73300781EA4 /* Model */,
+				D45C22F61D3DF72000781EA4 /* Controller */,
 				D45C22DE1D3DC2F400781EA4 /* AppDelegate.swift */,
-				D45C22E01D3DC2F400781EA4 /* ViewController.swift */,
-				D45C22F21D3DEF8B00781EA4 /* GrouponsModel.swift */,
 				D45C22E21D3DC2F400781EA4 /* Main.storyboard */,
 				D45C22E51D3DC2F400781EA4 /* Assets.xcassets */,
 				D45C22E71D3DC2F400781EA4 /* LaunchScreen.storyboard */,
@@ -68,6 +75,32 @@
 				D45C22EA1D3DC2F400781EA4 /* Info.plist */,
 			);
 			path = "团购";
+			sourceTree = "<group>";
+		};
+		D45C22F61D3DF72000781EA4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D45C22E01D3DC2F400781EA4 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D45C22F71D3DF73300781EA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D45C22F21D3DEF8B00781EA4 /* GrouponsModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D45C22F81D3DF74200781EA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D45C22F41D3DF70300781EA4 /* BannerView.swift */,
+				D45C22F91D3E09BF00781EA4 /* FooterView.xib */,
+				D45C22FB1D3E0B6E00781EA4 /* FooterView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45C22FA1D3E09BF00781EA4 /* FooterView.xib in Resources */,
 				D45C22E91D3DC2F400781EA4 /* LaunchScreen.storyboard in Resources */,
 				D45C22F11D3DEF5300781EA4 /* tgs.plist in Resources */,
 				D45C22E61D3DC2F400781EA4 /* Assets.xcassets in Resources */,
@@ -143,8 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45C22F51D3DF70300781EA4 /* BannerView.swift in Sources */,
 				D45C22E11D3DC2F400781EA4 /* ViewController.swift in Sources */,
 				D45C22DF1D3DC2F400781EA4 /* AppDelegate.swift in Sources */,
+				D45C22FC1D3E0B6E00781EA4 /* FooterView.swift in Sources */,
 				D45C22F31D3DEF8B00781EA4 /* GrouponsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +333,7 @@
 				D45C22EF1D3DC2F400781EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
