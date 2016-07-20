@@ -10,7 +10,7 @@ import UIKit
 
 class WeiboModel: NSObject {
     
-    var text: String!
+    var text: String?
     var icon: String!
     var picture: String?
     var name: String!

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D45C22FE1D3F1F0300781EA4 /* ContentFrameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C22FD1D3F1F0300781EA4 /* ContentFrameModel.swift */; };
 		D4E4CD971D3EBD0500D15004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4CD961D3EBD0500D15004 /* AppDelegate.swift */; };
 		D4E4CD991D3EBD0500D15004 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4CD981D3EBD0500D15004 /* ViewController.swift */; };
 		D4E4CD9C1D3EBD0500D15004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E4CD9A1D3EBD0500D15004 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D45C22FD1D3F1F0300781EA4 /* ContentFrameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentFrameModel.swift; sourceTree = "<group>"; };
 		D4E4CD931D3EBD0500D15004 /* 简单微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "简单微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E4CD961D3EBD0500D15004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E4CD981D3EBD0500D15004 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +62,8 @@
 		D4E4CD951D3EBD0500D15004 /* 简单微博 */ = {
 			isa = PBXGroup;
 			children = (
-				D4E4CDAF1D3EC43900D15004 /* View */,
 				D4E4CDAD1D3EC3F000D15004 /* Controller */,
+				D4E4CDAF1D3EC43900D15004 /* View */,
 				D4E4CDAC1D3EC3E600D15004 /* Model */,
 				D4E4CD961D3EBD0500D15004 /* AppDelegate.swift */,
 				D4E4CDAE1D3EC41800D15004 /* Other */,
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				D4E4CDAA1D3EBF9A00D15004 /* WeiboModel.swift */,
+				D45C22FD1D3F1F0300781EA4 /* ContentFrameModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4E4CDB11D3EC47C00D15004 /* WeiboCell.swift in Sources */,
+				D45C22FE1D3F1F0300781EA4 /* ContentFrameModel.swift in Sources */,
 				D4E4CDAB1D3EBF9A00D15004 /* WeiboModel.swift in Sources */,
 				D4E4CD991D3EBD0500D15004 /* ViewController.swift in Sources */,
 				D4E4CD971D3EBD0500D15004 /* AppDelegate.swift in Sources */,
@@ -333,6 +337,7 @@
 				D4E4CDA71D3EBD0500D15004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

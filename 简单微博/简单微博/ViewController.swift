@@ -10,24 +10,28 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    private lazy var dataArray: [WeiboModel] = {
+    private lazy var dataArray: [ContentFrameModel] = {
         let path = NSBundle.mainBundle().pathForResource("weibo.plist", ofType: nil)
         let tempArray = NSArray(contentsOfFile: path!)
         
-        var weiboArray: [WeiboModel] = []
+        var frameArray: [ContentFrameModel] = []
         
         for dict in tempArray! {
             let model = WeiboModel(dict: dict as! NSDictionary)
-            weiboArray.append(model)
+            
+            let frameModel = ContentFrameModel()
+            frameModel.weiboModel = model
+            
+            frameArray.append(frameModel)
         }
-        return weiboArray
+        return frameArray
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.tableView.rowHeight = 500
+//        self.tableView.rowHeight = 500
         
     }
 
@@ -53,12 +57,19 @@ class ViewController: UITableViewController {
             cell = WeiboCell(style: .Default, reuseIdentifier: identifier)
         }
         
-        let weiboModel = self.dataArray[indexPath.row]
+        let contentFrameModel = self.dataArray[indexPath.row]
         
-        cell!.weiboModel = weiboModel
+        cell!.contentFrameModel = contentFrameModel
         
         return cell!
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let frameModel = self.dataArray[indexPath.row]
+        
+        return frameModel.cellHeight!
+    }
+    
     
     override func prefersStatusBarHidden() -> Bool {
         return true

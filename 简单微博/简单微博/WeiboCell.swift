@@ -16,74 +16,16 @@ class WeiboCell: UITableViewCell {
     private var contentLabel: UILabel?
     private var pictureImageView: UIImageView?
     
-    var weiboModel: WeiboModel?
+    var contentFrameModel: ContentFrameModel?
         
         {
         didSet {
             
-            self.userImageView?.image = UIImage(named: (weiboModel!.icon)!)
-            self.nameLabel?.text = weiboModel!.name
+            self.setupData()
             
-            self.vipImageView?.image = UIImage(named: "vip")
-            
-            self.contentLabel?.text = weiboModel!.text
-            
-            if let picture = weiboModel!.picture {
-                self.pictureImageView?.image = UIImage(named: picture)
-            }
+            self.setupFrame()
             
             
-            //头像frame
-            let margin:CGFloat = 10
-            let userImageWidth:CGFloat = 50
-            
-            self.userImageView?.frame = CGRectMake(margin, margin, userImageWidth, userImageWidth)
-            
-            //用户名称frame
-            let nameLabelX = CGRectGetMaxX(self.userImageView.frame) + margin
-            
-            let nameLabelHeight: CGFloat = 20
-//            let nameLabelWidth: CGFloat = 150
-            
-            let nameLabelY = (userImageWidth - nameLabelHeight)/2 + margin
-            
-            let nameLabelMaxSize = CGSizeMake(CGFloat.max, CGFloat.max)
-            
-            let nameLabelRealSize = ((self.weiboModel?.name)! as NSString).boundingRectWithSize(nameLabelMaxSize, options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName : UIFont.systemFontOfSize(17)], context: nil)
-            
-            self.nameLabel.frame = CGRectMake(nameLabelX, nameLabelY, nameLabelRealSize.width, nameLabelRealSize.height)
-            
-            //vip
-            let vipWidth: CGFloat = 20
-            let vipX: CGFloat = CGRectGetMaxX(self.nameLabel.frame) + margin
-            let vipY: CGFloat = CGRectGetMinY(self.nameLabel.frame)
-            
-            if self.weiboModel!.vip == 1 {
-                self.vipImageView!.frame = CGRectMake(vipX, vipY, vipWidth, vipWidth)
-            }
-            
-            //contentLabel
-            let contentLabelWidth = self.contentView.frame.width - 2 * margin
-            
-//            let contentMaxSize = CGSizeMake(contentLabelWidth, CGFloat.max)
-//            
-//            let attributesDict = [NSFontAttributeName: UIFont.systemFontOfSize(15)]
-            
-//            let contentRealSize = (weiboModel!.text as NSString).boundingRectWithSize(contentMaxSize, options: .UsesLineFragmentOrigin, attributes: attributesDict, context: nil)
-            
-            let contentLabelX = margin
-            let contentLabelY = CGRectGetMaxY(self.userImageView.frame) + margin
-            
-//            self.contentLabel?.frame = CGRectMake(contentLabelX, contentLabelY, contentRealSize.width, contentRealSize.height)
-            self.contentLabel?.frame = CGRectMake(contentLabelX, contentLabelY, contentLabelWidth, 0)
-            self.contentLabel?.sizeToFit()
-            
-            //picture
-            let pictureWidth = 2 * userImageWidth
-            let pictureX = margin
-            let pictureY = CGRectGetMaxY(self.contentLabel!.frame) + margin
-            
-            self.pictureImageView?.frame = CGRectMake(pictureX, pictureY, pictureWidth, pictureWidth)
         }
     }
 
@@ -114,8 +56,7 @@ class WeiboCell: UITableViewCell {
         self.contentView.addSubview(self.userImageView!)
         
         self.nameLabel = UILabel()
-        self.nameLabel.textColor = UIColor.redColor()
-        self.contentView.addSubview(nameLabel!)
+        self.contentView.addSubview(self.nameLabel!)
         
         self.vipImageView = UIImageView()
         self.contentView.addSubview(self.vipImageView!)
@@ -127,6 +68,44 @@ class WeiboCell: UITableViewCell {
         
         self.pictureImageView = UIImageView()
         self.contentView.addSubview(self.pictureImageView!)
+    }
+    
+    private func setupData() {
+        self.vipImageView?.image = nil
+        self.pictureImageView?.image = nil
+        
+        let weiboModel = contentFrameModel?.weiboModel
+        
+        self.userImageView?.image = UIImage(named: (weiboModel!.icon)!)
+        self.nameLabel?.text = weiboModel!.name
+        
+        if weiboModel!.vip == 1 {
+            self.vipImageView?.image = UIImage(named: "vip")
+            self.nameLabel.textColor = UIColor.redColor()
+        }
+        else{
+            self.nameLabel.textColor = UIColor.blackColor()
+        }
+        
+        
+        self.contentLabel?.text = weiboModel!.text
+        
+        if let picture = weiboModel!.picture {
+            self.pictureImageView?.image = UIImage(named: picture)
+        }
+    }
+    
+    private func setupFrame() {
+        self.userImageView.frame = (self.contentFrameModel?.userImageFrame)!
+        
+        
+        self.nameLabel.frame = (self.contentFrameModel?.userNameFrame)!
+        
+        self.vipImageView?.frame = (self.contentFrameModel?.vipImageFrame)!
+        
+        self.contentLabel?.frame = (self.contentFrameModel?.contentFrame)!
+        
+        self.pictureImageView?.frame = (self.contentFrameModel?.pictureFrame)!
     }
     
 
