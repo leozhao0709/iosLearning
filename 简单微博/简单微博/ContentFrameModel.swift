@@ -67,11 +67,20 @@ class ContentFrameModel: NSObject {
             let contentLabelX = margin
             let contentLabelY = CGRectGetMaxY(self.userImageFrame) + margin
             
-            let label = UILabel(frame: CGRectMake(contentLabelX, contentLabelY, contentLabelMaxWidth, 0))
-            label.text = weiboModel?.text
-            label.numberOfLines = 0
-            label.sizeToFit()
-            self.contentFrame = label.frame
+//            let label = UILabel(frame: CGRectMake(contentLabelX, contentLabelY, contentLabelMaxWidth, 0))
+//            label.text = weiboModel?.text
+//            label.numberOfLines = 0
+//            nameLabel.font = UIFont.systemFontOfSize(15)
+//            label.sizeToFit()
+//            self.contentFrame = label.frame
+            
+            let contentMaxSize = CGSizeMake(contentLabelMaxWidth, 0)
+
+            let attributesDict = [NSFontAttributeName: UIFont.systemFontOfSize(15)]
+
+            let contentRealSize = (weiboModel!.text! as NSString).boundingRectWithSize(contentMaxSize, options: .UsesLineFragmentOrigin, attributes: attributesDict, context: nil)
+            
+            self.contentFrame = CGRectMake(contentLabelX, contentLabelY, contentRealSize.width, contentRealSize.height)
             
             
             //picture
