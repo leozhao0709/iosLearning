@@ -17,6 +17,7 @@ class QQCell: UITableViewCell {
     var qqModel: QQModel! {
         didSet {
             
+            //time label
             self.timeLabel = UILabel(frame: qqModel.timeLabelFrame)
             self.timeLabel.text = qqModel.time
             self.timeLabel.textAlignment = .Center
@@ -24,6 +25,7 @@ class QQCell: UITableViewCell {
             self.contentView.addSubview(self.timeLabel)
             
             
+            // user image
             self.userImageView = UIImageView(frame: qqModel.iconFrame)
             if qqModel.type == 1
             {
@@ -37,6 +39,7 @@ class QQCell: UITableViewCell {
             self.contentView.addSubview(self.userImageView)
             
             
+            //content button
             self.contentButton = UIButton(frame: qqModel.textFrame)
             self.contentButton.setTitle(qqModel.text, forState: .Normal)
             self.contentButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
