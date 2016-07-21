@@ -53,18 +53,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifter = "QQ"
-//
-//        var cell = tableView.dequeueReusableCellWithIdentifier(identifter) as? QQCell
-//        
-//        if cell == nil {
-//            cell = QQCell(style: .Default, reuseIdentifier: identifter)
-//        }
+
+        var cell = tableView.dequeueReusableCellWithIdentifier(identifter) as? QQCell
         
-        let cell = QQCell(style: .Default, reuseIdentifier: identifter)
+        if cell == nil {
+            cell = QQCell(style: .Default, reuseIdentifier: identifter)
+        }
         
-        cell.qqModel = self.dataArray[indexPath.row]
         
-        return cell
+        let model = self.dataArray[indexPath.row]
+        
+        cell!.qqModel = model
+        
+        return cell!
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

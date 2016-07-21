@@ -16,6 +16,10 @@ class QQCell: UITableViewCell {
     
     var qqModel: QQModel! {
         didSet {
+
+            for view in self.contentView.subviews {
+                view.removeFromSuperview()
+            }
             
             //time label
             self.timeLabel = UILabel(frame: qqModel.timeLabelFrame)
@@ -58,6 +62,7 @@ class QQCell: UITableViewCell {
             self.contentView.addSubview(self.contentButton)
             
         }
+        
     }
 
     override func awakeFromNib() {
