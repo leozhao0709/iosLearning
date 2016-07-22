@@ -46,6 +46,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.textField.delegate = self
         
         self.registerNotification()
+        
+        self.scrollToBottom()
     }
 
     override func didReceiveMemoryWarning() {
@@ -113,6 +115,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if cell == nil {
             cell = QQCell(style: .Default, reuseIdentifier: identifter)
+            
+            cell?.selectionStyle = .None
         }
         
         
@@ -136,7 +140,54 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.textField.resignFirstResponder()
         
+        self.sendMessage(self.textField.text!, type: QQUserType.Me)
+        
+        self.sendMessage("小逗逼", type: QQUserType.Other)
+        
+        self.textField.text = ""
+        
         return true
+    }
+    
+    private func sendMessage(content: String, type: QQUserType) {
+        let currentDate = NSDate()
+        let formatter = NSDateFormatter()
+        
+        //format: yyyy-MM-dd HH:mm:ss
+        formatter.dateFormat = "HH:mm"
+        let time = formatter.stringFromDate(currentDate)
+        
+        let text = content
+        
+        let type = type
+        
+        let qqModel = QQModel(text: text, time: time, type: type)
+//        let qqModel = QQModel()
+//        
+//        qqModel.text = text
+//        qqModel.time = time
+//        qqModel.type = type
+        
+        let lastQQModel = self.dataArray.last!
+        if lastQQModel.time == time {
+            qqModel.hideTimeLabel = true
+        }
+        
+        self.dataArray.append(qqModel)
+        
+        let indexPath = NSIndexPath(forRow: self.dataArray.count - 1, inSection: 0)
+        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        
+        self.scrollToBottom()
+    }
+    
+    private func scrollToBottom() {
+        let indexPath = NSIndexPath(forRow: self.dataArray.count - 1, inSection: 0)
+        self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Bottom, animated: true)
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
 }

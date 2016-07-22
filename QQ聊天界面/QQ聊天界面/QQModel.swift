@@ -33,6 +33,21 @@ class QQModel: NSObject {
     //help
     var hideTimeLabel:Bool = false
     
+    override init() {
+        super.init()
+    }
+    
+    init(text: String, time: String, type: QQUserType) {
+        super.init()
+        
+        self.text = text
+        self.time = time
+        self.type = type
+        
+        self.setupFrame()
+        
+    }
+    
     init(dict: [String: AnyObject]) {
         super.init()
         
