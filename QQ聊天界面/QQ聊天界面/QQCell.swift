@@ -25,13 +25,14 @@ class QQCell: UITableViewCell {
             self.timeLabel = UILabel(frame: qqModel.timeLabelFrame)
             self.timeLabel.text = qqModel.time
             self.timeLabel.textAlignment = .Center
+            self.timeLabel.hidden = qqModel.hideTimeLabel
             
             self.contentView.addSubview(self.timeLabel)
             
             
             // user image
             self.userImageView = UIImageView(frame: qqModel.iconFrame)
-            if qqModel.type == 1
+            if qqModel.type == .Me
             {
                 self.userImageView.image = UIImage(named: "me")
             }
@@ -50,14 +51,24 @@ class QQCell: UITableViewCell {
             self.contentButton.titleLabel?.numberOfLines = 0
             self.contentButton.titleLabel?.font = UIFont.systemFontOfSize(17)
             
-            self.contentButton.backgroundColor = UIColor.orangeColor()
+//            self.contentButton.backgroundColor = UIColor.orangeColor()
             
-            if qqModel.type == 1 {
-                self.contentButton.setBackgroundImage(UIImage(named: "chat_send_nor"), forState: .Normal)
+            if qqModel.type == .Me  {
+                
+                let resizeImage = self.resizeImageWith(imageName: "chat_send_nor")
+                
+                self.contentButton.setBackgroundImage(resizeImage, forState: .Normal)
             }
             else{
-                self.contentButton.setBackgroundImage(UIImage(named: "chat_recive_press_pic"), forState: .Normal)
+                
+                let resizeImage = self.resizeImageWith(imageName: "chat_recive_press_pic")
+                
+                self.contentButton.setBackgroundImage(resizeImage, forState: .Normal)
             }
+            
+            //set content edge to make text in the image
+            
+            self.contentButton.contentEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20)
             
             self.contentView.addSubview(self.contentButton)
             
@@ -74,6 +85,17 @@ class QQCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func resizeImageWith(imageName imageName: String) -> UIImage {
+        let image = UIImage(named: imageName)
+        
+        let halfWidth = image!.size.width/2
+        let halfHeight = image!.size.height/2
+        
+        let resizeImage = image?.resizableImageWithCapInsets(UIEdgeInsetsMake(halfHeight, halfWidth, halfHeight, halfWidth), resizingMode: .Stretch)
+        
+        return resizeImage!
     }
 
 }

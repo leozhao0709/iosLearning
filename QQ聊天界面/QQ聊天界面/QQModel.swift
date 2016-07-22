@@ -11,12 +11,17 @@ import UIKit
 let kScreenSize = UIScreen.mainScreen().bounds.size
 let kDeltaMargin: CGFloat = 40
 
+internal enum QQUserType : NSInteger{
+    case Other = 0
+    case Me
+}
+
 class QQModel: NSObject {
     
     //dataSource
     var text: String!
     var time: String!
-    var type: NSInteger!
+    var type: QQUserType!
     
     //frame
     private(set) var timeLabelFrame: CGRect!
@@ -25,12 +30,15 @@ class QQModel: NSObject {
     
     private(set) var height: CGFloat!
     
+    //help
+    var hideTimeLabel:Bool = false
+    
     init(dict: [String: AnyObject]) {
         super.init()
         
         self.text = dict["text"] as? String
         self.time = dict["time"] as? String
-        self.type = dict["type"] as? NSInteger
+        self.type = QQUserType(rawValue: dict["type"] as! NSInteger)
         
         self.setupFrame()
     }
@@ -46,7 +54,7 @@ class QQModel: NSObject {
         let iconY = CGRectGetMaxY(self.timeLabelFrame) + margin
         let iconWidth: CGFloat = 40
         
-        if self.type == 1 {
+        if self.type == .Me {
             let rightIconX = kScreenSize.width - margin - iconWidth
             self.iconFrame = CGRectMake(rightIconX, iconY, iconWidth, iconWidth)
         }
@@ -63,12 +71,12 @@ class QQModel: NSObject {
         
         let textSize = self.text.asTextSize(textMaxWidth: textMaxWidth, textFontSize: 17)
         
-        if self.type == 1 {
-            let rightTextX = kScreenSize.width - textSize.width - iconWidth - margin - margin;
-            self.textFrame = CGRectMake(rightTextX, textY, textSize.width, textSize.height)
+        if self.type == .Me  {
+            let rightTextX = kScreenSize.width - textSize.width - iconWidth - margin - margin - kDeltaMargin;
+            self.textFrame = CGRectMake(rightTextX, textY, textSize.width + kDeltaMargin, textSize.height + kDeltaMargin)
         }
         else{
-            self.textFrame = CGRectMake(textX, textY, textSize.width, textSize.height)
+            self.textFrame = CGRectMake(textX, textY, textSize.width + kDeltaMargin, textSize.height + kDeltaMargin)
         }
         
         

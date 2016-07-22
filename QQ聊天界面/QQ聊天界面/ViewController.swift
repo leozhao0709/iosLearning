@@ -20,8 +20,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var QQModelArray: [QQModel] = []
         
         for dict in tempArray! {
-//            let model = QQModel(dict: dict as! NSDictionary)
-            let model = QQModel(dict: dict as! [String : AnyObject] )
+            let model:QQModel = QQModel(dict: dict as! [String : AnyObject])
+            
+            if let lastModel = QQModelArray.last {
+                if model.time == lastModel.time {                    
+                    model.hideTimeLabel = true
+                }
+            }
             
             QQModelArray.append(model)
         }
