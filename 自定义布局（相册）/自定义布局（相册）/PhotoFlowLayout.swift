@@ -61,11 +61,10 @@ class PhotoFlowLayout: UICollectionViewFlowLayout {
     }
     
     /**
-     - targetContentOffset: 最终停留的位置(进行干预后停留的位置)
      - parameter proposedContentOffset: 本应该停留的位置
      - parameter velocity:              力度，速度
      
-     - returns:
+     - returns: targetContentOffset: 最终停留的位置(进行干预后停留的位置)
      */
     
     override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
