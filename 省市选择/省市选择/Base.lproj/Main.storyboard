@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="省市选择" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yA6-5s-cWm">
+                                <rect key="frame" x="0.0" y="20" width="600" height="216"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJb-rH-3ga">
+                                <rect key="frame" x="20" y="256" width="270" height="21"/>
+                                <color key="backgroundColor" red="0.17064526677131653" green="0.92897725105285645" blue="0.81604045629501343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pES-24-a35">
+                                <rect key="frame" x="310" y="256" width="270" height="21"/>
+                                <color key="backgroundColor" red="0.91000217199325562" green="0.68366318941116333" blue="0.93542188405990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.31280056410000001" blue="0.2294350023" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pES-24-a35" secondAttribute="trailing" constant="20" id="4L1-ss-mCB"/>
+                            <constraint firstItem="pES-24-a35" firstAttribute="width" secondItem="OJb-rH-3ga" secondAttribute="width" id="72p-HX-5Ec"/>
+                            <constraint firstItem="pES-24-a35" firstAttribute="top" secondItem="yA6-5s-cWm" secondAttribute="bottom" constant="20" id="74T-cR-m8J"/>
+                            <constraint firstItem="OJb-rH-3ga" firstAttribute="top" secondItem="yA6-5s-cWm" secondAttribute="bottom" constant="20" id="GcM-fv-kHu"/>
+                            <constraint firstItem="pES-24-a35" firstAttribute="leading" secondItem="OJb-rH-3ga" secondAttribute="trailing" constant="20" id="Ln6-Hz-djW"/>
+                            <constraint firstAttribute="trailing" secondItem="yA6-5s-cWm" secondAttribute="trailing" id="Vib-x8-kga"/>
+                            <constraint firstItem="pES-24-a35" firstAttribute="height" secondItem="OJb-rH-3ga" secondAttribute="height" id="aF0-vj-6jX"/>
+                            <constraint firstItem="yA6-5s-cWm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="mtd-JQ-0w0"/>
+                            <constraint firstItem="OJb-rH-3ga" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ozG-mX-6ah"/>
+                            <constraint firstItem="yA6-5s-cWm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qfj-q7-B67"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
