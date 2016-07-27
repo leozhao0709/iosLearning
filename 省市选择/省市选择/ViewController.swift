@@ -53,6 +53,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return 2
     }
     
+    //如果只滑动第二个picker，第二个picker的row count不变（不会掉用刷新），只有第一个picker停的时候，才会掉用这个方法
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0
         {
@@ -63,6 +64,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             let selectProvinceIndex = pickerView.selectedRowInComponent(0)
             
             self.selProvice = self.dataArray[selectProvinceIndex]
+            
+            NSLog("^^^^^^^\(self.selProvice?.cities.count)^^^^^^")
             
             return (self.selProvice?.cities.count)!
         }
@@ -76,14 +79,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
         else
         {
-//            let selectProvinceIndex = pickerView.selectedRowInComponent(0)
-//            let cities = self.dataArray[selectProvinceIndex].cities
-//            
-//            self.selProvice = self.dataArray[selectProvinceIndex]
+            //select row in component 总是掉用最新的，但是row的值是根据前一个numberOfRowsIncomponent决定的,所以有可能越界
+            let selectProvinceIndex = pickerView.selectedRowInComponent(0)
+            let cities = self.dataArray[selectProvinceIndex].cities
             
-//            return cities[row]
+            self.selProvice = self.dataArray[selectProvinceIndex]
             
-            return self.selProvice?.cities[row]
+            NSLog("$$$$$$$\(self.dataArray[selectProvinceIndex].name)*****\(cities)$$$$$\(row)")
+            return cities[row]
+            
+//            return self.selProvice?.cities[row]
         }
     }
     
@@ -93,6 +98,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             pickerView.reloadComponent(1)
             pickerView.selectRow(0, inComponent: 1, animated: true)
         }
+        
+        NSLog("pickerView did select")
 
         let selectProvinceIndex = pickerView.selectedRowInComponent(0)
         let selectCityIndex = pickerView.selectedRowInComponent(1)
@@ -101,9 +108,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let selectCities = selectProvince.cities
         
         self.provinceLabel.text = selectProvince.name
-//        self.cityLabel.text = selectCities[selectCityIndex]
+        self.cityLabel.text = selectCities[selectCityIndex]
         
-        self.cityLabel.text = self.selProvice?.cities[selectCityIndex]
+//        self.cityLabel.text = self.selProvice?.cities[selectCityIndex]
     }
 
 
