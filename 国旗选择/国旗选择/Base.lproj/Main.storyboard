@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="国旗选择" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7e-zT-mwJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9i1-Ti-OoP"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qi1-ym-X6T"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h7e-zT-mwJ" secondAttribute="trailing" id="2O7-Vq-nPG"/>
+                            <constraint firstAttribute="trailing" secondItem="h7e-zT-mwJ" secondAttribute="trailing" id="7nS-Jp-Mk9"/>
+                            <constraint firstItem="h7e-zT-mwJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ND5-Mb-gst"/>
+                            <constraint firstItem="h7e-zT-mwJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QB5-b5-hft"/>
+                            <constraint firstItem="h7e-zT-mwJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a50-AA-dSc"/>
+                            <constraint firstItem="h7e-zT-mwJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="a8f-5Z-PJE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7nS-Jp-Mk9"/>
+                                <exclude reference="ND5-Mb-gst"/>
+                                <exclude reference="a8f-5Z-PJE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
