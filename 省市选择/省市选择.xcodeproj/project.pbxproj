@@ -12,6 +12,8 @@
 		D4987C6C1D48172B00C38569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4987C6A1D48172B00C38569 /* Main.storyboard */; };
 		D4987C6E1D48172B00C38569 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4987C6D1D48172B00C38569 /* Assets.xcassets */; };
 		D4987C711D48172B00C38569 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4987C6F1D48172B00C38569 /* LaunchScreen.storyboard */; };
+		D4987C791D483B3E00C38569 /* 02cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4987C781D483B3E00C38569 /* 02cities.plist */; };
+		D4987C801D483CAA00C38569 /* ProvinceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4987C7F1D483CAA00C38569 /* ProvinceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D4987C6D1D48172B00C38569 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4987C701D48172B00C38569 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4987C721D48172B00C38569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4987C781D483B3E00C38569 /* 02cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 02cities.plist; sourceTree = "<group>"; };
+		D4987C7F1D483CAA00C38569 /* ProvinceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		D4987C651D48172B00C38569 /* 省市选择 */ = {
 			isa = PBXGroup;
 			children = (
-				D4987C661D48172B00C38569 /* AppDelegate.swift */,
-				D4987C681D48172B00C38569 /* ViewController.swift */,
-				D4987C6A1D48172B00C38569 /* Main.storyboard */,
-				D4987C6D1D48172B00C38569 /* Assets.xcassets */,
-				D4987C6F1D48172B00C38569 /* LaunchScreen.storyboard */,
-				D4987C721D48172B00C38569 /* Info.plist */,
+				D4987C7E1D483C4400C38569 /* Other */,
+				D4987C7D1D483C3200C38569 /* View */,
+				D4987C7C1D483C2D00C38569 /* Model */,
+				D4987C7B1D483C2400C38569 /* Controller */,
 			);
 			path = "省市选择";
+			sourceTree = "<group>";
+		};
+		D4987C7B1D483C2400C38569 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D4987C681D48172B00C38569 /* ViewController.swift */,
+				D4987C6A1D48172B00C38569 /* Main.storyboard */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D4987C7C1D483C2D00C38569 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4987C7F1D483CAA00C38569 /* ProvinceModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D4987C7D1D483C3200C38569 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D4987C7E1D483C4400C38569 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D4987C661D48172B00C38569 /* AppDelegate.swift */,
+				D4987C6D1D48172B00C38569 /* Assets.xcassets */,
+				D4987C6F1D48172B00C38569 /* LaunchScreen.storyboard */,
+				D4987C781D483B3E00C38569 /* 02cities.plist */,
+				D4987C721D48172B00C38569 /* Info.plist */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +164,7 @@
 				D4987C711D48172B00C38569 /* LaunchScreen.storyboard in Resources */,
 				D4987C6E1D48172B00C38569 /* Assets.xcassets in Resources */,
 				D4987C6C1D48172B00C38569 /* Main.storyboard in Resources */,
+				D4987C791D483B3E00C38569 /* 02cities.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4987C801D483CAA00C38569 /* ProvinceModel.swift in Sources */,
 				D4987C691D48172B00C38569 /* ViewController.swift in Sources */,
 				D4987C671D48172B00C38569 /* AppDelegate.swift in Sources */,
 			);
@@ -289,6 +329,7 @@
 				D4987C771D48172B00C38569 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

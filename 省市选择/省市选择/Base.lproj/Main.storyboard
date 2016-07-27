@@ -52,6 +52,11 @@
                             <constraint firstItem="yA6-5s-cWm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qfj-q7-B67"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="pES-24-a35" id="aog-YD-enp"/>
+                        <outlet property="pickerView" destination="yA6-5s-cWm" id="Dpx-ad-gme"/>
+                        <outlet property="provinceLabel" destination="OJb-rH-3ga" id="eBL-gj-Sih"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
