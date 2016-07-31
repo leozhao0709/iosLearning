@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  TabBarController
+//  Quartz2D绘图
 //
 //  Created by Lei Zhao on 7/30/16.
 //  Copyright © 2016 Lei Zhao. All rights reserved.
@@ -16,37 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        let tabBarVC = UITabBarController()
-//        tabBarVC.view.backgroundColor = UIColor.redColor()
-        
-        let one = OneViewController()
-        one.tabBarItem.title = "老大"
-//        tabBarVC.addChildViewController(one)
-        
-        let two = TwoTableViewController()
-        two.tabBarItem.title = "老二"
-        two.tabBarItem.image = UIImage(named: "tabbar_contacts")
-        two.tabBarItem.selectedImage = UIImage(named: "tabbar_contactsHL")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
-        
-        two.tabBarItem.badgeValue = "99+"
-        
-//        tabBarVC.addChildViewController(two)
-        
-        let three = ThreeViewController()
-        three.tabBarItem.title = "小三"
-        
-        
-//        tabBarVC.addChildViewController(three)
-        
-        tabBarVC.viewControllers = [one, two, three]
-        
-        self.window?.rootViewController = tabBarVC
-        
-        self.window?.makeKeyAndVisible()
-        
         return true
     }
 

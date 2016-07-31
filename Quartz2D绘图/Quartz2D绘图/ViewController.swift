@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  TabBarController
+//  Quartz2D绘图
 //
 //  Created by Lei Zhao on 7/30/16.
 //  Copyright © 2016 Lei Zhao. All rights reserved.
