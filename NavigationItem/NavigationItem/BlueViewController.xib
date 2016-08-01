@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlueViewController" customModule="NavigationItem" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIj-if-Qfe">
+                    <rect key="frame" x="254" y="244" width="92" height="30"/>
+                    <state key="normal" title="返回黄色view"/>
+                    <connections>
+                        <action selector="backToYellow:" destination="-1" eventType="touchUpInside" id="CR8-6h-GLA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyE-A2-d5q">
+                    <rect key="frame" x="254" y="312" width="92" height="30"/>
+                    <state key="normal" title="返回红色view"/>
+                    <connections>
+                        <action selector="backToRed:" destination="-1" eventType="touchUpInside" id="iuz-cP-R7S"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.58830392360687256" green="0.91877490282058716" blue="0.91639250516891479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SyE-A2-d5q" firstAttribute="top" secondItem="CIj-if-Qfe" secondAttribute="bottom" constant="38" id="29s-rB-0fl"/>
+                <constraint firstItem="SyE-A2-d5q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dn9-pM-gbi"/>
+                <constraint firstItem="SyE-A2-d5q" firstAttribute="top" secondItem="CIj-if-Qfe" secondAttribute="bottom" constant="38" id="LfD-pJ-f1g"/>
+                <constraint firstAttribute="bottom" secondItem="SyE-A2-d5q" secondAttribute="bottom" constant="258" id="PKt-O2-fkg"/>
+                <constraint firstItem="CIj-if-Qfe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="244" id="QV1-NS-rEE"/>
+                <constraint firstItem="CIj-if-Qfe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QbO-8m-6J5"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
