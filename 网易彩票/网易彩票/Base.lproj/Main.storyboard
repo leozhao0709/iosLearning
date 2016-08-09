@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gUn-du-G2i" id="cYK-OS-STI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -47,7 +47,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dIH-e8-w2T" id="xrV-If-RZm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -76,7 +76,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bJu-8b-0yY" id="nJk-zU-xpt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -129,7 +129,7 @@
         <!--Item-->
         <scene sceneID="MrV-az-EF0">
             <objects>
-                <navigationController id="pMi-Pb-rMK" sceneMemberID="viewController">
+                <navigationController id="pMi-Pb-rMK" customClass="CZNavigationController" customModule="网易彩票" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="4Ts-Tx-I42"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cw4-Wc-ICE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="-95" y="-832"/>
         </scene>
-        <!--View Controller-->
+        <!--购彩大厅-->
         <scene sceneID="kxG-xH-07V">
             <objects>
-                <viewController id="05n-Vv-NQt" sceneMemberID="viewController">
+                <viewController id="05n-Vv-NQt" customClass="CZBuyLotteryHallViewController" customModule="网易彩票" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fel-A5-TX7"/>
                         <viewControllerLayoutGuide type="bottom" id="sGz-oH-6TV"/>
@@ -156,7 +156,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.46833842992782593" green="0.90805226564407349" blue="0.85642343759536743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wRh-vt-nsK"/>
+                    <navigationItem key="navigationItem" title="购彩大厅" id="wRh-vt-nsK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mt4-d0-Xc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,7 +166,7 @@
         <!--Item-->
         <scene sceneID="eHp-9d-mGR">
             <objects>
-                <navigationController id="MKf-s0-ylK" sceneMemberID="viewController">
+                <navigationController id="MKf-s0-ylK" customClass="CZNavigationController" customModule="网易彩票" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="R5G-No-qam"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mUy-V4-m5z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -183,7 +183,7 @@
         <!--Item-->
         <scene sceneID="iwe-ek-1j6">
             <objects>
-                <navigationController id="ThG-4u-1eO" sceneMemberID="viewController">
+                <navigationController id="ThG-4u-1eO" customClass="CZNavigationController" customModule="网易彩票" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vpO-lm-SYz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sYE-HX-FJq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
