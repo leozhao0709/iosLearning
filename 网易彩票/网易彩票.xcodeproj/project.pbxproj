@@ -17,6 +17,8 @@
 		D4BFDBA61D58047D00D44595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4BFDBA51D58047D00D44595 /* Assets.xcassets */; };
 		D4BFDBA91D58047D00D44595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4BFDBA71D58047D00D44595 /* LaunchScreen.storyboard */; };
 		D4E4CA0C1D58092E003C02AF /* CZTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4CA0B1D58092E003C02AF /* CZTabBarController.swift */; };
+		D4E4CA121D5AFF29003C02AF /* CZTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4CA111D5AFF29003C02AF /* CZTitleButton.swift */; };
+		D4E4CA141D5B0202003C02AF /* CZBuyTogetherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4CA131D5B0202003C02AF /* CZBuyTogetherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		D4BFDBA81D58047D00D44595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4BFDBAA1D58047D00D44595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4E4CA0B1D58092E003C02AF /* CZTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CZTabBarController.swift; path = "网易彩票/Classes/Main/Controllers/CZTabBarController.swift"; sourceTree = SOURCE_ROOT; };
+		D4E4CA111D5AFF29003C02AF /* CZTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZTitleButton.swift; sourceTree = "<group>"; };
+		D4E4CA131D5B0202003C02AF /* CZBuyTogetherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZBuyTogetherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				D4034C941D59444D00036CA7 /* BuyLotteryHall */,
+				D4E4CA0D1D5AFEE6003C02AF /* BuyTogether */,
 				D4E4CA071D5808DD003C02AF /* Main */,
 			);
 			name = Classes;
@@ -150,6 +155,40 @@
 			children = (
 				D4034C8E1D59315D00036CA7 /* CZTabbar.swift */,
 				D4034C901D59355D00036CA7 /* CZTabbarDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4E4CA0D1D5AFEE6003C02AF /* BuyTogether */ = {
+			isa = PBXGroup;
+			children = (
+				D4E4CA0E1D5AFEE6003C02AF /* Controller */,
+				D4E4CA0F1D5AFEE6003C02AF /* Model */,
+				D4E4CA101D5AFEE6003C02AF /* View */,
+			);
+			name = BuyTogether;
+			path = "网易彩票/Classes/BuyTogether";
+			sourceTree = SOURCE_ROOT;
+		};
+		D4E4CA0E1D5AFEE6003C02AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D4E4CA131D5B0202003C02AF /* CZBuyTogetherViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4E4CA0F1D5AFEE6003C02AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4E4CA101D5AFEE6003C02AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4E4CA111D5AFF29003C02AF /* CZTitleButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4034C9D1D5948D100036CA7 /* CZNavigationController.swift in Sources */,
+				D4E4CA141D5B0202003C02AF /* CZBuyTogetherViewController.swift in Sources */,
+				D4E4CA121D5AFF29003C02AF /* CZTitleButton.swift in Sources */,
 				D4034C911D59355D00036CA7 /* CZTabbarDelegate.swift in Sources */,
 				D4034C9B1D59450200036CA7 /* CZBuyLotteryHallViewController.swift in Sources */,
 				D4E4CA0C1D58092E003C02AF /* CZTabBarController.swift in Sources */,

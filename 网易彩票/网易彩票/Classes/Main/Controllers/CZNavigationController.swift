@@ -25,10 +25,28 @@ class CZNavigationController: UINavigationController {
         //全局样式, 可以写进AppDelegate
         //一般不会在自控制器里设置导航条
         
-        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "NavBar64"), forBarMetrics: .Default) //此方法没代码提示0.0
+        let navBar = UINavigationBar.appearance()
         
-        //UIApplication设置状态栏样式, 需要添加 View controller-based status bar appearance 进info.plist
+        //1. 设置背景
+        navBar.setBackgroundImage(UIImage(named: "NavBar64"), forBarMetrics: .Default) //此方法连写没代码提示0.0
+        
+        //2. UIApplication设置状态栏样式, 需要添加 View controller-based status bar appearance 进info.plist
         UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        //3. 设置导航条的字体和颜色
+        let titleAttr = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(24)]
+        
+        navBar.titleTextAttributes = titleAttr
+        //设置返回按钮的样式
+        navBar.tintColor = UIColor.whiteColor()
+        
+        
+        let navItem = UIBarButtonItem.appearance()
+        navItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFontOfSize(15)], forState: UIControlState.Normal)
+        
+//        //改变整个按钮
+//        navItem.setBackgroundImage(<#T##backgroundImage: UIImage?##UIImage?#>, forState: <#T##UIControlState#>, barMetrics: <#T##UIBarMetrics#>)
+        
         
         return true
     }()
@@ -55,5 +73,14 @@ class CZNavigationController: UINavigationController {
 //    override func preferredStatusBarStyle() -> UIStatusBarStyle {
 //        return .LightContent
 //    }
+    
+    override func popViewControllerAnimated(animated: Bool) -> UIViewController? {
+        return super.popViewControllerAnimated(animated)
+    }
+    
+    override func pushViewController(viewController: UIViewController, animated: Bool) {
+        viewController.hidesBottomBarWhenPushed = true
+        return super.pushViewController(viewController, animated: animated)
+    }
 
 }
