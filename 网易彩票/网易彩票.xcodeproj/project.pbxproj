@@ -11,6 +11,12 @@
 		D4034C911D59355D00036CA7 /* CZTabbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4034C901D59355D00036CA7 /* CZTabbarDelegate.swift */; };
 		D4034C9B1D59450200036CA7 /* CZBuyLotteryHallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4034C9A1D59450200036CA7 /* CZBuyLotteryHallViewController.swift */; };
 		D4034C9D1D5948D100036CA7 /* CZNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4034C9C1D5948D100036CA7 /* CZNavigationController.swift */; };
+		D45603EF1D5BDA0F0090A6E0 /* CZSettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45603EE1D5BDA0F0090A6E0 /* CZSettingItem.swift */; };
+		D45603F51D5BE0810090A6E0 /* CZMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45603F41D5BE0810090A6E0 /* CZMineViewController.swift */; };
+		D45603F71D5BE4A00090A6E0 /* CZSettingArrowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45603F61D5BE4A00090A6E0 /* CZSettingArrowItem.swift */; };
+		D45603F91D5BE4C00090A6E0 /* CZSettingSwitchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45603F81D5BE4C00090A6E0 /* CZSettingSwitchItem.swift */; };
+		D45603FB1D5BE7680090A6E0 /* CZSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45603FA1D5BE7680090A6E0 /* CZSettingCell.swift */; };
+		D45603FE1D5BE78D0090A6E0 /* CZSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45603FD1D5BE78D0090A6E0 /* CZSettingViewController.swift */; };
 		D4BFDB9F1D58047D00D44595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BFDB9E1D58047D00D44595 /* AppDelegate.swift */; };
 		D4BFDBA11D58047D00D44595 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BFDBA01D58047D00D44595 /* ViewController.swift */; };
 		D4BFDBA41D58047D00D44595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4BFDBA21D58047D00D44595 /* Main.storyboard */; };
@@ -26,6 +32,12 @@
 		D4034C901D59355D00036CA7 /* CZTabbarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZTabbarDelegate.swift; sourceTree = "<group>"; };
 		D4034C9A1D59450200036CA7 /* CZBuyLotteryHallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZBuyLotteryHallViewController.swift; sourceTree = "<group>"; };
 		D4034C9C1D5948D100036CA7 /* CZNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CZNavigationController.swift; path = "网易彩票/Classes/Main/Controllers/CZNavigationController.swift"; sourceTree = SOURCE_ROOT; };
+		D45603EE1D5BDA0F0090A6E0 /* CZSettingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSettingItem.swift; sourceTree = "<group>"; };
+		D45603F41D5BE0810090A6E0 /* CZMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZMineViewController.swift; sourceTree = "<group>"; };
+		D45603F61D5BE4A00090A6E0 /* CZSettingArrowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSettingArrowItem.swift; sourceTree = "<group>"; };
+		D45603F81D5BE4C00090A6E0 /* CZSettingSwitchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSettingSwitchItem.swift; sourceTree = "<group>"; };
+		D45603FA1D5BE7680090A6E0 /* CZSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSettingCell.swift; sourceTree = "<group>"; };
+		D45603FD1D5BE78D0090A6E0 /* CZSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSettingViewController.swift; sourceTree = "<group>"; };
 		D4BFDB9B1D58047D00D44595 /* 网易彩票.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易彩票.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BFDB9E1D58047D00D44595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4BFDBA01D58047D00D44595 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +94,76 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D45603E81D5BD9A70090A6E0 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D45603FC1D5BE78D0090A6E0 /* Controller */,
+				D45603EA1D5BD9A70090A6E0 /* Model */,
+				D45603EB1D5BD9A70090A6E0 /* View */,
+			);
+			name = Setting;
+			path = "网易彩票/Classes/Setting";
+			sourceTree = SOURCE_ROOT;
+		};
+		D45603EA1D5BD9A70090A6E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D45603EE1D5BDA0F0090A6E0 /* CZSettingItem.swift */,
+				D45603F61D5BE4A00090A6E0 /* CZSettingArrowItem.swift */,
+				D45603F81D5BE4C00090A6E0 /* CZSettingSwitchItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D45603EB1D5BD9A70090A6E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D45603FA1D5BE7680090A6E0 /* CZSettingCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45603F01D5BE04F0090A6E0 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				D45603F11D5BE04F0090A6E0 /* Controller */,
+				D45603F21D5BE04F0090A6E0 /* Model */,
+				D45603F31D5BE04F0090A6E0 /* View */,
+			);
+			name = Mine;
+			path = "网易彩票/Classes/Mine";
+			sourceTree = SOURCE_ROOT;
+		};
+		D45603F11D5BE04F0090A6E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D45603F41D5BE0810090A6E0 /* CZMineViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D45603F21D5BE04F0090A6E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D45603F31D5BE04F0090A6E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45603FC1D5BE78D0090A6E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D45603FD1D5BE78D0090A6E0 /* CZSettingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D4BFDB921D58047D00D44595 = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +197,10 @@
 		D4E4CA061D5806FB003C02AF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D45603F01D5BE04F0090A6E0 /* Mine */,
 				D4034C941D59444D00036CA7 /* BuyLotteryHall */,
 				D4E4CA0D1D5AFEE6003C02AF /* BuyTogether */,
+				D45603E81D5BD9A70090A6E0 /* Setting */,
 				D4E4CA071D5808DD003C02AF /* Main */,
 			);
 			name = Classes;
@@ -272,9 +356,15 @@
 				D4034C911D59355D00036CA7 /* CZTabbarDelegate.swift in Sources */,
 				D4034C9B1D59450200036CA7 /* CZBuyLotteryHallViewController.swift in Sources */,
 				D4E4CA0C1D58092E003C02AF /* CZTabBarController.swift in Sources */,
+				D45603F51D5BE0810090A6E0 /* CZMineViewController.swift in Sources */,
 				D4BFDBA11D58047D00D44595 /* ViewController.swift in Sources */,
+				D45603FB1D5BE7680090A6E0 /* CZSettingCell.swift in Sources */,
+				D45603F71D5BE4A00090A6E0 /* CZSettingArrowItem.swift in Sources */,
 				D4034C8F1D59315D00036CA7 /* CZTabbar.swift in Sources */,
 				D4BFDB9F1D58047D00D44595 /* AppDelegate.swift in Sources */,
+				D45603F91D5BE4C00090A6E0 /* CZSettingSwitchItem.swift in Sources */,
+				D45603FE1D5BE78D0090A6E0 /* CZSettingViewController.swift in Sources */,
+				D45603EF1D5BDA0F0090A6E0 /* CZSettingItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

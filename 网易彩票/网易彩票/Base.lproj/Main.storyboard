@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gUn-du-G2i" id="cYK-OS-STI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -78,7 +78,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dIH-e8-w2T" id="xrV-If-RZm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="-95.5" y="2425.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Mine View Controller-->
         <scene sceneID="C7A-QX-e1b">
             <objects>
-                <viewController id="LLS-Ds-TNs" sceneMemberID="viewController">
+                <viewController id="LLS-Ds-TNs" customClass="CZMineViewController" customModule="网易彩票" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SjH-X7-VC0"/>
                         <viewControllerLayoutGuide type="bottom" id="9eM-k4-rrx"/>
@@ -126,7 +126,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6bU-QV-anC">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" title="设置" id="58p-EI-Arc"/>
+                        <barButtonItem key="rightBarButtonItem" title="设置" id="58p-EI-Arc">
+                            <connections>
+                                <action selector="settingBtnClick:" destination="LLS-Ds-TNs" id="PVC-9R-76d"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
