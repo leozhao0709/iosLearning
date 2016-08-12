@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class CZSettingViewController: UITableViewController {
     
@@ -26,6 +27,25 @@ class CZSettingViewController: UITableViewController {
         
         //第二组
         let item4 = CZSettingArrowItem(icon: "MoreUpdate", title: "检查版本更新")
+        item4.operation = {
+            
+           let info =  NSBundle.mainBundle().infoDictionary!
+            
+            NSLog("\(info["CFBundleShortVersionString"]!)")
+            
+            let localVersion = info["CFBundleShortVersionString"]!
+            
+//            NSLog("正在检查版本更新")
+            
+            KRProgressHUD.show(message: "正在检查版本")
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), { 
+                
+                KRProgressHUD.showSuccess(message: "当前版本已是最新")
+                KRProgressHUD.dismiss()
+            })
+        }
+        
         let item5 = CZSettingArrowItem(icon: "MoreHelp", title: "帮助")
         let item6 = CZSettingArrowItem(icon: "MoreShare", title: "分享")
         let item7 = CZSettingArrowItem(icon: "MoreMessage", title: "查看消息")
@@ -93,7 +113,12 @@ class CZSettingViewController: UITableViewController {
         let group = self.cellData[indexPath.section]
         let item = group[indexPath.row]
         
-        if let VC = item.vcClass {
+        //判断item4
+        if let completion = item.operation {
+            completion()
+        }
+        
+         else if let VC = item.vcClass {
 //            if VC is UIViewController.Type {
 //                let temp = (VC as! UIViewController.Type).init()
 //                self.navigationController?.pushViewController(temp, animated: true)

@@ -15,6 +15,8 @@ class CZSettingItem: NSObject {
     
     var vcClass: AnyClass?
     
+    var operation: (()->Void)?
+    
     init(icon: String, title: String) {
         self.icon = icon
         self.title = title

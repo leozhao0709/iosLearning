@@ -11,3 +11,9 @@ print(tempArray!)
 
 //let tempArray = NSDictionary(contentsOfFile: path!)
 //print(tempArray)
+
+var hello: ()->(String) = {
+    return "Hello World!"
+}
+
+hello()
