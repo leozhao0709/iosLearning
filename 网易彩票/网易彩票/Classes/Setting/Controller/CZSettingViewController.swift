@@ -37,11 +37,11 @@ class CZSettingViewController: UITableViewController {
             
 //            NSLog("正在检查版本更新")
             
-            KRProgressHUD.show(message: "正在检查版本")
+            KRProgressHUD.show(message: "正在检查版本", progressHUDStyle: .Black)
             
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), { 
                 
-                KRProgressHUD.showSuccess(message: "当前版本已是最新")
+                KRProgressHUD.showSuccess(message: "当前版本已是最新", progressHUDStyle: .Black)
                 KRProgressHUD.dismiss()
             })
         }
