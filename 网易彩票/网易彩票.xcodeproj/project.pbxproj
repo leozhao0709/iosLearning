@@ -12,6 +12,13 @@
 		D4034C911D59355D00036CA7 /* CZTabbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4034C901D59355D00036CA7 /* CZTabbarDelegate.swift */; };
 		D4034C9B1D59450200036CA7 /* CZBuyLotteryHallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4034C9A1D59450200036CA7 /* CZBuyLotteryHallViewController.swift */; };
 		D4034C9D1D5948D100036CA7 /* CZNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4034C9C1D5948D100036CA7 /* CZNavigationController.swift */; };
+		D442ED301D5EE27500216C59 /* CZPushAndWarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442ED2F1D5EE27500216C59 /* CZPushAndWarningViewController.swift */; };
+		D442ED331D5EEFD100216C59 /* CZBaseSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442ED321D5EEFD100216C59 /* CZBaseSettingViewController.swift */; };
+		D442ED351D5EF58A00216C59 /* CZAwardNumPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442ED341D5EF58A00216C59 /* CZAwardNumPushViewController.swift */; };
+		D442ED371D5EF73800216C59 /* CZSettingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442ED361D5EF73800216C59 /* CZSettingGroup.swift */; };
+		D442ED3A1D5EFA6800216C59 /* CZAwardAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442ED391D5EFA6800216C59 /* CZAwardAnimationViewController.swift */; };
+		D442ED3C1D5EFB2500216C59 /* CZScoreLiveWarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442ED3B1D5EFB2500216C59 /* CZScoreLiveWarningViewController.swift */; };
+		D442ED3E1D5EFBCC00216C59 /* CZSettingLabelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D442ED3D1D5EFBCC00216C59 /* CZSettingLabelItem.swift */; };
 		D45603EF1D5BDA0F0090A6E0 /* CZSettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45603EE1D5BDA0F0090A6E0 /* CZSettingItem.swift */; };
 		D45603F51D5BE0810090A6E0 /* CZMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45603F41D5BE0810090A6E0 /* CZMineViewController.swift */; };
 		D45603F71D5BE4A00090A6E0 /* CZSettingArrowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45603F61D5BE4A00090A6E0 /* CZSettingArrowItem.swift */; };
@@ -36,6 +43,13 @@
 		D4034C901D59355D00036CA7 /* CZTabbarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZTabbarDelegate.swift; sourceTree = "<group>"; };
 		D4034C9A1D59450200036CA7 /* CZBuyLotteryHallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZBuyLotteryHallViewController.swift; sourceTree = "<group>"; };
 		D4034C9C1D5948D100036CA7 /* CZNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CZNavigationController.swift; path = "网易彩票/Classes/Main/Controllers/CZNavigationController.swift"; sourceTree = SOURCE_ROOT; };
+		D442ED2F1D5EE27500216C59 /* CZPushAndWarningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZPushAndWarningViewController.swift; sourceTree = "<group>"; };
+		D442ED321D5EEFD100216C59 /* CZBaseSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZBaseSettingViewController.swift; sourceTree = "<group>"; };
+		D442ED341D5EF58A00216C59 /* CZAwardNumPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZAwardNumPushViewController.swift; sourceTree = "<group>"; };
+		D442ED361D5EF73800216C59 /* CZSettingGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSettingGroup.swift; sourceTree = "<group>"; };
+		D442ED391D5EFA6800216C59 /* CZAwardAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZAwardAnimationViewController.swift; sourceTree = "<group>"; };
+		D442ED3B1D5EFB2500216C59 /* CZScoreLiveWarningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZScoreLiveWarningViewController.swift; sourceTree = "<group>"; };
+		D442ED3D1D5EFBCC00216C59 /* CZSettingLabelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSettingLabelItem.swift; sourceTree = "<group>"; };
 		D45603EE1D5BDA0F0090A6E0 /* CZSettingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSettingItem.swift; sourceTree = "<group>"; };
 		D45603F41D5BE0810090A6E0 /* CZMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZMineViewController.swift; sourceTree = "<group>"; };
 		D45603F61D5BE4A00090A6E0 /* CZSettingArrowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSettingArrowItem.swift; sourceTree = "<group>"; };
@@ -108,6 +122,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D442ED381D5EF7C700216C59 /* PushAndWarning */ = {
+			isa = PBXGroup;
+			children = (
+				D442ED2F1D5EE27500216C59 /* CZPushAndWarningViewController.swift */,
+				D442ED341D5EF58A00216C59 /* CZAwardNumPushViewController.swift */,
+				D442ED391D5EFA6800216C59 /* CZAwardAnimationViewController.swift */,
+				D442ED3B1D5EFB2500216C59 /* CZScoreLiveWarningViewController.swift */,
+			);
+			name = PushAndWarning;
+			sourceTree = "<group>";
+		};
 		D45603E81D5BD9A70090A6E0 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +150,8 @@
 				D45603EE1D5BDA0F0090A6E0 /* CZSettingItem.swift */,
 				D45603F61D5BE4A00090A6E0 /* CZSettingArrowItem.swift */,
 				D45603F81D5BE4C00090A6E0 /* CZSettingSwitchItem.swift */,
+				D442ED361D5EF73800216C59 /* CZSettingGroup.swift */,
+				D442ED3D1D5EFBCC00216C59 /* CZSettingLabelItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,7 +200,9 @@
 		D45603FC1D5BE78D0090A6E0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D442ED381D5EF7C700216C59 /* PushAndWarning */,
 				D45603FD1D5BE78D0090A6E0 /* CZSettingViewController.swift */,
+				D442ED321D5EEFD100216C59 /* CZBaseSettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -427,19 +456,26 @@
 			files = (
 				D4034C9D1D5948D100036CA7 /* CZNavigationController.swift in Sources */,
 				D4E4CA141D5B0202003C02AF /* CZBuyTogetherViewController.swift in Sources */,
+				D442ED3C1D5EFB2500216C59 /* CZScoreLiveWarningViewController.swift in Sources */,
 				D4E4CA121D5AFF29003C02AF /* CZTitleButton.swift in Sources */,
 				D4034C911D59355D00036CA7 /* CZTabbarDelegate.swift in Sources */,
+				D442ED351D5EF58A00216C59 /* CZAwardNumPushViewController.swift in Sources */,
+				D442ED301D5EE27500216C59 /* CZPushAndWarningViewController.swift in Sources */,
 				D4034C9B1D59450200036CA7 /* CZBuyLotteryHallViewController.swift in Sources */,
 				D4E4CA0C1D58092E003C02AF /* CZTabBarController.swift in Sources */,
+				D442ED331D5EEFD100216C59 /* CZBaseSettingViewController.swift in Sources */,
 				D45603F51D5BE0810090A6E0 /* CZMineViewController.swift in Sources */,
 				D4BFDBA11D58047D00D44595 /* ViewController.swift in Sources */,
 				D45603FB1D5BE7680090A6E0 /* CZSettingCell.swift in Sources */,
 				D45603F71D5BE4A00090A6E0 /* CZSettingArrowItem.swift in Sources */,
 				D4034C8F1D59315D00036CA7 /* CZTabbar.swift in Sources */,
+				D442ED3A1D5EFA6800216C59 /* CZAwardAnimationViewController.swift in Sources */,
 				D4BFDB9F1D58047D00D44595 /* AppDelegate.swift in Sources */,
 				D45603F91D5BE4C00090A6E0 /* CZSettingSwitchItem.swift in Sources */,
 				D45603FE1D5BE78D0090A6E0 /* CZSettingViewController.swift in Sources */,
+				D442ED371D5EF73800216C59 /* CZSettingGroup.swift in Sources */,
 				D45603EF1D5BDA0F0090A6E0 /* CZSettingItem.swift in Sources */,
+				D442ED3E1D5EFBCC00216C59 /* CZSettingLabelItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

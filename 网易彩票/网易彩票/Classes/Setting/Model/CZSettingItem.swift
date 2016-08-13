@@ -10,19 +10,19 @@ import UIKit
 
 class CZSettingItem: NSObject {
     
-    var icon: String!
+    var icon: String?
     var title: String!
     
     var vcClass: AnyClass?
     
     var operation: (()->Void)?
     
-    init(icon: String, title: String) {
+    init(icon: String?, title: String) {
         self.icon = icon
         self.title = title
     }
     
-    init(icon: String, title: String, vcClass: AnyClass) {
+    init(icon: String?, title: String, vcClass: AnyClass) {
         self.icon = icon
         self.title = title
         self.vcClass = vcClass

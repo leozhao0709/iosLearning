@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gUn-du-G2i" id="cYK-OS-STI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -78,7 +78,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dIH-e8-w2T" id="xrV-If-RZm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -111,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="-95.5" y="2425.5"/>
         </scene>
-        <!--Mine View Controller-->
+        <!--我的彩票-->
         <scene sceneID="C7A-QX-e1b">
             <objects>
                 <viewController id="LLS-Ds-TNs" customClass="CZMineViewController" customModule="网易彩票" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,8 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6bU-QV-anC">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" title="我的彩票" id="6bU-QV-anC">
                         <barButtonItem key="rightBarButtonItem" title="设置" id="58p-EI-Arc">
                             <connections>
                                 <action selector="settingBtnClick:" destination="LLS-Ds-TNs" id="PVC-9R-76d"/>
