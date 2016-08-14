@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class CZBuyLotteryHallViewController: UIViewController {
 

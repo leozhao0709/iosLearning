@@ -97,7 +97,7 @@
         <!--Item-->
         <scene sceneID="Nni-ZW-bnx">
             <objects>
-                <navigationController id="vLU-gy-5AF" sceneMemberID="viewController">
+                <navigationController id="vLU-gy-5AF" customClass="CZNavigationController" customModule="网易彩票" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="nXx-zd-JTR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P79-nf-fNi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

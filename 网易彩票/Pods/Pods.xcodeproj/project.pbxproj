@@ -7,22 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08754A16B6E6D0DD229EB5F93DC3DEBE /* KRProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC15ED163F6759A4E6E207F912FF28E /* KRProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13CB42BBEA76B10DDCAF0F1C0755E518 /* KRActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5DB4A51DA5DC85DC796C5BF63E3DD /* KRActivityIndicatorViewStyle.swift */; };
-		29F218947F981BF2816F08CF9B212E0F /* KRProgressHUDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435899E5A94C3051ADE98FDE9B928518 /* KRProgressHUDExtensions.swift */; };
-		732FEBF28FA99E93103F3B8D448CDED0 /* KRProgressHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9867EF8F782FB94F3EFA514A33C92962 /* KRProgressHUDViewController.swift */; };
-		7772DF8472F83746E69C2A22FA746C8E /* KRProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B0F26F2C059CE7904D746AE3C1EDFD /* KRProgressHUD-dummy.m */; };
-		7D51772C403931A16D781C97C5CA950D /* Pods-网易彩票-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2305DDC59A8A93DC01E829DFE458DF1D /* Pods-网易彩票-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8975FFAD81C05F0D97E439220AD7DD12 /* Pods-网易彩票-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 754D53A2CA83C28D3D4101A366BC6B4C /* Pods-网易彩票-dummy.m */; };
-		9A7DEB3560CF4F5B9883FD5D44925B08 /* KRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CF22FA51F0B94EF678813AB7D078A5 /* KRProgressHUD.swift */; };
-		9FF23F00AD4E903319D63E06C4F259F5 /* KRProgressHUDIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370DA98EB939DCC60670D416999BBA5 /* KRProgressHUDIconType.swift */; };
+		08754A16B6E6D0DD229EB5F93DC3DEBE /* KRProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F35F469F384E5D0CF3481CAC7FF3570B /* KRProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CB42BBEA76B10DDCAF0F1C0755E518 /* KRActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F26FA3FEE2911077C56C88F76939DF5 /* KRActivityIndicatorViewStyle.swift */; };
+		29F218947F981BF2816F08CF9B212E0F /* KRProgressHUDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526BFDE7BD7AD3EBD6C6CDCF407EDAA /* KRProgressHUDExtensions.swift */; };
+		2C5C4A8A451A45637933780E04C7DE76 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF66BD16A1C31790C707627D217BC93 /* SwiftyJSON-dummy.m */; };
+		3389E903D9EDCAB7926A776DD32C13B1 /* Pods-网易彩票-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 754D53A2CA83C28D3D4101A366BC6B4C /* Pods-网易彩票-dummy.m */; };
+		3807DC523758A5862818F05A4D80732F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		40E74E43B9736EA73C1BC368B64287D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		4DD8B0739C32FE953EEDCEFB25ACD841 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9080DAC0717C2F3F24F8E5C0B2906834 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		732FEBF28FA99E93103F3B8D448CDED0 /* KRProgressHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BCF3327E1BF1835857AB44620157E /* KRProgressHUDViewController.swift */; };
+		7772DF8472F83746E69C2A22FA746C8E /* KRProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E09905276307A9E8AB4178A3532CD3B /* KRProgressHUD-dummy.m */; };
+		8C913E478745D294FBB69DB010156C3E /* Pods-网易彩票-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2305DDC59A8A93DC01E829DFE458DF1D /* Pods-网易彩票-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A7DEB3560CF4F5B9883FD5D44925B08 /* KRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24177113C01662F6A7DD005BC35B98 /* KRProgressHUD.swift */; };
+		9FF23F00AD4E903319D63E06C4F259F5 /* KRProgressHUDIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A74DAE01B6A1DFEC924829DD51289D /* KRProgressHUDIconType.swift */; };
 		C23288EE1D1BB21264EC1350BB27A7D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		DEDBD191EC59E2396FB02187F699C35A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		E757A9C4EB546F3907E6EE4D08F32E07 /* KRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75E6DA99D4BF591A2B7B267E1D8FD0 /* KRActivityIndicatorView.swift */; };
+		E6CAFB8A0DF00FEBE91A5E7BBC7750ED /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D6B49E26B993CBD73B2D233BB180F /* SwiftyJSON.swift */; };
+		E757A9C4EB546F3907E6EE4D08F32E07 /* KRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45E91686845FF6BC2FBC6998397F6B9 /* KRActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AB280D64B8E7E434C02F17135BB7E5CF /* PBXContainerItemProxy */ = {
+		89A70B57F6A3FD1108BCAF4EAAF513BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00638F048BBD37CCF24A163E9BE209F1;
+			remoteInfo = SwiftyJSON;
+		};
+		E8DB9A5C203512FACC1909D35D7D45E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -33,31 +44,39 @@
 
 /* Begin PBXFileReference section */
 		04F7DFBFA0EE878D8C0097B418EFD76A /* Pods-网易彩票-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-网易彩票-acknowledgements.markdown"; sourceTree = "<group>"; };
+		131AE36F8EE7BCCB083B317A2DDB3248 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ABFF4EF5AFD8D39D4732DA55E2B472C /* Pods-网易彩票.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-网易彩票.release.xcconfig"; sourceTree = "<group>"; };
+		21A74DAE01B6A1DFEC924829DD51289D /* KRProgressHUDIconType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDIconType.swift; path = KRProgressHUD/Classes/KRProgressHUDIconType.swift; sourceTree = "<group>"; };
+		22AC09B698121DCB7787EC94361B9DDB /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		2305DDC59A8A93DC01E829DFE458DF1D /* Pods-网易彩票-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-网易彩票-umbrella.h"; sourceTree = "<group>"; };
+		2345E3A6C498F8C9F4A9B1FADFEAAE4D /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		270630FE0568FAEC00192B79A72F8E10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		355362481A67045C60C976D49A02B311 /* KRProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KRProgressHUD.modulemap; sourceTree = "<group>"; };
-		435899E5A94C3051ADE98FDE9B928518 /* KRProgressHUDExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDExtensions.swift; path = KRProgressHUD/Classes/KRProgressHUDExtensions.swift; sourceTree = "<group>"; };
-		4E5A5B4AB5075174DBC937086E2CFC2C /* KRProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KRProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FC15ED163F6759A4E6E207F912FF28E /* KRProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		32E0BC3B6EF9113695A3C8F64ECBA53A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3526BFDE7BD7AD3EBD6C6CDCF407EDAA /* KRProgressHUDExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDExtensions.swift; path = KRProgressHUD/Classes/KRProgressHUDExtensions.swift; sourceTree = "<group>"; };
+		3AF66BD16A1C31790C707627D217BC93 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		586661ABEA7AFD4BAD8E3D6B4D712B9B /* Pods-网易彩票.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-网易彩票.modulemap"; sourceTree = "<group>"; };
-		6B9BF90E8EAFC4C44675595E249FAB41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F26FA3FEE2911077C56C88F76939DF5 /* KRActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorViewStyle.swift; path = KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
 		754D53A2CA83C28D3D4101A366BC6B4C /* Pods-网易彩票-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-网易彩票-dummy.m"; sourceTree = "<group>"; };
-		75A5DB4A51DA5DC85DC796C5BF63E3DD /* KRActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorViewStyle.swift; path = KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
-		8370DA98EB939DCC60670D416999BBA5 /* KRProgressHUDIconType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDIconType.swift; path = KRProgressHUD/Classes/KRProgressHUDIconType.swift; sourceTree = "<group>"; };
+		8411C4DFF2C94C3872848230EB33D9A0 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E09905276307A9E8AB4178A3532CD3B /* KRProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		9080DAC0717C2F3F24F8E5C0B2906834 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		958556B4860105017825B530BD4CBAA5 /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9867EF8F782FB94F3EFA514A33C92962 /* KRProgressHUDViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDViewController.swift; path = KRProgressHUD/Classes/KRProgressHUDViewController.swift; sourceTree = "<group>"; };
+		9E0791C27B4B7152A3EEF952D60F6D57 /* KRProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		A5F8B37D31EEB0C66EC1688E4BD391C7 /* Pods-网易彩票.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-网易彩票.debug.xcconfig"; sourceTree = "<group>"; };
-		AD0593AB642BD9D56C044B64A392F9AD /* KRProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRProgressHUD.xcconfig; sourceTree = "<group>"; };
+		AD24177113C01662F6A7DD005BC35B98 /* KRProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUD.swift; path = KRProgressHUD/Classes/KRProgressHUD.swift; sourceTree = "<group>"; };
 		AEF774812EBAE141B64BBEA846FC035D /* Pods-网易彩票-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-网易彩票-frameworks.sh"; sourceTree = "<group>"; };
 		C1F54DDCFBB638AC3C5FB2AA435963EE /* Pods-网易彩票-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-网易彩票-resources.sh"; sourceTree = "<group>"; };
-		C4B0F26F2C059CE7904D746AE3C1EDFD /* KRProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		C7577A0A6F49A34D6142E2B90B387F2F /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		CD9D6B49E26B993CBD73B2D233BB180F /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DF5533466EFA442A5774BFBD09F87FA5 /* KRProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		DD265FDB8602D93932B9AB3BECDA25C1 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		DFBB1CD502415777F131A69124EB6BBC /* KRProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KRProgressHUD.modulemap; sourceTree = "<group>"; };
 		E0DA7E9ECA3389D987E39E2AD9A3CCB2 /* Pods-网易彩票-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-网易彩票-acknowledgements.plist"; sourceTree = "<group>"; };
-		F1CF22FA51F0B94EF678813AB7D078A5 /* KRProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUD.swift; path = KRProgressHUD/Classes/KRProgressHUD.swift; sourceTree = "<group>"; };
-		FE75E6DA99D4BF591A2B7B267E1D8FD0 /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorView.swift; path = KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		E364086A3131753D111B19752DFB105F /* KRProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRProgressHUD.xcconfig; sourceTree = "<group>"; };
+		F35F469F384E5D0CF3481CAC7FF3570B /* KRProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		F45E91686845FF6BC2FBC6998397F6B9 /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorView.swift; path = KRProgressHUD/Classes/KRActivityIndicatorView/KRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		FD1BCF3327E1BF1835857AB44620157E /* KRProgressHUDViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDViewController.swift; path = KRProgressHUD/Classes/KRProgressHUDViewController.swift; sourceTree = "<group>"; };
+		FE7403B7F67B2A69458FFBE1F10A63AD /* KRProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KRProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +88,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A8DAAF788A79ABC7FC959CD2E0179C63 /* Frameworks */ = {
+		5E084692A2B39FD0E21F2CD500ECC03E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEDBD191EC59E2396FB02187F699C35A /* Foundation.framework in Frameworks */,
+				3807DC523758A5862818F05A4D80732F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63F796FABA2EC2B56235FFEC5FF08813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E74E43B9736EA73C1BC368B64287D3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		379D528FF76F790175C93820BCB8F3AA /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				CD9D6B49E26B993CBD73B2D233BB180F /* SwiftyJSON.swift */,
+				DF807CDCB8E255A5B8F41FFA097F0F3B /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,27 +124,13 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		3F869A74CB6F8964D14DBE75BAE072CB /* Products */ = {
+		4AEFF3BCEE625691B4B169DAC14D6911 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4E5A5B4AB5075174DBC937086E2CFC2C /* KRProgressHUD.framework */,
-				958556B4860105017825B530BD4CBAA5 /* Pods_____.framework */,
+				A5DBE18EE0C4C9241C86E856F884217C /* KRProgressHUD */,
+				379D528FF76F790175C93820BCB8F3AA /* SwiftyJSON */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		43EBEE3BD50F97174CD620597D3A3353 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6B9BF90E8EAFC4C44675595E249FAB41 /* Info.plist */,
-				355362481A67045C60C976D49A02B311 /* KRProgressHUD.modulemap */,
-				AD0593AB642BD9D56C044B64A392F9AD /* KRProgressHUD.xcconfig */,
-				C4B0F26F2C059CE7904D746AE3C1EDFD /* KRProgressHUD-dummy.m */,
-				DF5533466EFA442A5774BFBD09F87FA5 /* KRProgressHUD-prefix.pch */,
-				4FC15ED163F6759A4E6E207F912FF28E /* KRProgressHUD-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/KRProgressHUD";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7D1A9E139FC5AD9399F46C2D7C2C2011 /* Targets Support Files */ = {
@@ -124,18 +146,38 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B12FA2D175617DA18261777773720F3B /* Pods */,
-				3F869A74CB6F8964D14DBE75BAE072CB /* Products */,
+				4AEFF3BCEE625691B4B169DAC14D6911 /* Pods */,
+				E713C7B8E307ED6ECB3181BF8AA47ADA /* Products */,
 				7D1A9E139FC5AD9399F46C2D7C2C2011 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		B12FA2D175617DA18261777773720F3B /* Pods */ = {
+		811CED3D61BA889454779DA5EB3CABDF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F7223AE495513E9540AADC4368DCE534 /* KRProgressHUD */,
+				32E0BC3B6EF9113695A3C8F64ECBA53A /* Info.plist */,
+				DFBB1CD502415777F131A69124EB6BBC /* KRProgressHUD.modulemap */,
+				E364086A3131753D111B19752DFB105F /* KRProgressHUD.xcconfig */,
+				8E09905276307A9E8AB4178A3532CD3B /* KRProgressHUD-dummy.m */,
+				9E0791C27B4B7152A3EEF952D60F6D57 /* KRProgressHUD-prefix.pch */,
+				F35F469F384E5D0CF3481CAC7FF3570B /* KRProgressHUD-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/KRProgressHUD";
+			sourceTree = "<group>";
+		};
+		A5DBE18EE0C4C9241C86E856F884217C /* KRProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F45E91686845FF6BC2FBC6998397F6B9 /* KRActivityIndicatorView.swift */,
+				5F26FA3FEE2911077C56C88F76939DF5 /* KRActivityIndicatorViewStyle.swift */,
+				AD24177113C01662F6A7DD005BC35B98 /* KRProgressHUD.swift */,
+				3526BFDE7BD7AD3EBD6C6CDCF407EDAA /* KRProgressHUDExtensions.swift */,
+				21A74DAE01B6A1DFEC924829DD51289D /* KRProgressHUDIconType.swift */,
+				FD1BCF3327E1BF1835857AB44620157E /* KRProgressHUDViewController.swift */,
+				811CED3D61BA889454779DA5EB3CABDF /* Support Files */,
+			);
+			path = KRProgressHUD;
 			sourceTree = "<group>";
 		};
 		B47A28EE4A4CD87613602BC4A8C70454 /* Pods-网易彩票 */ = {
@@ -164,18 +206,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F7223AE495513E9540AADC4368DCE534 /* KRProgressHUD */ = {
+		DF807CDCB8E255A5B8F41FFA097F0F3B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FE75E6DA99D4BF591A2B7B267E1D8FD0 /* KRActivityIndicatorView.swift */,
-				75A5DB4A51DA5DC85DC796C5BF63E3DD /* KRActivityIndicatorViewStyle.swift */,
-				F1CF22FA51F0B94EF678813AB7D078A5 /* KRProgressHUD.swift */,
-				435899E5A94C3051ADE98FDE9B928518 /* KRProgressHUDExtensions.swift */,
-				8370DA98EB939DCC60670D416999BBA5 /* KRProgressHUDIconType.swift */,
-				9867EF8F782FB94F3EFA514A33C92962 /* KRProgressHUDViewController.swift */,
-				43EBEE3BD50F97174CD620597D3A3353 /* Support Files */,
+				131AE36F8EE7BCCB083B317A2DDB3248 /* Info.plist */,
+				DD265FDB8602D93932B9AB3BECDA25C1 /* SwiftyJSON.modulemap */,
+				C7577A0A6F49A34D6142E2B90B387F2F /* SwiftyJSON.xcconfig */,
+				3AF66BD16A1C31790C707627D217BC93 /* SwiftyJSON-dummy.m */,
+				22AC09B698121DCB7787EC94361B9DDB /* SwiftyJSON-prefix.pch */,
+				9080DAC0717C2F3F24F8E5C0B2906834 /* SwiftyJSON-umbrella.h */,
 			);
-			path = KRProgressHUD;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		E713C7B8E307ED6ECB3181BF8AA47ADA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE7403B7F67B2A69458FFBE1F10A63AD /* KRProgressHUD.framework */,
+				2345E3A6C498F8C9F4A9B1FADFEAAE4D /* Pods_____.framework */,
+				8411C4DFF2C94C3872848230EB33D9A0 /* SwiftyJSON.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,11 +241,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F92BF530B53844FAF3497FC9DC397EC /* Headers */ = {
+		ADEDEA787F84FED67B541C7944515DCE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D51772C403931A16D781C97C5CA950D /* Pods-网易彩票-umbrella.h in Headers */,
+				8C913E478745D294FBB69DB010156C3E /* Pods-网易彩票-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D61BC737E6E7660B3A6F7903A386A188 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DD8B0739C32FE953EEDCEFB25ACD841 /* SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,25 +274,43 @@
 			);
 			name = KRProgressHUD;
 			productName = KRProgressHUD;
-			productReference = 4E5A5B4AB5075174DBC937086E2CFC2C /* KRProgressHUD.framework */;
+			productReference = FE7403B7F67B2A69458FFBE1F10A63AD /* KRProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A8D244C612C7DFAC1E52FA456BC2F7C2 /* Pods-网易彩票 */ = {
+		00638F048BBD37CCF24A163E9BE209F1 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FA12E61DBC74DA1984E7B8A8A6381 /* Build configuration list for PBXNativeTarget "Pods-网易彩票" */;
+			buildConfigurationList = 18F600550008C2EC52F40447BD3E9B99 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				5FFC2BA65C49612E520ECEA0C45F3103 /* Sources */,
-				A8DAAF788A79ABC7FC959CD2E0179C63 /* Frameworks */,
-				3F92BF530B53844FAF3497FC9DC397EC /* Headers */,
+				ED764F52D809E4A8ECBB54C65A5770A6 /* Sources */,
+				5E084692A2B39FD0E21F2CD500ECC03E /* Frameworks */,
+				D61BC737E6E7660B3A6F7903A386A188 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DE2ABBDD2525E9576328AEB85BE5CDD9 /* PBXTargetDependency */,
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 8411C4DFF2C94C3872848230EB33D9A0 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3A985D69DC4AA56787DA7ACF2C6D1CBA /* Pods-网易彩票 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3397470B0C0CCA94C67FB5F9686B9D /* Build configuration list for PBXNativeTarget "Pods-网易彩票" */;
+			buildPhases = (
+				562A5A7CABAB34AFBB9A71CF4DE8C4ED /* Sources */,
+				63F796FABA2EC2B56235FFEC5FF08813 /* Frameworks */,
+				ADEDEA787F84FED67B541C7944515DCE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD790CACBE2FA35718DF8FF51C87F7FB /* PBXTargetDependency */,
+				0B0CCAD597B57A2C0C34B08CD8576141 /* PBXTargetDependency */,
 			);
 			name = "Pods-网易彩票";
 			productName = "Pods-网易彩票";
-			productReference = 958556B4860105017825B530BD4CBAA5 /* Pods_____.framework */;
+			productReference = 2345E3A6C498F8C9F4A9B1FADFEAAE4D /* Pods_____.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -252,22 +330,23 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3F869A74CB6F8964D14DBE75BAE072CB /* Products */;
+			productRefGroup = E713C7B8E307ED6ECB3181BF8AA47ADA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				002A79E870219FA26D9FCCF693E84BD3 /* KRProgressHUD */,
-				A8D244C612C7DFAC1E52FA456BC2F7C2 /* Pods-网易彩票 */,
+				3A985D69DC4AA56787DA7ACF2C6D1CBA /* Pods-网易彩票 */,
+				00638F048BBD37CCF24A163E9BE209F1 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5FFC2BA65C49612E520ECEA0C45F3103 /* Sources */ = {
+		562A5A7CABAB34AFBB9A71CF4DE8C4ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8975FFAD81C05F0D97E439220AD7DD12 /* Pods-网易彩票-dummy.m in Sources */,
+				3389E903D9EDCAB7926A776DD32C13B1 /* Pods-网易彩票-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,14 +364,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED764F52D809E4A8ECBB54C65A5770A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C5C4A8A451A45637933780E04C7DE76 /* SwiftyJSON-dummy.m in Sources */,
+				E6CAFB8A0DF00FEBE91A5E7BBC7750ED /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DE2ABBDD2525E9576328AEB85BE5CDD9 /* PBXTargetDependency */ = {
+		0B0CCAD597B57A2C0C34B08CD8576141 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 00638F048BBD37CCF24A163E9BE209F1 /* SwiftyJSON */;
+			targetProxy = 89A70B57F6A3FD1108BCAF4EAAF513BD /* PBXContainerItemProxy */;
+		};
+		FD790CACBE2FA35718DF8FF51C87F7FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KRProgressHUD;
 			target = 002A79E870219FA26D9FCCF693E84BD3 /* KRProgressHUD */;
-			targetProxy = AB280D64B8E7E434C02F17135BB7E5CF /* PBXContainerItemProxy */;
+			targetProxy = E8DB9A5C203512FACC1909D35D7D45E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -332,6 +426,35 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4251096BA855C947BA073E9FBC2C30FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7577A0A6F49A34D6142E2B90B387F2F /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -377,36 +500,7 @@
 			};
 			name = Debug;
 		};
-		6ECFC2EE1EE420B26A780DFE9317CC4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD0593AB642BD9D56C044B64A392F9AD /* KRProgressHUD.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/KRProgressHUD/KRProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KRProgressHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KRProgressHUD/KRProgressHUD.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = KRProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6EE1833E78A4F389BF1F1449E470B678 /* Debug */ = {
+		6DC31A100A1A6E39DE7EEB65A9711017 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5F8B37D31EEB0C66EC1688E4BD391C7 /* Pods-网易彩票.debug.xcconfig */;
 			buildSettings = {
@@ -440,9 +534,38 @@
 			};
 			name = Debug;
 		};
+		6ECFC2EE1EE420B26A780DFE9317CC4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E364086A3131753D111B19752DFB105F /* KRProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KRProgressHUD/KRProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KRProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KRProgressHUD/KRProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KRProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		796DD84CC451FC58FCBAB3F9BD55991D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD0593AB642BD9D56C044B64A392F9AD /* KRProgressHUD.xcconfig */;
+			baseConfigurationReference = E364086A3131753D111B19752DFB105F /* KRProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -470,7 +593,7 @@
 			};
 			name = Debug;
 		};
-		E5C5FDD4DA32D20C93863D5F575BA5F1 /* Release */ = {
+		C0FF28F1166E3D287957E9A9813CCF30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ABFF4EF5AFD8D39D4732DA55E2B472C /* Pods-网易彩票.release.xcconfig */;
 			buildSettings = {
@@ -503,9 +626,48 @@
 			};
 			name = Release;
 		};
+		FA53325F37F7C6A119062128C8E24B4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7577A0A6F49A34D6142E2B90B387F2F /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18F600550008C2EC52F40447BD3E9B99 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA53325F37F7C6A119062128C8E24B4B /* Debug */,
+				4251096BA855C947BA073E9FBC2C30FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -515,20 +677,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FA12E61DBC74DA1984E7B8A8A6381 /* Build configuration list for PBXNativeTarget "Pods-网易彩票" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6EE1833E78A4F389BF1F1449E470B678 /* Debug */,
-				E5C5FDD4DA32D20C93863D5F575BA5F1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		9171A8C9F8CCDFE40F2B4265D5648FD3 /* Build configuration list for PBXNativeTarget "KRProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				796DD84CC451FC58FCBAB3F9BD55991D /* Debug */,
 				6ECFC2EE1EE420B26A780DFE9317CC4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE3397470B0C0CCA94C67FB5F9686B9D /* Build configuration list for PBXNativeTarget "Pods-网易彩票" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DC31A100A1A6E39DE7EEB65A9711017 /* Debug */,
+				C0FF28F1166E3D287957E9A9813CCF30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
