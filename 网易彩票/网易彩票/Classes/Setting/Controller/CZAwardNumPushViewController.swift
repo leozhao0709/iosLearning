@@ -15,8 +15,8 @@ class CZAwardNumPushViewController: CZBaseSettingViewController {
 
         // Do any additional setup after loading the view.
         
-        let item1 = CZSettingSwitchItem(icon: nil, title: "双色球", vcClass: ViewController.self)
-        let item2 = CZSettingSwitchItem(icon: nil, title: "大乐透", vcClass: ViewController.self)
+        let item1 = CZSettingSwitchItem(icon: nil, title: "双色球")
+        let item2 = CZSettingSwitchItem(icon: nil, title: "大乐透")
 
         
         let group1 = CZSettingGroup()

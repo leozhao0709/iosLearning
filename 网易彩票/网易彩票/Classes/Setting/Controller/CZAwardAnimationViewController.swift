@@ -15,7 +15,7 @@ class CZAwardAnimationViewController: CZBaseSettingViewController {
 
         // Do any additional setup after loading the view.
         
-        let item1 = CZSettingSwitchItem(icon: nil, title: "中奖动画", vcClass: ViewController.self)
+        let item1 = CZSettingSwitchItem(icon: nil, title: "中奖动画")
         
         
         let group1 = CZSettingGroup()

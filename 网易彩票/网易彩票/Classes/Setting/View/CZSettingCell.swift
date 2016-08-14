@@ -10,6 +10,25 @@ import UIKit
 
 class CZSettingCell: UITableViewCell {
     
+    lazy var myArrow:UIImageView? = {
+        return UIImageView(image: UIImage(named: "CellArrow"))
+    }()
+    
+    lazy var mySwitch: UISwitch? = {
+        let mSwitch = UISwitch()
+        mSwitch.addTarget(self, action: #selector(self.valueChanged), forControlEvents: UIControlEvents.ValueChanged)
+        
+        return mSwitch
+    }()
+    
+    lazy var myLabel: UILabel? = {
+        let label = UILabel()
+        label.bounds = CGRectMake(0, 0, 80, 44)
+        label.text = "00:00"
+        
+        return label
+    }()
+    
     var item: CZSettingItem! {
         didSet {
             self.textLabel?.text = item.title
@@ -23,19 +42,23 @@ class CZSettingCell: UITableViewCell {
             //        cell?.accessoryView = UIImageView(image: UIImage(named: "CellArrow"))
             
             if item .isKindOfClass(CZSettingArrowItem) {
-                self.accessoryView = UIImageView(image: UIImage(named: "CellArrow"))
+                self.accessoryView = self.myArrow
+                
+                self.selectionStyle = .Default
             }
             else if item.isKindOfClass(CZSettingSwitchItem){
-                let switchView = UISwitch()
-                switchView.on = true
+                let switchView = mySwitch
+                switchView!.on = NSUserDefaults.standardUserDefaults().boolForKey(item.title)
                 self.accessoryView = switchView
+                
+                self.selectionStyle = .None
             }
             else if item.isKindOfClass(CZSettingLabelItem) {
-                let label = UILabel()
-                label.bounds = CGRectMake(0, 0, 80, 44)
-                label.text = "00:00"
                 
-                self.accessoryView = label
+                
+                self.accessoryView = self.myLabel
+                
+                self.selectionStyle = .Default
             }
         }
     }
@@ -52,6 +75,12 @@ class CZSettingCell: UITableViewCell {
         
         return cell!
         
+    }
+    
+    @objc private func valueChanged(mySwitch: UISwitch) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(mySwitch.on, forKey: self.item.title)
+        defaults.synchronize()
     }
 
 }

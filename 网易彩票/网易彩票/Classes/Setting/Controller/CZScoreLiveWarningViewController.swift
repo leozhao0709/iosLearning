@@ -15,7 +15,7 @@ class CZScoreLiveWarningViewController: CZBaseSettingViewController {
 
         // Do any additional setup after loading the view.
         
-        let item1 = CZSettingSwitchItem(icon: nil, title: "提醒我关注的比赛", vcClass: ViewController.self)
+        let item1 = CZSettingSwitchItem(icon: nil, title: "提醒我关注的比赛")
         
         
         let group1 = CZSettingGroup()
@@ -25,7 +25,7 @@ class CZScoreLiveWarningViewController: CZBaseSettingViewController {
         self.cellData.append(group1)
         
         
-        let item2 = CZSettingLabelItem(icon: nil, title: "起始时间", vcClass: ViewController.self)
+        let item2 = CZSettingLabelItem(icon: nil, title: "起始时间")
         
         
         let group2 = CZSettingGroup()
@@ -35,7 +35,7 @@ class CZScoreLiveWarningViewController: CZBaseSettingViewController {
         self.cellData.append(group2)
         
         
-        let item3 = CZSettingLabelItem(icon: nil, title: "结束时间", vcClass: ViewController.self)
+        let item3 = CZSettingLabelItem(icon: nil, title: "结束时间")
         
         
         let group3 = CZSettingGroup()
