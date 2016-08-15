@@ -54,10 +54,10 @@ class CZSettingViewController: CZBaseSettingViewController {
         }
         
         let item5 = CZSettingArrowItem(icon: "MoreHelp", title: "帮助", vcClass: CZHelpViewController.self)
-        let item6 = CZSettingArrowItem(icon: "MoreShare", title: "分享")
+        let item6 = CZSettingArrowItem(icon: "MoreShare", title: "分享", vcClass: CZShareViewController.self)
         let item7 = CZSettingArrowItem(icon: "MoreMessage", title: "查看消息")
         let item8 = CZSettingArrowItem(icon: "MoreNetease", title: "产品推荐", vcClass: CZProductsShareViewController.self)
-        let item9 = CZSettingArrowItem(icon: "MoreAbout", title: "关于")
+        let item9 = CZSettingArrowItem(icon: "MoreAbout", title: "关于", vcClass: CZAboutViewController.self)
         
         let group2 = CZSettingGroup()
         group2.items = [item4, item5, item6, item7, item8, item9]

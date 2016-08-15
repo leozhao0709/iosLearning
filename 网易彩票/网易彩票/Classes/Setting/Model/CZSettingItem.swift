@@ -12,6 +12,7 @@ class CZSettingItem: NSObject {
     
     var icon: String?
     var title: String!
+    var subtitle: String?
     
     var vcClass: AnyClass?
     

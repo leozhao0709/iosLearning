@@ -37,6 +37,7 @@ class CZSettingCell: UITableViewCell {
                 self.imageView?.image = UIImage(named: icon)
             }
             
+            self.detailTextLabel?.text = item.subtitle
             
             //        cell?.accessoryType = .DisclosureIndicator
             //        cell?.accessoryView = UIImageView(image: UIImage(named: "CellArrow"))
@@ -70,7 +71,7 @@ class CZSettingCell: UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentity) as? CZSettingCell
         
         if cell == nil {
-            cell = CZSettingCell(style: .Default, reuseIdentifier: cellIdentity)
+            cell = CZSettingCell(style: .Value1, reuseIdentifier: cellIdentity)
         }
         
         return cell!
