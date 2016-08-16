@@ -1,0 +1,101 @@
+[
+  {
+    "length" : "320",
+    "desc" : "C语言-语法预览",
+    "videoId" : "1",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head1.png",
+    "name" : "01.C语言-语法预览",
+    "videoURL" : "\/itcast\/videos\/01.C语言-语法预览.mp4"
+  },
+  {
+    "length" : "2708",
+    "desc" : "C语言-第一个C程序",
+    "videoId" : "2",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head2.png",
+    "name" : "02.C语言-第一个C程序",
+    "videoURL" : "\/itcast\/videos\/02.C语言-第一个C程序.mp4"
+  },
+  {
+    "length" : "822",
+    "desc" : "C语言-函数",
+    "videoId" : "3",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head3.png",
+    "name" : "03.C语言-函数",
+    "videoURL" : "\/itcast\/videos\/03.C语言-函数.mp4"
+  },
+  {
+    "length" : "1113",
+    "desc" : "C语言-基本数据类型",
+    "videoId" : "4",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head4.png",
+    "name" : "04.C语言-基本数据类型",
+    "videoURL" : "\/itcast\/videos\/04.C语言-基本数据类型.mp4"
+  },
+  {
+    "length" : "594",
+    "desc" : "C语言-基本运算",
+    "videoId" : "5",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head5.png",
+    "name" : "05.C语言-基本运算",
+    "videoURL" : "\/itcast\/videos\/05.C语言-基本运算.mp4"
+  },
+  {
+    "length" : "923",
+    "desc" : "C语言-数组",
+    "videoId" : "6",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head6.png",
+    "name" : "06.C语言-数组",
+    "videoURL" : "\/itcast\/videos\/06.C语言-数组.mp4"
+  },
+  {
+    "length" : "848",
+    "desc" : "C语言-字符串",
+    "videoId" : "7",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head7.png",
+    "name" : "07.C语言-字符串",
+    "videoURL" : "\/itcast\/videos\/07.C语言-字符串.mp4"
+  },
+  {
+    "length" : "502",
+    "desc" : "C语言-指针",
+    "videoId" : "8",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head8.png",
+    "name" : "08.C语言-指针",
+    "videoURL" : "\/itcast\/videos\/08.C语言-指针.mp4"
+  },
+  {
+    "length" : "558",
+    "desc" : "C语言-指针用例",
+    "videoId" : "9",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head1.png",
+    "name" : "09.C语言-指针用例",
+    "videoURL" : "\/itcast\/videos\/09.C语言-指针用例.mp4"
+  },
+  {
+    "length" : "1682",
+    "desc" : "C语言-指针与数组",
+    "videoId" : "10",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head2.png",
+    "name" : "10.C语言-指针与数组",
+    "videoURL" : "\/itcast\/videos\/10.C语言-指针与数组.mp4"
+  },
+  {
+    "length" : "1092",
+    "desc" : "C语言-指针与字符串",
+    "videoId" : "11",
+    "teacher" : "李明杰",
+    "imageURL" : "\/itcast\/images\/head3.png",
+    "name" : "11.C语言-指针与字符串",
+    "videoURL" : "\/itcast\/videos\/11.C语言-指针与字符串"
+  }
+]
