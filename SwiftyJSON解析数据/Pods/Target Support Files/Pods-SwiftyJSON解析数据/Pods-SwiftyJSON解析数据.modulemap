@@ -1,0 +1,6 @@
+framework module Pods_SwiftyJSON____ {
+  umbrella header "Pods-SwiftyJSON解析数据-umbrella.h"
+
+  export *
+  module * { export * }
+}
