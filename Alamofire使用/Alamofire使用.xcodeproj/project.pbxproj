@@ -13,6 +13,15 @@
 		D46EAAAE1D66619700F1A223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46EAAAC1D66619700F1A223 /* Main.storyboard */; };
 		D46EAAB01D66619700F1A223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46EAAAF1D66619700F1A223 /* Assets.xcassets */; };
 		D46EAAB31D66619700F1A223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46EAAB11D66619700F1A223 /* LaunchScreen.storyboard */; };
+		D4B0A7061D683A2100267FCA /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B0A6FD1D683A2100267FCA /* 1.jpg */; };
+		D4B0A7071D683A2100267FCA /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B0A6FE1D683A2100267FCA /* 2.jpg */; };
+		D4B0A7081D683A2100267FCA /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B0A6FF1D683A2100267FCA /* 3.jpg */; };
+		D4B0A7091D683A2100267FCA /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B0A7001D683A2100267FCA /* 4.jpg */; };
+		D4B0A70A1D683A2100267FCA /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B0A7011D683A2100267FCA /* 5.jpg */; };
+		D4B0A70B1D683A2100267FCA /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B0A7021D683A2100267FCA /* 6.jpg */; };
+		D4B0A70C1D683A2100267FCA /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B0A7031D683A2100267FCA /* 7.jpg */; };
+		D4B0A70D1D683A2100267FCA /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B0A7041D683A2100267FCA /* 8.jpg */; };
+		D4B0A70E1D683A2100267FCA /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B0A7051D683A2100267FCA /* 9.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,15 @@
 		D46EAAAF1D66619700F1A223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D46EAAB21D66619700F1A223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D46EAAB41D66619700F1A223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4B0A6FD1D683A2100267FCA /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		D4B0A6FE1D683A2100267FCA /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		D4B0A6FF1D683A2100267FCA /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		D4B0A7001D683A2100267FCA /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		D4B0A7011D683A2100267FCA /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		D4B0A7021D683A2100267FCA /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		D4B0A7031D683A2100267FCA /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		D4B0A7041D683A2100267FCA /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		D4B0A7051D683A2100267FCA /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		E32740F7FD4AF8B4AB0FE190 /* Pods-Alamofire使用.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alamofire使用.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alamofire使用/Pods-Alamofire使用.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +78,7 @@
 		D46EAA9C1D66619700F1A223 = {
 			isa = PBXGroup;
 			children = (
+				D4B0A6FC1D683A2100267FCA /* pic */,
 				D46EAAA71D66619700F1A223 /* Alamofire使用 */,
 				D46EAAA61D66619700F1A223 /* Products */,
 				3AC32097E84839AA87E73367 /* Pods */,
@@ -86,6 +105,22 @@
 				D46EAAB41D66619700F1A223 /* Info.plist */,
 			);
 			path = "Alamofire使用";
+			sourceTree = "<group>";
+		};
+		D4B0A6FC1D683A2100267FCA /* pic */ = {
+			isa = PBXGroup;
+			children = (
+				D4B0A6FD1D683A2100267FCA /* 1.jpg */,
+				D4B0A6FE1D683A2100267FCA /* 2.jpg */,
+				D4B0A6FF1D683A2100267FCA /* 3.jpg */,
+				D4B0A7001D683A2100267FCA /* 4.jpg */,
+				D4B0A7011D683A2100267FCA /* 5.jpg */,
+				D4B0A7021D683A2100267FCA /* 6.jpg */,
+				D4B0A7031D683A2100267FCA /* 7.jpg */,
+				D4B0A7041D683A2100267FCA /* 8.jpg */,
+				D4B0A7051D683A2100267FCA /* 9.jpg */,
+			);
+			path = pic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +184,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B0A70D1D683A2100267FCA /* 8.jpg in Resources */,
+				D4B0A70B1D683A2100267FCA /* 6.jpg in Resources */,
 				D46EAAB31D66619700F1A223 /* LaunchScreen.storyboard in Resources */,
+				D4B0A70A1D683A2100267FCA /* 5.jpg in Resources */,
+				D4B0A7091D683A2100267FCA /* 4.jpg in Resources */,
+				D4B0A7061D683A2100267FCA /* 1.jpg in Resources */,
+				D4B0A7071D683A2100267FCA /* 2.jpg in Resources */,
+				D4B0A7081D683A2100267FCA /* 3.jpg in Resources */,
+				D4B0A70C1D683A2100267FCA /* 7.jpg in Resources */,
+				D4B0A70E1D683A2100267FCA /* 9.jpg in Resources */,
 				D46EAAB01D66619700F1A223 /* Assets.xcassets in Resources */,
 				D46EAAAE1D66619700F1A223 /* Main.storyboard in Resources */,
 			);

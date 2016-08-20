@@ -8,4 +8,5 @@ target 'Alamofire使用' do
   # Pods for Alamofire使用
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'SWXMLHash'
 end
