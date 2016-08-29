@@ -22,9 +22,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         // Do any additional setup after loading the view, typically from a nib.
         
         self.mgr.delegate = self
-        
-        //扫描外界设备(传nil扫描外界所有设备)
-        self.mgr.scanForPeripheralsWithServices(nil, options: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,8 +38,11 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         switch central.state {
         case .PoweredOn:
             NSLog("蓝牙已打开，请扫描设备")
+            //扫描外界设备(传nil扫描外界所有设备)
+            self.mgr.scanForPeripheralsWithServices(nil, options: nil)
         case .PoweredOff:
             NSLog("蓝牙没有打开,请先打开蓝牙")
+            self.peripherals.removeAll()
         default:
             break
         }

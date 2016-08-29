@@ -1,0 +1,7 @@
+
+Lei's iPhone:
+2016-08-29 00:26:05.104 蓝牙(CoreBluetooth)[3840:2653433] *****[<CBPeripheral: 0x13d629be0, identifier = DC852D7F-4482-9723-656B-ABF5D19E0D49, name = Lei's iPhone, state = disconnected>, <CBPeripheral: 0x13d5583c0, identifier = A2877D71-79B4-80E7-F4B3-5FD8BD7150BE, name = Apple TV, state = connected>]
+
+
+Lei's iPad:
+2016-08-29 00:28:43.942 蓝牙(CoreBluetooth)[3415:1533256] *****[<CBPeripheral: 0x12463fa70, identifier = 4654B154-E0A2-A728-6728-FE5EA249916F, name = Apple TV, state = disconnected>, <CBPeripheral: 0x12461e2b0, identifier = 7FBFFD7A-38AA-B365-EB4B-8F009CBF133C, name = (null), state = disconnected>]
