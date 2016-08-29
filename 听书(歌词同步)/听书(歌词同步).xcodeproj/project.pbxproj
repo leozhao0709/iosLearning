@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		879A30ED2752BDC5A785272B /* Pods_________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5BF678B5F775E04C8A2D82 /* Pods_________.framework */; };
 		D4C08FBC1D74DFA7004F5EDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C08FBB1D74DFA7004F5EDA /* AppDelegate.swift */; };
 		D4C08FBE1D74DFA7004F5EDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C08FBD1D74DFA7004F5EDA /* ViewController.swift */; };
 		D4C08FC11D74DFA7004F5EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C08FBF1D74DFA7004F5EDA /* Main.storyboard */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187E06DE4E9A38EA14393367 /* Pods-听书(歌词同步).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-听书(歌词同步).debug.xcconfig"; path = "Pods/Target Support Files/Pods-听书(歌词同步)/Pods-听书(歌词同步).debug.xcconfig"; sourceTree = "<group>"; };
+		4C5BF678B5F775E04C8A2D82 /* Pods_________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E85A807C0A70F38E8BF91C /* Pods-听书(歌词同步).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-听书(歌词同步).release.xcconfig"; path = "Pods/Target Support Files/Pods-听书(歌词同步)/Pods-听书(歌词同步).release.xcconfig"; sourceTree = "<group>"; };
 		D4C08FB81D74DFA7004F5EDA /* 听书(歌词同步).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "听书(歌词同步).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C08FBB1D74DFA7004F5EDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C08FBD1D74DFA7004F5EDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879A30ED2752BDC5A785272B /* Pods_________.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A9B34C22EACCD4834D15850 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				187E06DE4E9A38EA14393367 /* Pods-听书(歌词同步).debug.xcconfig */,
+				D0E85A807C0A70F38E8BF91C /* Pods-听书(歌词同步).release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3C4AC2BC7C2A8BF1A07E103 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C5BF678B5F775E04C8A2D82 /* Pods_________.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4C08FAF1D74DFA7004F5EDA = {
 			isa = PBXGroup;
 			children = (
 				D4C08FBA1D74DFA7004F5EDA /* 听书(歌词同步) */,
 				D4C08FB91D74DFA7004F5EDA /* Products */,
+				8A9B34C22EACCD4834D15850 /* Pods */,
+				C3C4AC2BC7C2A8BF1A07E103 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4C08FCA1D74DFA7004F5EDA /* Build configuration list for PBXNativeTarget "听书(歌词同步)" */;
 			buildPhases = (
+				42602EAA8DE8980362579982 /* 📦 Check Pods Manifest.lock */,
 				D4C08FB41D74DFA7004F5EDA /* Sources */,
 				D4C08FB51D74DFA7004F5EDA /* Frameworks */,
 				D4C08FB61D74DFA7004F5EDA /* Resources */,
+				AB383CFC9A4D62317554831E /* 📦 Embed Pods Frameworks */,
+				CDB5F95013AD01D364B948E4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +179,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42602EAA8DE8980362579982 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB383CFC9A4D62317554831E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-听书(歌词同步)/Pods-听书(歌词同步)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDB5F95013AD01D364B948E4 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-听书(歌词同步)/Pods-听书(歌词同步)-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4C08FB41D74DFA7004F5EDA /* Sources */ = {
@@ -273,6 +348,7 @@
 		};
 		D4C08FCB1D74DFA7004F5EDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187E06DE4E9A38EA14393367 /* Pods-听书(歌词同步).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "听书(歌词同步)/Info.plist";
@@ -284,6 +360,7 @@
 		};
 		D4C08FCC1D74DFA7004F5EDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0E85A807C0A70F38E8BF91C /* Pods-听书(歌词同步).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "听书(歌词同步)/Info.plist";
@@ -312,6 +389,7 @@
 				D4C08FCC1D74DFA7004F5EDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

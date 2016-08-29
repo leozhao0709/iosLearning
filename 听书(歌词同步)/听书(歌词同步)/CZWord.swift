@@ -10,11 +10,11 @@ import UIKit
 
 class CZWord: NSObject {
     var text: String!
-    var time: Double!
+    var time: NSNumber!
     
-    init(dict: NSDictionary) {
-        self.text = dict["text"] as! String
-        self.time = dict["time"] as! Double
-    }
+//    init(dict: NSDictionary) {
+//        self.text = dict["text"] as! String
+//        self.time = dict["time"] as! Double
+//    }
     
 }
