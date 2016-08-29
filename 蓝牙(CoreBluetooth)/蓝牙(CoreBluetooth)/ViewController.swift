@@ -32,9 +32,20 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        NSLog("*****\(self.peripherals)")
+    }
+    
     //MARK: - CBcenteralManager的代理方法
     func centralManagerDidUpdateState(central: CBCentralManager) {
-        
+        switch central.state {
+        case .PoweredOn:
+            NSLog("蓝牙已打开，请扫描设备")
+        case .PoweredOff:
+            NSLog("蓝牙没有打开,请先打开蓝牙")
+        default:
+            break
+        }
     }
     
     /**
@@ -46,23 +57,35 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
      - parameter RSSI:              信号强度
      */
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
+        
+        NSLog("已发现 peripheral:\(peripheral), rssi:\(RSSI), UUID: \(peripheral.identifier), advertisementData: \(advertisementData)")
+        
         if !self.peripherals.contains(peripheral) {
             self.peripherals.append(peripheral)
         }
+        
+        self.mgr.connectPeripheral(peripheral, options: nil)
+        self.mgr.stopScan()
     }
     
     
     func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
+        
+        NSLog("成功连接 peripheral: \(peripheral) with UUID: \(peripheral.identifier)")
         //nil表示扫描所有
         peripheral.discoverServices(nil)
         
         peripheral.delegate = self
     }
     
-    //连接设备
-    func connect(peripheral: CBPeripheral) {
-        self.mgr.connectPeripheral(peripheral, options: nil)
+    func centralManager(central: CBCentralManager, didFailToConnectPeripheral peripheral: CBPeripheral, error: NSError?) {
+        NSLog("failed to connect with error: \(error)")
     }
+    
+//    //连接设备
+//    func connect(peripheral: CBPeripheral) {
+//        self.mgr.connectPeripheral(peripheral, options: nil)
+//    }
     
     
     /**
