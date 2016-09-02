@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayerToolBarView" customModule="音乐" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_bar_bg2" translatesAutoresizingMaskIntoConstraints="NO" id="SV7-wR-wf9">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccT-Wo-dQR">
+                    <rect key="frame" x="14" y="4" width="49" height="42"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwZ-LU-y6W">
+                    <rect key="frame" x="76" y="8" width="79" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-TN-oOF">
+                    <rect key="frame" x="76" y="26" width="79" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwG-B1-res">
+                    <rect key="frame" x="205" y="2" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="JSd-02-9A6"/>
+                        <constraint firstAttribute="height" constant="46" id="e4c-Xw-hmT"/>
+                    </constraints>
+                    <state key="normal" image="playbar_playbtn_nomal"/>
+                    <state key="highlighted" image="playbar_playbtn_click"/>
+                    <connections>
+                        <action selector="playBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="6eu-aN-F8W"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-S1-Pre">
+                    <rect key="frame" x="156" y="2" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="Szc-VZ-2RI"/>
+                        <constraint firstAttribute="width" constant="46" id="hfd-SF-SDs"/>
+                    </constraints>
+                    <state key="normal" image="playbar_prebtn_nomal"/>
+                    <state key="highlighted" image="playbar_prebtn_click"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pB1-Cu-KC0">
+                    <rect key="frame" x="254" y="2" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="VjO-Pr-gUB"/>
+                        <constraint firstAttribute="height" constant="46" id="cPT-pf-wgN"/>
+                    </constraints>
+                    <state key="normal" image="playbar_nextbtn_nomal"/>
+                    <state key="highlighted" image="playbar_nextbtn_click"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SV7-wR-wf9" secondAttribute="bottom" id="3Ux-OW-cpd"/>
+                <constraint firstItem="GwG-B1-res" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FAS-wM-eYz"/>
+                <constraint firstItem="SV7-wR-wf9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Jvn-34-056"/>
+                <constraint firstAttribute="trailing" secondItem="SV7-wR-wf9" secondAttribute="trailing" id="a73-hv-sKJ"/>
+                <constraint firstItem="SV7-wR-wf9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bSx-ON-GGY"/>
+                <constraint firstItem="pB1-Cu-KC0" firstAttribute="leading" secondItem="GwG-B1-res" secondAttribute="trailing" constant="3" id="e6M-IM-idg"/>
+                <constraint firstItem="MqL-S1-Pre" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ir0-32-4Pw"/>
+                <constraint firstItem="pB1-Cu-KC0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lbL-AE-Xrq"/>
+                <constraint firstAttribute="trailing" secondItem="pB1-Cu-KC0" secondAttribute="trailing" constant="20" id="pcc-rU-yRb"/>
+                <constraint firstItem="GwG-B1-res" firstAttribute="leading" secondItem="MqL-S1-Pre" secondAttribute="trailing" constant="3" id="wsy-Jr-8A3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="musicNameLabel" destination="hwZ-LU-y6W" id="1A2-qf-hPG"/>
+                <outlet property="singerImageView" destination="ccT-Wo-dQR" id="FUt-31-Tmh"/>
+                <outlet property="singerNameLabel" destination="8xW-TN-oOF" id="uKW-0c-Huf"/>
+            </connections>
+            <point key="canvasLocation" x="299" y="404"/>
+        </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="En3-IG-YGB">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="246" y="426.5"/>
+        </label>
+    </objects>
+    <resources>
+        <image name="play_bar_bg2" width="242" height="97"/>
+        <image name="playbar_nextbtn_click" width="54" height="54"/>
+        <image name="playbar_nextbtn_nomal" width="54" height="54"/>
+        <image name="playbar_playbtn_click" width="80" height="80"/>
+        <image name="playbar_playbtn_nomal" width="80" height="80"/>
+        <image name="playbar_prebtn_click" width="54" height="54"/>
+        <image name="playbar_prebtn_nomal" width="54" height="54"/>
+    </resources>
+</document>
