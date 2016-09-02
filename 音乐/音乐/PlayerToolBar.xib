@@ -15,9 +15,6 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccT-Wo-dQR">
-                    <rect key="frame" x="14" y="4" width="49" height="42"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwZ-LU-y6W">
                     <rect key="frame" x="76" y="8" width="79" height="14"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -60,6 +57,9 @@
                     <state key="normal" image="playbar_nextbtn_nomal"/>
                     <state key="highlighted" image="playbar_nextbtn_click"/>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccT-Wo-dQR">
+                    <rect key="frame" x="14" y="2" width="45" height="45"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
