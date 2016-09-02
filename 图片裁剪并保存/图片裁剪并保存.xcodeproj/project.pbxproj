@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4161E501D7A2DCE00A98FC0 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E4E1D7A2DCE00A98FC0 /* UIImageViewExtension.swift */; };
+		D4161E541D7A2EE500A98FC0 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E531D7A2EE500A98FC0 /* UIImageExtension.swift */; };
 		D43EC8D61D4DBAFC00DDD2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43EC8D51D4DBAFC00DDD2B7 /* AppDelegate.swift */; };
 		D43EC8D81D4DBAFC00DDD2B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43EC8D71D4DBAFC00DDD2B7 /* ViewController.swift */; };
 		D43EC8DB1D4DBAFC00DDD2B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43EC8D91D4DBAFC00DDD2B7 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4161E4E1D7A2DCE00A98FC0 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		D4161E531D7A2EE500A98FC0 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		D43EC8D21D4DBAFC00DDD2B7 /* 图片裁剪并保存.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图片裁剪并保存.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43EC8D51D4DBAFC00DDD2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D43EC8D71D4DBAFC00DDD2B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4161E441D7A131200A98FC0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D4161E531D7A2EE500A98FC0 /* UIImageExtension.swift */,
+				D4161E4E1D7A2DCE00A98FC0 /* UIImageViewExtension.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		D43EC8C91D4DBAFC00DDD2B7 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +67,7 @@
 		D43EC8D41D4DBAFC00DDD2B7 /* 图片裁剪并保存 */ = {
 			isa = PBXGroup;
 			children = (
+				D4161E441D7A131200A98FC0 /* Util */,
 				D43EC8D51D4DBAFC00DDD2B7 /* AppDelegate.swift */,
 				D43EC8D71D4DBAFC00DDD2B7 /* ViewController.swift */,
 				D43EC8D91D4DBAFC00DDD2B7 /* Main.storyboard */,
@@ -96,7 +110,7 @@
 				TargetAttributes = {
 					D43EC8D11D4DBAFC00DDD2B7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = ZQNTYXCS7L;
+						DevelopmentTeam = U3G53LBLG6;
 					};
 				};
 			};
@@ -138,6 +152,8 @@
 			files = (
 				D43EC8D81D4DBAFC00DDD2B7 /* ViewController.swift in Sources */,
 				D43EC8D61D4DBAFC00DDD2B7 /* AppDelegate.swift in Sources */,
+				D4161E501D7A2DCE00A98FC0 /* UIImageViewExtension.swift in Sources */,
+				D4161E541D7A2EE500A98FC0 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,10 +268,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "图片裁剪并保存/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lzhao.exercise.-------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -263,10 +282,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "图片裁剪并保存/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lzhao.exercise.-------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -289,6 +311,7 @@
 				D43EC8E61D4DBAFC00DDD2B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
