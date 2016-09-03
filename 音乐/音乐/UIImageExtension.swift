@@ -353,8 +353,9 @@ extension UIImage {
      */
     func circleImage() -> UIImage?
     {
-        let shortest = min(size.width, size.height)
-        return cropToSquare()?.roundCorners(shortest/2)
+        let squareCurrentImage = self.cropToSquare()!
+        let radius = min(squareCurrentImage.size.width, squareCurrentImage.size.height)/2
+        return squareCurrentImage.roundCorners(radius)
     }
     
     /**
@@ -367,8 +368,9 @@ extension UIImage {
      */
     func circleImageWithBorder(border border:CGFloat, color:UIColor) -> UIImage?
     {
-        let shortest = min(size.width, size.height)
-        return cropToSquare()?.roundCorners(shortest/2, border: border, color: color)
+        let squareCurrentImage = self.cropToSquare()!
+        let radius = min(squareCurrentImage.size.width, squareCurrentImage.size.height)/2
+        return squareCurrentImage.roundCorners(radius, border: border, color: color)
     }
     
     

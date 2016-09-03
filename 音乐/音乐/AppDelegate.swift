@@ -7,16 +7,61 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var playerRemoteEventClosure: ((event: UIEvent)->Void)!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //要想在后台播放, 需要这里 和 applicationDidEnterBackground 和 plist
+        let musicSession = AVAudioSession.sharedInstance()
+        do{
+            try musicSession.setCategory(AVAudioSessionCategoryPlayback)
+            try musicSession.setActive(true)
+        }
+        catch let error as NSError {
+            NSLog("music session error: \(error)")
+        }
+        
+        //设置远程事件, 记得接收远程事件
+        application.beginReceivingRemoteControlEvents()
+        
         return true
+    }
+    
+    //接收远程事件
+    override func remoteControlReceivedWithEvent(event: UIEvent?) {
+        if let event = event {
+            if event.type == .RemoteControl {
+                //subtype
+                
+//                case None
+//                
+//                // for UIEventTypeMotion, available in iPhone OS 3.0
+//                case MotionShake
+//                
+//                // for UIEventTypeRemoteControl, available in iOS 4.0
+//                case RemoteControlPlay
+//                case RemoteControlPause
+//                case RemoteControlStop
+//                case RemoteControlTogglePlayPause
+//                case RemoteControlNextTrack
+//                case RemoteControlPreviousTrack
+//                case RemoteControlBeginSeekingBackward
+//                case RemoteControlEndSeekingBackward
+//                case RemoteControlBeginSeekingForward
+//                case RemoteControlEndSeekingForward
+                
+                self.playerRemoteEventClosure(event: event)
+                
+            }
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -27,6 +72,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        application.beginBackgroundTaskWithExpirationHandler(nil)
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

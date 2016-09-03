@@ -11,7 +11,6 @@
 		D4161DED1D78E7C700A98FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161DEC1D78E7C700A98FC0 /* AppDelegate.swift */; };
 		D4161DF21D78E7C700A98FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4161DF01D78E7C700A98FC0 /* Main.storyboard */; };
 		D4161DF41D78E7C700A98FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4161DF31D78E7C700A98FC0 /* Assets.xcassets */; };
-		D4161DF71D78E7C700A98FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4161DF51D78E7C700A98FC0 /* LaunchScreen.storyboard */; };
 		D4161E021D78E89A00A98FC0 /* PlayerToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E011D78E89A00A98FC0 /* PlayerToolBarView.swift */; };
 		D4161E041D78E8B800A98FC0 /* PlayerToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4161E031D78E8B800A98FC0 /* PlayerToolBar.xib */; };
 		D4161E061D78EB5000A98FC0 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E051D78EB5000A98FC0 /* MusicPlayerViewController.swift */; };
@@ -26,9 +25,12 @@
 		D4161E2F1D78FACC00A98FC0 /* songs.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4161E1C1D78FACC00A98FC0 /* songs.plist */; };
 		D4161E311D78FB6A00A98FC0 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E301D78FB6A00A98FC0 /* Music.swift */; };
 		D4161E331D79008800A98FC0 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E321D79008800A98FC0 /* MusicCell.swift */; };
-		D4161E411D7A12F300A98FC0 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E3E1D7A12F300A98FC0 /* UIButtonExtension.swift */; };
-		D4161E421D7A12F300A98FC0 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E3F1D7A12F300A98FC0 /* UIImageExtension.swift */; };
-		D4161E431D7A12F300A98FC0 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E401D7A12F300A98FC0 /* UIImageViewExtension.swift */; };
+		D4161E581D7A2F3400A98FC0 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E551D7A2F3400A98FC0 /* UIButtonExtension.swift */; };
+		D4161E591D7A2F3400A98FC0 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E561D7A2F3400A98FC0 /* UIImageExtension.swift */; };
+		D4161E5A1D7A2F3400A98FC0 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E571D7A2F3400A98FC0 /* UIImageViewExtension.swift */; };
+		D4161E5D1D7A331500A98FC0 /* MusicTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4161E5C1D7A331500A98FC0 /* MusicTool.swift */; };
+		D4DBC9211D7A4FB7002C6972 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4DBC9201D7A4FB7002C6972 /* Launch Screen.storyboard */; };
+		D4DBC9251D7A565C002C6972 /* NSTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DBC9241D7A565C002C6972 /* NSTimeIntervalExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +41,6 @@
 		D4161DEC1D78E7C700A98FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4161DF11D78E7C700A98FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4161DF31D78E7C700A98FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D4161DF61D78E7C700A98FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4161DF81D78E7C700A98FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4161E011D78E89A00A98FC0 /* PlayerToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerToolBarView.swift; sourceTree = "<group>"; };
 		D4161E031D78E8B800A98FC0 /* PlayerToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerToolBar.xib; sourceTree = "<group>"; };
@@ -55,9 +56,12 @@
 		D4161E1C1D78FACC00A98FC0 /* songs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = songs.plist; sourceTree = "<group>"; };
 		D4161E301D78FB6A00A98FC0 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		D4161E321D79008800A98FC0 /* MusicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
-		D4161E3E1D7A12F300A98FC0 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		D4161E3F1D7A12F300A98FC0 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		D4161E401D7A12F300A98FC0 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		D4161E551D7A2F3400A98FC0 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		D4161E561D7A2F3400A98FC0 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		D4161E571D7A2F3400A98FC0 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		D4161E5C1D7A331500A98FC0 /* MusicTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTool.swift; sourceTree = "<group>"; };
+		D4DBC9201D7A4FB7002C6972 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D4DBC9241D7A565C002C6972 /* NSTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +114,8 @@
 		D4161DEB1D78E7C700A98FC0 /* 音乐 */ = {
 			isa = PBXGroup;
 			children = (
-				D4161E341D79ED2700A98FC0 /* Util */,
+				D4161E341D79ED2700A98FC0 /* Utils */,
+				D4161E5B1D7A32F000A98FC0 /* Tool */,
 				D4161E071D78FA9A00A98FC0 /* Resources */,
 				D4161E001D78E7E200A98FC0 /* Controller */,
 				D4161DFF1D78E7DD00A98FC0 /* View */,
@@ -118,7 +123,7 @@
 				D4161DEC1D78E7C700A98FC0 /* AppDelegate.swift */,
 				D4161DF01D78E7C700A98FC0 /* Main.storyboard */,
 				D4161DF31D78E7C700A98FC0 /* Assets.xcassets */,
-				D4161DF51D78E7C700A98FC0 /* LaunchScreen.storyboard */,
+				D4DBC9201D7A4FB7002C6972 /* Launch Screen.storyboard */,
 				D4161DF81D78E7C700A98FC0 /* Info.plist */,
 			);
 			path = "音乐";
@@ -174,14 +179,23 @@
 			path = MP3;
 			sourceTree = "<group>";
 		};
-		D4161E341D79ED2700A98FC0 /* Util */ = {
+		D4161E341D79ED2700A98FC0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D4161E3E1D7A12F300A98FC0 /* UIButtonExtension.swift */,
-				D4161E3F1D7A12F300A98FC0 /* UIImageExtension.swift */,
-				D4161E401D7A12F300A98FC0 /* UIImageViewExtension.swift */,
+				D4161E551D7A2F3400A98FC0 /* UIButtonExtension.swift */,
+				D4161E561D7A2F3400A98FC0 /* UIImageExtension.swift */,
+				D4161E571D7A2F3400A98FC0 /* UIImageViewExtension.swift */,
+				D4DBC9241D7A565C002C6972 /* NSTimeIntervalExtension.swift */,
 			);
-			name = Util;
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		D4161E5B1D7A32F000A98FC0 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D4161E5C1D7A331500A98FC0 /* MusicTool.swift */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +264,8 @@
 				D4161E2F1D78FACC00A98FC0 /* songs.plist in Resources */,
 				D4161E1F1D78FACC00A98FC0 /* 愿得一人心(剧场版).lrc in Resources */,
 				D4161E201D78FACC00A98FC0 /* 愿得一人心(剧场版).mp3 in Resources */,
-				D4161DF71D78E7C700A98FC0 /* LaunchScreen.storyboard in Resources */,
 				D4161E231D78FACC00A98FC0 /* 爱莫忘.mp3 in Resources */,
+				D4DBC9211D7A4FB7002C6972 /* Launch Screen.storyboard in Resources */,
 				D4161E211D78FACC00A98FC0 /* 昨迟人.mp3 in Resources */,
 				D4161E1D1D78FACC00A98FC0 /* Let It Go.mp3 in Resources */,
 				D4161E241D78FACC00A98FC0 /* 爸爸去哪儿.mp3 in Resources */,
@@ -319,12 +333,14 @@
 			files = (
 				D4161E331D79008800A98FC0 /* MusicCell.swift in Sources */,
 				D4161E021D78E89A00A98FC0 /* PlayerToolBarView.swift in Sources */,
-				D4161E421D7A12F300A98FC0 /* UIImageExtension.swift in Sources */,
+				D4161E591D7A2F3400A98FC0 /* UIImageExtension.swift in Sources */,
 				D4161DED1D78E7C700A98FC0 /* AppDelegate.swift in Sources */,
 				D4161E061D78EB5000A98FC0 /* MusicPlayerViewController.swift in Sources */,
+				D4161E5D1D7A331500A98FC0 /* MusicTool.swift in Sources */,
 				D4161E311D78FB6A00A98FC0 /* Music.swift in Sources */,
-				D4161E431D7A12F300A98FC0 /* UIImageViewExtension.swift in Sources */,
-				D4161E411D7A12F300A98FC0 /* UIButtonExtension.swift in Sources */,
+				D4161E5A1D7A2F3400A98FC0 /* UIImageViewExtension.swift in Sources */,
+				D4161E581D7A2F3400A98FC0 /* UIButtonExtension.swift in Sources */,
+				D4DBC9251D7A565C002C6972 /* NSTimeIntervalExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,14 +353,6 @@
 				D4161DF11D78E7C700A98FC0 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D4161DF51D78E7C700A98FC0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4161DF61D78E7C700A98FC0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

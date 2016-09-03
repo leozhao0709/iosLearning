@@ -38,9 +38,18 @@ class MusicCell: UITableViewCell {
         if cell == nil {
             cell = MusicCell(style: .Subtitle, reuseIdentifier: ID)
             cell?.backgroundColor = UIColor.clearColor()
+            cell?.selectionStyle = .None
         }
         
         return cell!
+    }
+    
+    override func setHighlighted(highlighted: Bool, animated: Bool) {
+        if highlighted {
+            self.backgroundColor = UIColor(red: 0.17, green: 0.46, blue: 0.67, alpha: 1)
+        } else {
+            self.backgroundColor = UIColor.clearColor()
+        }
     }
 
 }
