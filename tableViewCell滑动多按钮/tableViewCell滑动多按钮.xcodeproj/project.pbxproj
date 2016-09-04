@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D42C12511D7BBDFC003E1D92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C12501D7BBDFC003E1D92 /* AppDelegate.swift */; };
+		D42C12531D7BBDFC003E1D92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C12521D7BBDFC003E1D92 /* ViewController.swift */; };
+		D42C12561D7BBDFC003E1D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42C12541D7BBDFC003E1D92 /* Main.storyboard */; };
+		D42C12581D7BBDFC003E1D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42C12571D7BBDFC003E1D92 /* Assets.xcassets */; };
+		D42C125B1D7BBDFC003E1D92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42C12591D7BBDFC003E1D92 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D42C124D1D7BBDFC003E1D92 /* tableViewCell滑动多按钮.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tableViewCell滑动多按钮.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42C12501D7BBDFC003E1D92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D42C12521D7BBDFC003E1D92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D42C12551D7BBDFC003E1D92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D42C12571D7BBDFC003E1D92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D42C125A1D7BBDFC003E1D92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D42C125C1D7BBDFC003E1D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D42C124A1D7BBDFC003E1D92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D42C12441D7BBDFC003E1D92 = {
+			isa = PBXGroup;
+			children = (
+				D42C124F1D7BBDFC003E1D92 /* tableViewCell滑动多按钮 */,
+				D42C124E1D7BBDFC003E1D92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D42C124E1D7BBDFC003E1D92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D42C124D1D7BBDFC003E1D92 /* tableViewCell滑动多按钮.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D42C124F1D7BBDFC003E1D92 /* tableViewCell滑动多按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				D42C12501D7BBDFC003E1D92 /* AppDelegate.swift */,
+				D42C12521D7BBDFC003E1D92 /* ViewController.swift */,
+				D42C12541D7BBDFC003E1D92 /* Main.storyboard */,
+				D42C12571D7BBDFC003E1D92 /* Assets.xcassets */,
+				D42C12591D7BBDFC003E1D92 /* LaunchScreen.storyboard */,
+				D42C125C1D7BBDFC003E1D92 /* Info.plist */,
+			);
+			path = "tableViewCell滑动多按钮";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D42C124C1D7BBDFC003E1D92 /* tableViewCell滑动多按钮 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D42C125F1D7BBDFC003E1D92 /* Build configuration list for PBXNativeTarget "tableViewCell滑动多按钮" */;
+			buildPhases = (
+				D42C12491D7BBDFC003E1D92 /* Sources */,
+				D42C124A1D7BBDFC003E1D92 /* Frameworks */,
+				D42C124B1D7BBDFC003E1D92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tableViewCell滑动多按钮";
+			productName = "tableViewCell滑动多按钮";
+			productReference = D42C124D1D7BBDFC003E1D92 /* tableViewCell滑动多按钮.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D42C12451D7BBDFC003E1D92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Lei Zhao";
+				TargetAttributes = {
+					D42C124C1D7BBDFC003E1D92 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZQNTYXCS7L;
+					};
+				};
+			};
+			buildConfigurationList = D42C12481D7BBDFC003E1D92 /* Build configuration list for PBXProject "tableViewCell滑动多按钮" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D42C12441D7BBDFC003E1D92;
+			productRefGroup = D42C124E1D7BBDFC003E1D92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D42C124C1D7BBDFC003E1D92 /* tableViewCell滑动多按钮 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D42C124B1D7BBDFC003E1D92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42C125B1D7BBDFC003E1D92 /* LaunchScreen.storyboard in Resources */,
+				D42C12581D7BBDFC003E1D92 /* Assets.xcassets in Resources */,
+				D42C12561D7BBDFC003E1D92 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D42C12491D7BBDFC003E1D92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42C12531D7BBDFC003E1D92 /* ViewController.swift in Sources */,
+				D42C12511D7BBDFC003E1D92 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D42C12541D7BBDFC003E1D92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D42C12551D7BBDFC003E1D92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D42C12591D7BBDFC003E1D92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D42C125A1D7BBDFC003E1D92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D42C125D1D7BBDFC003E1D92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D42C125E1D7BBDFC003E1D92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D42C12601D7BBDFC003E1D92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "tableViewCell滑动多按钮/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lzhao.test.tableViewCell-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D42C12611D7BBDFC003E1D92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "tableViewCell滑动多按钮/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lzhao.test.tableViewCell-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D42C12481D7BBDFC003E1D92 /* Build configuration list for PBXProject "tableViewCell滑动多按钮" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42C125D1D7BBDFC003E1D92 /* Debug */,
+				D42C125E1D7BBDFC003E1D92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D42C125F1D7BBDFC003E1D92 /* Build configuration list for PBXNativeTarget "tableViewCell滑动多按钮" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42C12601D7BBDFC003E1D92 /* Debug */,
+				D42C12611D7BBDFC003E1D92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D42C12451D7BBDFC003E1D92 /* Project object */;
+}
