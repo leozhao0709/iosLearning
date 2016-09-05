@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D48BA6E01D7D3EA000B04E39 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4D00C961D7D12D800350F21 /* Info.plist */; };
+		D48BA6E21D7D3ECE00B04E39 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48BA6E11D7D3ECE00B04E39 /* Launch Screen.storyboard */; };
 		D4D00C8B1D7D12D800350F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D00C8A1D7D12D800350F21 /* AppDelegate.swift */; };
 		D4D00C921D7D12D800350F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D00C911D7D12D800350F21 /* Assets.xcassets */; };
 		D4D00C9D1D7D1EF100350F21 /* WBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D00C9C1D7D1EF100350F21 /* WBTabBarController.swift */; };
@@ -18,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D48BA6E11D7D3ECE00B04E39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D4D00C871D7D12D800350F21 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D00C8A1D7D12D800350F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D00C911D7D12D800350F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 				D4D00C911D7D12D800350F21 /* Assets.xcassets */,
 				D4D00C961D7D12D800350F21 /* Info.plist */,
 				D4D00C9C1D7D1EF100350F21 /* WBTabBarController.swift */,
+				D48BA6E11D7D3ECE00B04E39 /* Launch Screen.storyboard */,
 			);
 			path = Weibo;
 			sourceTree = "<group>";
@@ -157,6 +161,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48BA6E21D7D3ECE00B04E39 /* Launch Screen.storyboard in Resources */,
+				D48BA6E01D7D3EA000B04E39 /* Info.plist in Resources */,
 				D4D00C921D7D12D800350F21 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
