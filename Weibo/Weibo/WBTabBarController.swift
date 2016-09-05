@@ -30,7 +30,7 @@ class WBTabBarController: UITabBarController {
         
         let home = UIViewController()
         self.setupChildControllerView(home, title: "首页", tabBarNormolImage: UIImage(named: "tabbar_home")!, tabBarSelectedImage: UIImage(named: "tabbar_home_selected")!)
-        home.tabBarItem.badgeValue = nil
+//        home.tabBarItem.badgeValue = "11"
         home.view.backgroundColor = UIColor.greenColor()
         
         
