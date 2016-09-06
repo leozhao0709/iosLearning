@@ -50,14 +50,6 @@ class ViewController: UIViewController {
         
         let currentAlpha = self.circleImageView.alpha
         
-        //先实现隐藏和显示
-        
-        if currentAlpha == 0 {
-            self.circleImageView.alpha = 1
-        } else {
-            self.circleImageView.alpha = 0
-        }
-        
         //添加动画
         //创建组动画
         let group = CAAnimationGroup()
@@ -100,6 +92,14 @@ class ViewController: UIViewController {
         group.duration = 2
         
         self.circleImageView.layer.addAnimation(group, forKey: nil)
+        
+        //先实现隐藏和显示
+
+        if currentAlpha == 0 {
+            self.circleImageView.alpha = 1
+        } else {
+            self.circleImageView.alpha = 0
+        }
     }
     
     @objc private func btnClick(btn: UIButton) {

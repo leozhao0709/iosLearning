@@ -105,31 +105,52 @@ extension UIImage {
     
     // MARK: Image with Text
     /**
-     Creates a text label image.
+     Creates a text at customer position in image.
      
      - Parameter text: The text to use in the label.
-     - Parameter font: The font (default: System font of size 18)
-     - Parameter color: The text color (default: White)
-     - Parameter backgroundColor: The background color (default:Gray).
-     - Parameter size: Image size (default: 10x10)
-     - Parameter offset: Center offset (default: 0x0)
+     - Parameter font: The font (default: System font of size 11)
+     - Parameter textColor: The text color (default: White)
+     - Parameter position: text position in image (default: 0x0)
      
      - Returns A new image
      */
-    convenience init?(text: String, font: UIFont = UIFont.systemFontOfSize(18), color: UIColor = UIColor.whiteColor(), backgroundColor: UIColor = UIColor.grayColor(), size:CGSize = CGSizeMake(100, 100), offset: CGPoint = CGPoint(x: 0, y: 0))
-    {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        label.font = font
-        label.text = text
-        label.textColor = color
-        label.textAlignment = .Center
-        label.backgroundColor = backgroundColor
-        let image = UIImage(fromView: label)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        image?.drawInRect(CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        self.init(CGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage!)
+    
+    func addText(text: String, font: UIFont = UIFont.systemFontOfSize(11), textColor: UIColor = UIColor.orangeColor(), position: CGPoint = CGPoint(x: 0, y: 0)) -> UIImage {
+        
+        assert(self.size.width > position.x && self.size.height > position.y, "text must in image")
+        
+        let scale = UIScreen.mainScreen().scale
+        UIGraphicsBeginImageContextWithOptions(self.size, false, scale)
+        
+        let textFontAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: textColor]
+        
+        self.drawInRect(CGRectMake(0, 0, self.size.width, self.size.height))
+        
+        let rect = CGRectMake(position.x, position.y, self.size.width - position.x, self.size.height - position.y)
+        
+        (text as NSString).drawInRect(rect, withAttributes: textFontAttributes)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        
         UIGraphicsEndImageContext()
+        
+        
+        return newImage
     }
+    
+    func addTextInCenter(text: String, font: UIFont = UIFont.systemFontOfSize(11), textColor: UIColor = UIColor.orangeColor()) -> UIImage {
+        
+        let textFontAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: textColor]
+        
+        let nsText = NSAttributedString(string: text, attributes: textFontAttributes)
+        
+        let centerPosition = CGPointMake(self.size.width/2 - nsText.size().width/2, self.size.height/2 - nsText.size().height/2)
+        
+        let newImage = self.addText(text, font: font, textColor: textColor, position: centerPosition)
+        
+        return newImage
+    }
+    
     
     // MARK: Image from UIView
     /**
@@ -666,4 +687,5 @@ extension UIImage {
         }
         return placeholder
     }
+
 }

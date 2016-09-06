@@ -8,15 +8,39 @@
 
 import UIKit
 
-class WBTabBarController: UITabBarController {
+class WBTabBarController: UITabBarController, WBTabBarDelegate {
 
+    
+    weak var customerTabBar: WBTabBar?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        //child Controller
+        
+        self.setupAllChildController()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        //child Controller
-        self.setupAllChildController()
+        
+//        let tabBar = WBTabBarSystem(frame: self.tabBar.frame)
+//        self.setValue(tabBar, forKey: "tabBar")
+        
+        let tabBar = WBTabBar(frame: self.tabBar.frame)
+        self.view.addSubview(tabBar)
+        tabBar.delegate = self
+        self.customerTabBar = tabBar
+        
+        //记得remove掉
+        self.tabBar.removeFromSuperview()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +54,7 @@ class WBTabBarController: UITabBarController {
         
         let home = UIViewController()
         self.setupChildControllerView(home, title: "首页", tabBarNormolImage: UIImage(named: "tabbar_home")!, tabBarSelectedImage: UIImage(named: "tabbar_home_selected")!)
-//        home.tabBarItem.badgeValue = "11"
+        
         home.view.backgroundColor = UIColor.greenColor()
         
         
@@ -50,8 +74,9 @@ class WBTabBarController: UITabBarController {
         
         profile.view.backgroundColor = UIColor.lightGrayColor()
         
-        self.viewControllers = [home, message, discover, profile]
+//        self.viewControllers = [home, message, discover, profile]
     }
+    
     
     // MARK:- Setup one child controller view UI
     func setupChildControllerView(viewController: UIViewController, title: String?, tabBarNormolImage: UIImage, tabBarSelectedImage: UIImage) {
@@ -64,6 +89,13 @@ class WBTabBarController: UITabBarController {
         
         viewController.tabBarItem.setImageWithOriginalImage(tabBarNormolImage, selectedImage: tabBarSelectedImage)
         
+        self.customerTabBar?.addItem(viewController.tabBarItem)
+        
+        self.addChildViewController(viewController)
     }
-
+    
+    func tabBar(tabBar: WBTabBar, from: Int, to: Int) {
+//        printLog("from \(from) to \(to)")
+        self.selectedIndex = to
+    }
 }
