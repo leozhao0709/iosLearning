@@ -16,22 +16,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let imageView = UIImageView(frame: CGRect(x: 100, y: 63, width: 200, height: 300))
+//        let imageView = UIImageView(frame: CGRect(x: 100, y: 63, width: 200, height: 300))
+//        
+//        imageView.backgroundColor = UIColor.greenColor()
+//        
+//        let image = UIImage(named: "img05")
+//        
+//        
+////        imageView.image = image.addText("lzhao", font: UIFont.systemFontOfSize(20) , textColor: UIColor.orangeColor(), position: CGPointMake(image.size.width/2, image.size.height/2)).circleImage()
+//        
+//        let textImage = image!.addTextInCenter("爱我别走，如果你不爱我", font: UIFont.systemFontOfSize(25), textColor: UIColor.orangeColor())
+//        
+//        let logoImage = UIImage(named: "logo")
+//        
+//        let newImage = textImage.addImage(logoImage!, position: CGPoint(x: 600, y: 700))
+//        
+//        imageView.image = newImage
         
-        imageView.backgroundColor = UIColor.greenColor()
+        let imageView = UIImageView()
+        imageView.center = CGPointMake(UIScreen.mainScreen().bounds.width/2, UIScreen.mainScreen().bounds.height/2)
         
-        let image = UIImage(named: "img05")
-        
-        
-//        imageView.image = image.addText("lzhao", font: UIFont.systemFontOfSize(20) , textColor: UIColor.orangeColor(), position: CGPointMake(image.size.width/2, image.size.height/2)).circleImage()
-        
-        let textImage = image!.addTextInCenter("爱我别走，如果你不爱我", font: UIFont.systemFontOfSize(25), textColor: UIColor.orangeColor())
-        
-        let logoImage = UIImage(named: "logo")
-        
-        let newImage = textImage.addImage(logoImage!, position: CGPoint(x: 600, y: 700))
-        
-        imageView.image = newImage
+        imageView.bounds.size = CGSizeMake(200, 200)
+        imageView.backgroundColor = UIColor.orangeColor()
         
         self.imageView = imageView
         

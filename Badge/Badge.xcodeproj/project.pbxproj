@@ -15,9 +15,9 @@
 		D4CC51E61D7E7F9500AEA68E /* NSTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51DF1D7E7F9500AEA68E /* NSTimeIntervalExtension.swift */; };
 		D4CC51E71D7E7F9500AEA68E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51E01D7E7F9500AEA68E /* Utils.swift */; };
 		D4CC51E81D7E7F9500AEA68E /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51E21D7E7F9500AEA68E /* UIButtonExtension.swift */; };
-		D4CC51E91D7E7F9500AEA68E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51E31D7E7F9500AEA68E /* UIImageExtension.swift */; };
 		D4CC51EA1D7E7F9500AEA68E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51E41D7E7F9500AEA68E /* UIImageViewExtension.swift */; };
 		D4CC51EB1D7E7F9500AEA68E /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51E51D7E7F9500AEA68E /* UITabBarItemExtension.swift */; };
+		D4CC51ED1D806B0200AEA68E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51EC1D806B0200AEA68E /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		D4CC51DF1D7E7F9500AEA68E /* NSTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalExtension.swift; sourceTree = "<group>"; };
 		D4CC51E01D7E7F9500AEA68E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D4CC51E21D7E7F9500AEA68E /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		D4CC51E31D7E7F9500AEA68E /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		D4CC51E41D7E7F9500AEA68E /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		D4CC51E51D7E7F9500AEA68E /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtension.swift; sourceTree = "<group>"; };
+		D4CC51EC1D806B0200AEA68E /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 		D4CC51E11D7E7F9500AEA68E /* UIExtension */ = {
 			isa = PBXGroup;
 			children = (
+				D4CC51EC1D806B0200AEA68E /* UIImageExtension.swift */,
 				D4CC51E21D7E7F9500AEA68E /* UIButtonExtension.swift */,
-				D4CC51E31D7E7F9500AEA68E /* UIImageExtension.swift */,
 				D4CC51E41D7E7F9500AEA68E /* UIImageViewExtension.swift */,
 				D4CC51E51D7E7F9500AEA68E /* UITabBarItemExtension.swift */,
 			);
@@ -185,7 +185,7 @@
 				D4CC51EB1D7E7F9500AEA68E /* UITabBarItemExtension.swift in Sources */,
 				D4CC51CC1D7E7EDC00AEA68E /* AppDelegate.swift in Sources */,
 				D4CC51E71D7E7F9500AEA68E /* Utils.swift in Sources */,
-				D4CC51E91D7E7F9500AEA68E /* UIImageExtension.swift in Sources */,
+				D4CC51ED1D806B0200AEA68E /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +337,7 @@
 				D4CC51DC1D7E7EDC00AEA68E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
