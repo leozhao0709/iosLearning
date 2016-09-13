@@ -43,7 +43,6 @@ class WBTabBarSystem: UITabBar {
         
         for tabBarButton in self.subviews {
 //            if tabBarButton .isKindOfClass(NSClassFromString("UITabBarButton")!) {
-            printLog("\(tabBarButton.superclass)")
             if tabBarButton .isKindOfClass(UIControl) {
             
                 if i == (self.items?.count)!/2 {

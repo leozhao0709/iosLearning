@@ -9,7 +9,11 @@
 import UIKit
 
 class WBTabBarButton: UIButton {
-
+    
+    var badgeValue:String?
+    
+    weak var badgeView: WBBadgeView!
+    
     override var highlighted: Bool {
         set{}
         get {
@@ -36,6 +40,10 @@ class WBTabBarButton: UIButton {
         
         self.titleLabel?.font = UIFont.systemFontOfSize(13)
         self.setTitleColor(UIColor.blackColor(), highlightColor: UIColor.orangeColor(), selectedColor: UIColor.orangeColor())
+        
+        let badgeView = WBBadgeView()
+        self.badgeView = badgeView
+        self.addSubview(self.badgeView!)
     }
     
     /**
@@ -43,13 +51,17 @@ class WBTabBarButton: UIButton {
      */
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        if let badgeValue = self.badgeValue {
+            self.badgeView.badgeValue = badgeValue
+            self.badgeView.setX(self.frame.width - (self.badgeView?.frame.width)! - 12)
+            self.badgeView.setY(0)
+        }
     }
     
     override func imageRectForContentRect(contentRect: CGRect) -> CGRect {
         
         let imageX: CGFloat = 0;
-        let imageY: CGFloat = 0;
+        let imageY: CGFloat = 3;
         let imageW = self.bounds.width;
         let imageH = self.bounds.height * 0.6;
         

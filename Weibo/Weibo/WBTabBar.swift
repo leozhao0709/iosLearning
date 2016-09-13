@@ -91,6 +91,8 @@ class WBTabBar: UIView {
 
         btn.setTitle(item.title, forState: .Normal)
         
+        btn.badgeValue = item.badgeValue
+        
         btn.setImage(item.image, highlightImage: item.selectedImage, selectedImage: item.selectedImage)
         
         btn.addTarget(self, action: #selector(self.btnOnClick(_:)), forControlEvents: .TouchDown)
@@ -111,20 +113,16 @@ class WBTabBar: UIView {
             delegate.tabBar(self, from: self.currentSelectedBtn.tag, to: btn.tag)
         }
         
+        if btn.badgeValue != nil {
+            btn.badgeValue = nil
+            btn.badgeView?.removeFromSuperview()
+        }
+        
+        
         currentSelectedBtn.selected = false
         
         btn.selected = true
         self.currentSelectedBtn = btn
-        
-//        UIView.animateWithDuration(0.1, animations: {
-//            btn.transform = CGAffineTransformMakeScale(0.5, 0.5)
-//            }) { (finished) in
-//                UIView.animateWithDuration(0.1, animations: {
-//                    btn.transform = CGAffineTransformMakeScale(1.5, 1.5)
-//                    }, completion: { (finished) in
-//                        btn.transform = CGAffineTransformIdentity
-//                })
-//        }
         
         let scaleAni = CAKeyframeAnimation(keyPath: "transform.scale")
         scaleAni.values = [1, 0.5, 1.5, 1]
