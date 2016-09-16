@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4CC51941D7D40BE00AEA68E /* WBTabBarSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51931D7D40BE00AEA68E /* WBTabBarSystem.swift */; };
+		D4CC51961D7D438700AEA68E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51951D7D438700AEA68E /* Utils.swift */; };
+		D4CC51971D7D4F8500AEA68E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4D00C961D7D12D800350F21 /* Info.plist */; };
+		D4CC51981D7D4FCE00AEA68E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48BA6E11D7D3ECE00B04E39 /* Launch Screen.storyboard */; };
+		D4CC519A1D7DE65C00AEA68E /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51991D7DE65C00AEA68E /* WBTabBar.swift */; };
+		D4CC51BE1D7E30E600AEA68E /* WBTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51BD1D7E30E600AEA68E /* WBTabBarButton.swift */; };
+		D4D00C8B1D7D12D800350F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D00C8A1D7D12D800350F21 /* AppDelegate.swift */; };
+		D4D00C921D7D12D800350F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D00C911D7D12D800350F21 /* Assets.xcassets */; };
+		D4D00C9D1D7D1EF100350F21 /* WBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D00C9C1D7D1EF100350F21 /* WBTabBarController.swift */; };
+		D4D2EF871D7D2744007C0C6E /* NSTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF811D7D2744007C0C6E /* NSTimeIntervalExtension.swift */; };
+		D4D2EF881D7D2744007C0C6E /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF831D7D2744007C0C6E /* UIButtonExtension.swift */; };
+		D4D2EF891D7D2744007C0C6E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF841D7D2744007C0C6E /* UIImageExtension.swift */; };
+		D4D2EF8A1D7D2744007C0C6E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF851D7D2744007C0C6E /* UIImageViewExtension.swift */; };
+		D4D2EF8B1D7D2744007C0C6E /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF861D7D2744007C0C6E /* UITabBarItemExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D48BA6E11D7D3ECE00B04E39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D4CC51931D7D40BE00AEA68E /* WBTabBarSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarSystem.swift; sourceTree = "<group>"; };
+		D4CC51951D7D438700AEA68E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D4CC51991D7DE65C00AEA68E /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
+		D4CC51BD1D7E30E600AEA68E /* WBTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarButton.swift; sourceTree = "<group>"; };
+		D4D00C871D7D12D800350F21 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D00C8A1D7D12D800350F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4D00C911D7D12D800350F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4D00C961D7D12D800350F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D00C9C1D7D1EF100350F21 /* WBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarController.swift; sourceTree = "<group>"; };
+		D4D2EF811D7D2744007C0C6E /* NSTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalExtension.swift; sourceTree = "<group>"; };
+		D4D2EF831D7D2744007C0C6E /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		D4D2EF841D7D2744007C0C6E /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		D4D2EF851D7D2744007C0C6E /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		D4D2EF861D7D2744007C0C6E /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4D00C841D7D12D800350F21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4D00C7E1D7D12D800350F21 = {
+			isa = PBXGroup;
+			children = (
+				D4D00C891D7D12D800350F21 /* Weibo */,
+				D4D00C881D7D12D800350F21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4D00C881D7D12D800350F21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4D00C871D7D12D800350F21 /* Weibo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4D00C891D7D12D800350F21 /* Weibo */ = {
+			isa = PBXGroup;
+			children = (
+				D4D2EF7F1D7D2744007C0C6E /* Extension */,
+				D4D00C8A1D7D12D800350F21 /* AppDelegate.swift */,
+				D4D00C911D7D12D800350F21 /* Assets.xcassets */,
+				D4D00C961D7D12D800350F21 /* Info.plist */,
+				D4CC51931D7D40BE00AEA68E /* WBTabBarSystem.swift */,
+				D4D00C9C1D7D1EF100350F21 /* WBTabBarController.swift */,
+				D4CC51991D7DE65C00AEA68E /* WBTabBar.swift */,
+				D4CC51BD1D7E30E600AEA68E /* WBTabBarButton.swift */,
+				D48BA6E11D7D3ECE00B04E39 /* Launch Screen.storyboard */,
+			);
+			path = Weibo;
+			sourceTree = "<group>";
+		};
+		D4D2EF7F1D7D2744007C0C6E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D4D2EF801D7D2744007C0C6E /* FoundationExtension */,
+				D4D2EF821D7D2744007C0C6E /* UIExtension */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D4D2EF801D7D2744007C0C6E /* FoundationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D4D2EF811D7D2744007C0C6E /* NSTimeIntervalExtension.swift */,
+				D4CC51951D7D438700AEA68E /* Utils.swift */,
+			);
+			path = FoundationExtension;
+			sourceTree = "<group>";
+		};
+		D4D2EF821D7D2744007C0C6E /* UIExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D4D2EF831D7D2744007C0C6E /* UIButtonExtension.swift */,
+				D4D2EF841D7D2744007C0C6E /* UIImageExtension.swift */,
+				D4D2EF851D7D2744007C0C6E /* UIImageViewExtension.swift */,
+				D4D2EF861D7D2744007C0C6E /* UITabBarItemExtension.swift */,
+			);
+			path = UIExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4D00C861D7D12D800350F21 /* Weibo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4D00C991D7D12D800350F21 /* Build configuration list for PBXNativeTarget "Weibo" */;
+			buildPhases = (
+				D4D00C831D7D12D800350F21 /* Sources */,
+				D4D00C841D7D12D800350F21 /* Frameworks */,
+				D4D00C851D7D12D800350F21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Weibo;
+			productName = Weibo;
+			productReference = D4D00C871D7D12D800350F21 /* Weibo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4D00C7F1D7D12D800350F21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WB;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Lei Zhao";
+				TargetAttributes = {
+					D4D00C861D7D12D800350F21 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZQNTYXCS7L;
+					};
+				};
+			};
+			buildConfigurationList = D4D00C821D7D12D800350F21 /* Build configuration list for PBXProject "Weibo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4D00C7E1D7D12D800350F21;
+			productRefGroup = D4D00C881D7D12D800350F21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4D00C861D7D12D800350F21 /* Weibo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4D00C851D7D12D800350F21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4CC51981D7D4FCE00AEA68E /* Launch Screen.storyboard in Resources */,
+				D4CC51971D7D4F8500AEA68E /* Info.plist in Resources */,
+				D4D00C921D7D12D800350F21 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4D00C831D7D12D800350F21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4CC51BE1D7E30E600AEA68E /* WBTabBarButton.swift in Sources */,
+				D4D00C9D1D7D1EF100350F21 /* WBTabBarController.swift in Sources */,
+				D4D2EF881D7D2744007C0C6E /* UIButtonExtension.swift in Sources */,
+				D4CC51961D7D438700AEA68E /* Utils.swift in Sources */,
+				D4D2EF8A1D7D2744007C0C6E /* UIImageViewExtension.swift in Sources */,
+				D4CC519A1D7DE65C00AEA68E /* WBTabBar.swift in Sources */,
+				D4D2EF871D7D2744007C0C6E /* NSTimeIntervalExtension.swift in Sources */,
+				D4D2EF891D7D2744007C0C6E /* UIImageExtension.swift in Sources */,
+				D4D2EF8B1D7D2744007C0C6E /* UITabBarItemExtension.swift in Sources */,
+				D4CC51941D7D40BE00AEA68E /* WBTabBarSystem.swift in Sources */,
+				D4D00C8B1D7D12D800350F21 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D4D00C971D7D12D800350F21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4D00C981D7D12D800350F21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4D00C9A1D7D12D800350F21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = Weibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lzhao.test.Weibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4D00C9B1D7D12D800350F21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = Weibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lzhao.test.Weibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4D00C821D7D12D800350F21 /* Build configuration list for PBXProject "Weibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4D00C971D7D12D800350F21 /* Debug */,
+				D4D00C981D7D12D800350F21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4D00C991D7D12D800350F21 /* Build configuration list for PBXNativeTarget "Weibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4D00C9A1D7D12D800350F21 /* Debug */,
+				D4D00C9B1D7D12D800350F21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4D00C7F1D7D12D800350F21 /* Project object */;
+}
