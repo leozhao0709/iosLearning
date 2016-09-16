@@ -6,12 +6,13 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "avatar_grassroot@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "avatar_grassroot@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "avatar_grassroot@3x.png"
     }
   ],
   "info" : {

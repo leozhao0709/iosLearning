@@ -6,12 +6,11 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "timeline_icon_retweet@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "timeline_icon_retweet@2x.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "timeline_icon_retweet@3x.png",
       "scale" : "3x"
     }
   ],
