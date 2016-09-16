@@ -10,6 +10,11 @@ import UIKit
 
 extension UIButton {
     
+    public convenience init(normalImage: UIImage?, highlightImage: UIImage?, selectedImage: UIImage? = nil) {
+        self.init(type: UIButtonType.Custom)
+        self.setImage(normalImage, highlightImage: highlightImage, selectedImage: selectedImage)
+    }
+    
     // MARK: - Button UI
     /**
      Set Image button. if you want to use image as a button, use this method

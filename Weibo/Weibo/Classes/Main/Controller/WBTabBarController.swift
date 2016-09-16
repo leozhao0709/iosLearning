@@ -52,25 +52,25 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
     // MARK:- Setup All child controller
     func setupAllChildController() {
         
-        let home = UIViewController()
+        let home = WBHomeViewController()
         self.setupChildControllerView(home, title: "首页", tabBarNormolImage: UIImage(named: "tabbar_home")!, tabBarSelectedImage: UIImage(named: "tabbar_home_selected")!)
         
         home.view.backgroundColor = UIColor.greenColor()
         
         
         
-        let message = UIViewController()
+        let message = WBMessageViewController()
         message.tabBarItem.badgeValue = "3"
         self.setupChildControllerView(message, title: "消息", tabBarNormolImage: UIImage(named: "tabbar_message_center")!, tabBarSelectedImage: UIImage(named: "tabbar_message_center_selected")!)
         
         message.view.backgroundColor = UIColor.blueColor()
         
-        let discover = UIViewController()
+        let discover = WBDiscoverViewController()
         self.setupChildControllerView(discover, title: "发现", tabBarNormolImage: UIImage(named: "tabbar_discover")!, tabBarSelectedImage: UIImage(named: "tabbar_discover_selected")!)
         
         discover.view.backgroundColor = UIColor.purpleColor()
         
-        let profile = UIViewController()
+        let profile = WBProfileViewController()
         self.setupChildControllerView(profile, title: "我", tabBarNormolImage: UIImage(named: "tabbar_profile")!, tabBarSelectedImage: UIImage(named: "tabbar_profile_selected")!)
         
         profile.view.backgroundColor = UIColor.lightGrayColor()
@@ -81,7 +81,7 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
     // MARK:- Setup one child controller view UI
     func setupChildControllerView(viewController: UIViewController, title: String?, tabBarNormolImage: UIImage, tabBarSelectedImage: UIImage) {
         
-        viewController.tabBarItem.title = title
+        viewController.title = title
         
         let titleAttribute: [String: AnyObject]? = [NSForegroundColorAttributeName: UIColor.orangeColor()]
         
@@ -91,7 +91,9 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
         
         self.customerTabBar?.addItem(viewController.tabBarItem)
         
-        self.addChildViewController(viewController)
+        let nav = UINavigationController.init(rootViewController: viewController)
+        
+        self.addChildViewController(nav)
     }
     
     func tabBar(tabBar: WBTabBar, from: Int, to: Int) {
