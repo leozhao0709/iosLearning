@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D434D09B1D8B960500F7361C /* WBBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434D09A1D8B960500F7361C /* WBBadgeView.swift */; };
+		D434D0A61D8B963B00F7361C /* NSTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434D09E1D8B963B00F7361C /* NSTimeIntervalExtension.swift */; };
+		D434D0A71D8B963B00F7361C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434D09F1D8B963B00F7361C /* Utils.swift */; };
+		D434D0A81D8B963B00F7361C /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434D0A11D8B963B00F7361C /* UIButtonExtension.swift */; };
+		D434D0A91D8B963B00F7361C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434D0A21D8B963B00F7361C /* UIImageExtension.swift */; };
+		D434D0AA1D8B963B00F7361C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434D0A31D8B963B00F7361C /* UIImageViewExtension.swift */; };
+		D434D0AB1D8B963B00F7361C /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434D0A41D8B963B00F7361C /* UITabBarItemExtension.swift */; };
+		D434D0AC1D8B963B00F7361C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434D0A51D8B963B00F7361C /* UIViewExtension.swift */; };
 		D4CC51941D7D40BE00AEA68E /* WBTabBarSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51931D7D40BE00AEA68E /* WBTabBarSystem.swift */; };
-		D4CC51961D7D438700AEA68E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51951D7D438700AEA68E /* Utils.swift */; };
 		D4CC51971D7D4F8500AEA68E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4D00C961D7D12D800350F21 /* Info.plist */; };
 		D4CC51981D7D4FCE00AEA68E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48BA6E11D7D3ECE00B04E39 /* Launch Screen.storyboard */; };
 		D4CC519A1D7DE65C00AEA68E /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC51991D7DE65C00AEA68E /* WBTabBar.swift */; };
@@ -16,17 +23,19 @@
 		D4D00C8B1D7D12D800350F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D00C8A1D7D12D800350F21 /* AppDelegate.swift */; };
 		D4D00C921D7D12D800350F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D00C911D7D12D800350F21 /* Assets.xcassets */; };
 		D4D00C9D1D7D1EF100350F21 /* WBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D00C9C1D7D1EF100350F21 /* WBTabBarController.swift */; };
-		D4D2EF871D7D2744007C0C6E /* NSTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF811D7D2744007C0C6E /* NSTimeIntervalExtension.swift */; };
-		D4D2EF881D7D2744007C0C6E /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF831D7D2744007C0C6E /* UIButtonExtension.swift */; };
-		D4D2EF891D7D2744007C0C6E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF841D7D2744007C0C6E /* UIImageExtension.swift */; };
-		D4D2EF8A1D7D2744007C0C6E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF851D7D2744007C0C6E /* UIImageViewExtension.swift */; };
-		D4D2EF8B1D7D2744007C0C6E /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EF861D7D2744007C0C6E /* UITabBarItemExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D434D09A1D8B960500F7361C /* WBBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBadgeView.swift; sourceTree = "<group>"; };
+		D434D09E1D8B963B00F7361C /* NSTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalExtension.swift; sourceTree = "<group>"; };
+		D434D09F1D8B963B00F7361C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D434D0A11D8B963B00F7361C /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		D434D0A21D8B963B00F7361C /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		D434D0A31D8B963B00F7361C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		D434D0A41D8B963B00F7361C /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtension.swift; sourceTree = "<group>"; };
+		D434D0A51D8B963B00F7361C /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D48BA6E11D7D3ECE00B04E39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D4CC51931D7D40BE00AEA68E /* WBTabBarSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarSystem.swift; sourceTree = "<group>"; };
-		D4CC51951D7D438700AEA68E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D4CC51991D7DE65C00AEA68E /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
 		D4CC51BD1D7E30E600AEA68E /* WBTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarButton.swift; sourceTree = "<group>"; };
 		D4D00C871D7D12D800350F21 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,11 +43,6 @@
 		D4D00C911D7D12D800350F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D00C961D7D12D800350F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D00C9C1D7D1EF100350F21 /* WBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarController.swift; sourceTree = "<group>"; };
-		D4D2EF811D7D2744007C0C6E /* NSTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalExtension.swift; sourceTree = "<group>"; };
-		D4D2EF831D7D2744007C0C6E /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		D4D2EF841D7D2744007C0C6E /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		D4D2EF851D7D2744007C0C6E /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
-		D4D2EF861D7D2744007C0C6E /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D434D09C1D8B963B00F7361C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D434D09D1D8B963B00F7361C /* FoundationExtension */,
+				D434D0A01D8B963B00F7361C /* UIExtension */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D434D09D1D8B963B00F7361C /* FoundationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D434D09E1D8B963B00F7361C /* NSTimeIntervalExtension.swift */,
+				D434D09F1D8B963B00F7361C /* Utils.swift */,
+			);
+			path = FoundationExtension;
+			sourceTree = "<group>";
+		};
+		D434D0A01D8B963B00F7361C /* UIExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D434D0A11D8B963B00F7361C /* UIButtonExtension.swift */,
+				D434D0A21D8B963B00F7361C /* UIImageExtension.swift */,
+				D434D0A31D8B963B00F7361C /* UIImageViewExtension.swift */,
+				D434D0A41D8B963B00F7361C /* UITabBarItemExtension.swift */,
+				D434D0A51D8B963B00F7361C /* UIViewExtension.swift */,
+			);
+			path = UIExtension;
+			sourceTree = "<group>";
+		};
 		D4D00C7E1D7D12D800350F21 = {
 			isa = PBXGroup;
 			children = (
@@ -71,10 +105,11 @@
 		D4D00C891D7D12D800350F21 /* Weibo */ = {
 			isa = PBXGroup;
 			children = (
-				D4D2EF7F1D7D2744007C0C6E /* Extension */,
+				D434D09C1D8B963B00F7361C /* Extension */,
 				D4D00C8A1D7D12D800350F21 /* AppDelegate.swift */,
 				D4D00C911D7D12D800350F21 /* Assets.xcassets */,
 				D4D00C961D7D12D800350F21 /* Info.plist */,
+				D434D09A1D8B960500F7361C /* WBBadgeView.swift */,
 				D4CC51931D7D40BE00AEA68E /* WBTabBarSystem.swift */,
 				D4D00C9C1D7D1EF100350F21 /* WBTabBarController.swift */,
 				D4CC51991D7DE65C00AEA68E /* WBTabBar.swift */,
@@ -82,35 +117,6 @@
 				D48BA6E11D7D3ECE00B04E39 /* Launch Screen.storyboard */,
 			);
 			path = Weibo;
-			sourceTree = "<group>";
-		};
-		D4D2EF7F1D7D2744007C0C6E /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				D4D2EF801D7D2744007C0C6E /* FoundationExtension */,
-				D4D2EF821D7D2744007C0C6E /* UIExtension */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		D4D2EF801D7D2744007C0C6E /* FoundationExtension */ = {
-			isa = PBXGroup;
-			children = (
-				D4D2EF811D7D2744007C0C6E /* NSTimeIntervalExtension.swift */,
-				D4CC51951D7D438700AEA68E /* Utils.swift */,
-			);
-			path = FoundationExtension;
-			sourceTree = "<group>";
-		};
-		D4D2EF821D7D2744007C0C6E /* UIExtension */ = {
-			isa = PBXGroup;
-			children = (
-				D4D2EF831D7D2744007C0C6E /* UIButtonExtension.swift */,
-				D4D2EF841D7D2744007C0C6E /* UIImageExtension.swift */,
-				D4D2EF851D7D2744007C0C6E /* UIImageViewExtension.swift */,
-				D4D2EF861D7D2744007C0C6E /* UITabBarItemExtension.swift */,
-			);
-			path = UIExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,17 +192,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D434D0AB1D8B963B00F7361C /* UITabBarItemExtension.swift in Sources */,
 				D4CC51BE1D7E30E600AEA68E /* WBTabBarButton.swift in Sources */,
+				D434D0A61D8B963B00F7361C /* NSTimeIntervalExtension.swift in Sources */,
 				D4D00C9D1D7D1EF100350F21 /* WBTabBarController.swift in Sources */,
-				D4D2EF881D7D2744007C0C6E /* UIButtonExtension.swift in Sources */,
-				D4CC51961D7D438700AEA68E /* Utils.swift in Sources */,
-				D4D2EF8A1D7D2744007C0C6E /* UIImageViewExtension.swift in Sources */,
+				D434D0A91D8B963B00F7361C /* UIImageExtension.swift in Sources */,
+				D434D09B1D8B960500F7361C /* WBBadgeView.swift in Sources */,
 				D4CC519A1D7DE65C00AEA68E /* WBTabBar.swift in Sources */,
-				D4D2EF871D7D2744007C0C6E /* NSTimeIntervalExtension.swift in Sources */,
-				D4D2EF891D7D2744007C0C6E /* UIImageExtension.swift in Sources */,
-				D4D2EF8B1D7D2744007C0C6E /* UITabBarItemExtension.swift in Sources */,
+				D434D0AA1D8B963B00F7361C /* UIImageViewExtension.swift in Sources */,
+				D434D0A81D8B963B00F7361C /* UIButtonExtension.swift in Sources */,
+				D434D0AC1D8B963B00F7361C /* UIViewExtension.swift in Sources */,
 				D4CC51941D7D40BE00AEA68E /* WBTabBarSystem.swift in Sources */,
 				D4D00C8B1D7D12D800350F21 /* AppDelegate.swift in Sources */,
+				D434D0A71D8B963B00F7361C /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
