@@ -9,7 +9,7 @@
 import UIKit
 
 protocol WBTabBarDelegate {
-    func tabBar(tabBar: WBTabBar, from: Int, to: Int)
+    func tabBar(_ tabBar: WBTabBar, from: Int, to: Int)
 }
 
 class WBTabBar: UIView {
@@ -33,13 +33,13 @@ class WBTabBar: UIView {
     /**
      Just init different UI subviews here, no frame need here
      */
-    private func setupUI() {
-        self.backgroundColor = UIColor.whiteColor()
+    fileprivate func setupUI() {
+        self.backgroundColor = UIColor.white
         self.addPlusBtn()
     }
     
-    private func addPlusBtn() {
-        let btn = UIButton(type: UIButtonType.Custom)
+    fileprivate func addPlusBtn() {
+        let btn = UIButton(type: UIButtonType.custom)
         
         btn.setImage(UIImage(named: "tabbar_compose_icon_add")!, highlightImage: UIImage(named: "tabbar_compose_icon_add_highlighted")!)
         
@@ -76,26 +76,26 @@ class WBTabBar: UIView {
                 
                 
                 
-                button!.frame = CGRectMake(btnX, btnY, btnW, btnH)
+                button!.frame = CGRect(x: btnX, y: btnY, width: btnW, height: btnH)
                 
                 i += 1
             }
         }
         
-        self.plusButton!.center = CGPointMake(self.frame.width/2, self.frame.height/2)
+        self.plusButton!.center = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
     }
     
-    func addItem(item: UITabBarItem) {
+    func addItem(_ item: UITabBarItem) {
         
-        let btn = WBTabBarButton(type: .Custom)
+        let btn = WBTabBarButton(type: .custom)
 
-        btn.setTitle(item.title, forState: .Normal)
+        btn.setTitle(item.title, for: UIControlState())
         
         btn.badgeValue = item.badgeValue
         
         btn.setImage(item.image, highlightImage: item.selectedImage, selectedImage: item.selectedImage)
         
-        btn.addTarget(self, action: #selector(self.btnOnClick(_:)), forControlEvents: .TouchDown)
+        btn.addTarget(self, action: #selector(self.btnOnClick(_:)), for: .touchDown)
         
         btn.tag = self.subviews.count - 1
         
@@ -103,11 +103,11 @@ class WBTabBar: UIView {
     
         if btn.tag == 0 {
             self.currentSelectedBtn = btn
-            btn.selected = true
+            btn.isSelected = true
         }
     }
     
-    @objc private func btnOnClick(btn: WBTabBarButton) {
+    @objc fileprivate func btnOnClick(_ btn: WBTabBarButton) {
         
         if let delegate = self.delegate {
             delegate.tabBar(self, from: self.currentSelectedBtn.tag, to: btn.tag)
@@ -119,15 +119,15 @@ class WBTabBar: UIView {
         }
         
         
-        currentSelectedBtn.selected = false
+        currentSelectedBtn.isSelected = false
         
-        btn.selected = true
+        btn.isSelected = true
         self.currentSelectedBtn = btn
         
         let scaleAni = CAKeyframeAnimation(keyPath: "transform.scale")
         scaleAni.values = [1, 0.5, 1.5, 1]
         scaleAni.duration = 0.5
-        btn.layer.addAnimation(scaleAni, forKey: nil)
+        btn.layer.add(scaleAni, forKey: nil)
 
     }
 

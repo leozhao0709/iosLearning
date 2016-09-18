@@ -15,7 +15,7 @@ class WBTabBarSystem: UITabBar {
     weak var plusButton: UIButton? {
         
         if self.btn == nil  {
-            self.btn = UIButton(type: UIButtonType.Custom)
+            self.btn = UIButton(type: UIButtonType.custom)
             
             self.btn!.setImage(UIImage(named: "tabbar_compose_icon_add")!, highlightImage: UIImage(named: "tabbar_compose_icon_add_highlighted")!)
             
@@ -43,7 +43,7 @@ class WBTabBarSystem: UITabBar {
         
         for tabBarButton in self.subviews {
 //            if tabBarButton .isKindOfClass(NSClassFromString("UITabBarButton")!) {
-            if tabBarButton .isKindOfClass(UIControl) {
+            if tabBarButton .isKind(of: UIControl.self) {
             
                 if i == (self.items?.count)!/2 {
                     i += 1
@@ -52,13 +52,13 @@ class WBTabBarSystem: UITabBar {
                 btnX = CGFloat(i) * btnW
                 
                 
-                tabBarButton.frame = CGRectMake(btnX, btnY, btnW, btnH)
+                tabBarButton.frame = CGRect(x: btnX, y: btnY, width: btnW, height: btnH)
                 
                 i += 1
             }
         }
         
-        self.plusButton!.center = CGPointMake(self.frame.width/2, self.frame.height/2)
+        self.plusButton!.center = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
         
     }
 

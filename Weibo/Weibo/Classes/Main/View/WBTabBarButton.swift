@@ -14,10 +14,10 @@ class WBTabBarButton: UIButton {
     
     weak var badgeView: WBBadgeView!
     
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         set{}
         get {
-            return super.highlighted
+            return super.isHighlighted
         }
     }
     
@@ -34,12 +34,12 @@ class WBTabBarButton: UIButton {
     /**
      Just init different UI subviews here, no frame need here
      */
-    private func setupUI() {
-        self.imageView?.contentMode = .Center
-        self.titleLabel?.textAlignment = .Center
+    fileprivate func setupUI() {
+        self.imageView?.contentMode = .center
+        self.titleLabel?.textAlignment = .center
         
-        self.titleLabel?.font = UIFont.systemFontOfSize(13)
-        self.setTitleColor(UIColor.blackColor(), highlightColor: UIColor.orangeColor(), selectedColor: UIColor.orangeColor())
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        self.setTitleColor(UIColor.black, highlightColor: UIColor.orange, selectedColor: UIColor.orange)
         
         let badgeView = WBBadgeView()
         self.badgeView = badgeView
@@ -58,22 +58,22 @@ class WBTabBarButton: UIButton {
         }
     }
     
-    override func imageRectForContentRect(contentRect: CGRect) -> CGRect {
+    override func imageRect(forContentRect contentRect: CGRect) -> CGRect {
         
         let imageX: CGFloat = 0;
         let imageY: CGFloat = 3;
         let imageW = self.bounds.width;
         let imageH = self.bounds.height * 0.6;
         
-        return CGRectMake(imageX, imageY, imageW, imageH)
+        return CGRect(x: imageX, y: imageY, width: imageW, height: imageH)
     }
     
-    override func titleRectForContentRect(contentRect: CGRect) -> CGRect {
+    override func titleRect(forContentRect contentRect: CGRect) -> CGRect {
         let titleX: CGFloat = 0
         let titleY: CGFloat = self.bounds.height * 0.6
         let titleW = self.bounds.width
         let titleH = self.bounds.height * 0.4
         
-        return CGRectMake(titleX, titleY, titleW, titleH)
+        return CGRect(x: titleX, y: titleY, width: titleW, height: titleH)
     }
 }

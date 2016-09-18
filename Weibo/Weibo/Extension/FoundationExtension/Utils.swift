@@ -13,7 +13,7 @@ import Foundation
  
  - parameter format: Log String
  */
-func printLog(format: String) {
+func printLog(_ format: String) {
     #if DEBUG
     NSLog(format)
     #endif

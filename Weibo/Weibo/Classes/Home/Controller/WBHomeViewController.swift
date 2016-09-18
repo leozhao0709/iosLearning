@@ -22,12 +22,15 @@ class WBHomeViewController: UITableViewController {
         
     }
     
-    @objc private func friendSearch() {
+    @objc fileprivate func friendSearch() {
         printLog(#function)
     }
     
-    @objc private func scan() {
+    @objc fileprivate func scan() {
         printLog(#function)
+        
+        let scanVC = WBScanViewController()
+        self.present(scanVC, animated: true, completion: nil)
     }
 
 }

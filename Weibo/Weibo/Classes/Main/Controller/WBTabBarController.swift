@@ -13,7 +13,7 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
     
     weak var customerTabBar: WBTabBar?
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         //child Controller
         
@@ -55,7 +55,7 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
         let home = WBHomeViewController()
         self.setupChildControllerView(home, title: "首页", tabBarNormolImage: UIImage(named: "tabbar_home")!, tabBarSelectedImage: UIImage(named: "tabbar_home_selected")!)
         
-        home.view.backgroundColor = UIColor.greenColor()
+        home.view.backgroundColor = UIColor.green
         
         
         
@@ -63,29 +63,29 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
         message.tabBarItem.badgeValue = "3"
         self.setupChildControllerView(message, title: "消息", tabBarNormolImage: UIImage(named: "tabbar_message_center")!, tabBarSelectedImage: UIImage(named: "tabbar_message_center_selected")!)
         
-        message.view.backgroundColor = UIColor.blueColor()
+        message.view.backgroundColor = UIColor.blue
         
         let discover = WBDiscoverViewController()
         self.setupChildControllerView(discover, title: "发现", tabBarNormolImage: UIImage(named: "tabbar_discover")!, tabBarSelectedImage: UIImage(named: "tabbar_discover_selected")!)
         
-        discover.view.backgroundColor = UIColor.purpleColor()
+        discover.view.backgroundColor = UIColor.purple
         
         let profile = WBProfileViewController()
         self.setupChildControllerView(profile, title: "我", tabBarNormolImage: UIImage(named: "tabbar_profile")!, tabBarSelectedImage: UIImage(named: "tabbar_profile_selected")!)
         
-        profile.view.backgroundColor = UIColor.lightGrayColor()
+        profile.view.backgroundColor = UIColor.lightGray
         
     }
     
     
     // MARK:- Setup one child controller view UI
-    func setupChildControllerView(viewController: UIViewController, title: String?, tabBarNormolImage: UIImage, tabBarSelectedImage: UIImage) {
+    func setupChildControllerView(_ viewController: UIViewController, title: String?, tabBarNormolImage: UIImage, tabBarSelectedImage: UIImage) {
         
         viewController.title = title
         
-        let titleAttribute: [String: AnyObject]? = [NSForegroundColorAttributeName: UIColor.orangeColor()]
+        let titleAttribute: [String: AnyObject]? = [NSForegroundColorAttributeName: UIColor.orange]
         
-        viewController.tabBarItem.setTitleTextAttributes(titleAttribute, forState: .Selected)
+        viewController.tabBarItem.setTitleTextAttributes(titleAttribute, for: .selected)
         
         viewController.tabBarItem.setImageWithOriginalImage(tabBarNormolImage, selectedImage: tabBarSelectedImage)
         
@@ -96,7 +96,7 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
         self.addChildViewController(nav)
     }
     
-    func tabBar(tabBar: WBTabBar, from: Int, to: Int) {
+    func tabBar(_ tabBar: WBTabBar, from: Int, to: Int) {
 //        printLog("from \(from) to \(to)")
         self.selectedIndex = to
     }

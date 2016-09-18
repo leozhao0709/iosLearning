@@ -10,25 +10,25 @@ import UIKit
 
 extension UIView {
     
-    func setX(x: CGFloat) {
+    func setX(_ x: CGFloat) {
         var frame = self.frame
         frame.origin.x = x
         self.frame = frame
     }
     
-    func setY(y: CGFloat) {
+    func setY(_ y: CGFloat) {
         var frame = self.frame
         frame.origin.y = y
         self.frame = frame
     }
     
-    func setWidth(width: CGFloat) {
+    func setWidth(_ width: CGFloat) {
         var frame = self.frame
         frame.size.width = width
         self.frame = frame
     }
     
-    func setHeight(height: CGFloat) {
+    func setHeight(_ height: CGFloat) {
         var frame = self.frame
         frame.size.height = height
         self.frame = frame

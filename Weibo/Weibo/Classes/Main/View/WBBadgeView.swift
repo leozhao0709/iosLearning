@@ -24,7 +24,7 @@ class WBBadgeView: UIImageView {
         didSet {
             if let badgeValue = self.badgeValue {
                 let badgeBackground = UIImage(named: "main_badge")
-                self.badge = badgeBackground?.addTextInCenter(badgeValue, font: UIFont.systemFontOfSize(11), textColor: UIColor.whiteColor())
+                self.badge = badgeBackground?.addTextInCenter(badgeValue, font: UIFont.systemFont(ofSize: 11), textColor: UIColor.white)
                 self.image = self.badge
                 self.sizeToFit()
             }
@@ -32,7 +32,7 @@ class WBBadgeView: UIImageView {
     }
     
     convenience init() {
-        self.init(frame: CGRectMake(0, 0, 0, 0))
+        self.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     }
     
     

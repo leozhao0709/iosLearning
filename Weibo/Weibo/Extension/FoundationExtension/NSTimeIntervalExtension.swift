@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSTimeInterval {
+extension TimeInterval {
     
     /**
      convert the NSTimeInterval to minute and second format
@@ -18,7 +18,7 @@ extension NSTimeInterval {
     func converToMinuteSecondWithSecond() -> String{
         
         let minutes = Int(self / 60)
-        let seconds = Int(self % 60)
+        let seconds = Int(self.truncatingRemainder(dividingBy: 60))
         
         if minutes < 10 {
             return String(format: "%02d:%02d", minutes, seconds)

@@ -11,7 +11,7 @@ import UIKit
 extension UIButton {
     
     public convenience init(normalImage: UIImage?, highlightImage: UIImage?, selectedImage: UIImage? = nil) {
-        self.init(type: UIButtonType.Custom)
+        self.init(type: UIButtonType.custom)
         self.setImage(normalImage, highlightImage: highlightImage, selectedImage: selectedImage)
     }
     
@@ -22,23 +22,23 @@ extension UIButton {
      - parameter normalImage:    normal state image
      - parameter highlightImage: highlight state image
      */
-    func setImage(normalImage: UIImage?, highlightImage: UIImage?, selectedImage: UIImage? = nil){
+    func setImage(_ normalImage: UIImage?, highlightImage: UIImage?, selectedImage: UIImage? = nil){
         //Note: It's setImage, not setBackgroundImage
-        self.setImage(normalImage, forState: UIControlState.Normal)
-        self.setImage(highlightImage, forState: UIControlState.Highlighted)
-        self.setImage(selectedImage, forState: .Selected)
+        self.setImage(normalImage, for: UIControlState())
+        self.setImage(highlightImage, for: UIControlState.highlighted)
+        self.setImage(selectedImage, for: .selected)
     }
     
-    func setBackgroundImage(normalImage: UIImage?, highlightImage: UIImage?, selectedImage: UIImage? = nil) {
-        self.setBackgroundImage(normalImage, forState: .Normal)
-        self.setBackgroundImage(highlightImage, forState: .Highlighted)
-        self.setBackgroundImage(selectedImage, forState: .Selected)
+    func setBackgroundImage(_ normalImage: UIImage?, highlightImage: UIImage?, selectedImage: UIImage? = nil) {
+        self.setBackgroundImage(normalImage, for: UIControlState())
+        self.setBackgroundImage(highlightImage, for: .highlighted)
+        self.setBackgroundImage(selectedImage, for: .selected)
     }
     
-    func setTitleColor(normalColor: UIColor?, highlightColor: UIColor?, selectedColor: UIColor? = nil) {
-        self.setTitleColor(normalColor, forState: .Normal)
-        self.setTitleColor(highlightColor, forState: .Highlighted)
-        self.setTitleColor(selectedColor, forState: .Selected)
+    func setTitleColor(_ normalColor: UIColor?, highlightColor: UIColor?, selectedColor: UIColor? = nil) {
+        self.setTitleColor(normalColor, for: UIControlState())
+        self.setTitleColor(highlightColor, for: .highlighted)
+        self.setTitleColor(selectedColor, for: .selected)
     }
     
 }
