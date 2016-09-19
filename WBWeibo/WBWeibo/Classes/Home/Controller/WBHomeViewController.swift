@@ -20,6 +20,17 @@ class WBHomeViewController: UITableViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(normalImage: UIImage(named: "navigationbar_pop"), highlightImage: UIImage(named: "navigationbar_pop_highlighted"), target: self, action: #selector(self.scan))
         
+        let titleBtn = WBTitleButton()
+        titleBtn.setTitle("首页", for: .normal)
+        titleBtn.setImage(#imageLiteral(resourceName: "navigationbar_arrow_down"), highlightImage: nil, selectedImage: #imageLiteral(resourceName: "navigationbar_arrow_up"))
+        titleBtn.addTarget(self, action: #selector(self.titleBtnClick(btn:)), for: UIControlEvents.touchUpInside)
+        
+        self.navigationItem.titleView = titleBtn
+        
+    }
+    
+    @objc private func titleBtnClick(btn: UIButton) {
+        btn.isSelected = !btn.isSelected
     }
     
     @objc fileprivate func friendSearch() {

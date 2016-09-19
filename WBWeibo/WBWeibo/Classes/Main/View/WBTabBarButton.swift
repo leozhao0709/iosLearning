@@ -53,8 +53,8 @@ class WBTabBarButton: UIButton {
         super.layoutSubviews()
         if let badgeValue = self.badgeValue {
             self.badgeView.badgeValue = badgeValue
-            self.badgeView.setX(self.frame.width - (self.badgeView?.frame.width)! - 12)
-            self.badgeView.setY(0)
+            self.badgeView.x = self.frame.width - (self.badgeView?.frame.width)! - 12
+            self.badgeView.y = 0
         }
     }
     

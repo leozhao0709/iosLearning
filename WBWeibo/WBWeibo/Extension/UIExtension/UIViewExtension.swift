@@ -10,28 +10,77 @@ import UIKit
 
 extension UIView {
     
-    func setX(_ x: CGFloat) {
-        var frame = self.frame
-        frame.origin.x = x
-        self.frame = frame
+    var x: CGFloat {
+        get {
+           return self.frame.origin.x
+        }
+        
+        set(newValue) {
+            var frame = self.frame
+            frame.origin.x = newValue
+            self.frame = frame
+        }
     }
     
-    func setY(_ y: CGFloat) {
-        var frame = self.frame
-        frame.origin.y = y
-        self.frame = frame
+    var y: CGFloat {
+        get {
+            return self.frame.origin.y
+        }
+        
+        set(newValue) {
+            var frame = self.frame
+            frame.origin.y = newValue
+            self.frame = frame
+        }
+        
     }
     
-    func setWidth(_ width: CGFloat) {
-        var frame = self.frame
-        frame.size.width = width
-        self.frame = frame
+    var width: CGFloat {
+        get {
+            return self.frame.width
+        }
+        set(newValue) {
+            var frame = self.frame
+            frame.size.width = newValue
+            self.frame = frame
+        }
     }
     
-    func setHeight(_ height: CGFloat) {
-        var frame = self.frame
-        frame.size.height = height
-        self.frame = frame
+    var height: CGFloat {
+        get {
+            return self.frame.height
+        }
+        set(newValue) {
+            var frame = self.frame
+            frame.size.height = newValue
+            self.frame = frame
+        }
     }
+    
+    var centerX: CGFloat {
+        get {
+           return self.center.x
+        }
+        
+        set(newValue) {
+            var tempCenter = self.center
+            tempCenter.x = newValue
+            self.center = tempCenter
+        }
+        
+    }
+    
+    var centerY: CGFloat {
+        get {
+            return self.center.y
+        }
+        
+        set(newValue) {
+            var tempCenter = self.center
+            tempCenter.y = newValue
+            self.center = tempCenter
+        }
+    }
+    
     
 }
