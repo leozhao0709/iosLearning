@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WBMyCardViewController" customModule="WBWeibo" customModuleProvider="target">
+            <connections>
+                <outlet property="nameLabel" destination="69b-YZ-vi5" id="aUd-nE-YTO"/>
+                <outlet property="qrcodeImageView" destination="xT7-jk-ytv" id="fKb-5n-HeI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAB-IP-4hl">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xT7-jk-ytv">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="1mc-qS-CWR"/>
+                                <constraint firstAttribute="height" constant="200" id="hwY-pd-Zhr"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lei Zhao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69b-YZ-vi5">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan my qrcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cM-Kf-JmE">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.45782022090000002" green="1" blue="0.93978011100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="2cM-Kf-JmE" firstAttribute="centerX" secondItem="FAB-IP-4hl" secondAttribute="centerX" id="8V6-r5-DYA"/>
+                        <constraint firstItem="xT7-jk-ytv" firstAttribute="centerY" secondItem="FAB-IP-4hl" secondAttribute="centerY" id="CFO-3k-bEP"/>
+                        <constraint firstItem="xT7-jk-ytv" firstAttribute="centerX" secondItem="FAB-IP-4hl" secondAttribute="centerX" id="HLZ-zy-DRC"/>
+                        <constraint firstAttribute="height" constant="400" id="HP8-JH-KRZ"/>
+                        <constraint firstItem="69b-YZ-vi5" firstAttribute="top" secondItem="xT7-jk-ytv" secondAttribute="bottom" constant="20" id="KZL-sj-WeV"/>
+                        <constraint firstItem="2cM-Kf-JmE" firstAttribute="top" secondItem="69b-YZ-vi5" secondAttribute="bottom" constant="20" id="PVv-Sz-hak"/>
+                        <constraint firstItem="69b-YZ-vi5" firstAttribute="centerX" secondItem="FAB-IP-4hl" secondAttribute="centerX" id="sd0-FQ-ye8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FAB-IP-4hl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5ec-UD-u9s"/>
+                <constraint firstItem="FAB-IP-4hl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WcE-hX-cc8"/>
+                <constraint firstAttribute="trailing" secondItem="FAB-IP-4hl" secondAttribute="trailing" id="wwN-lz-brG"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

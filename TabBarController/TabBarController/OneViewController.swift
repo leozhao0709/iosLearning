@@ -31,5 +31,9 @@ class OneViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    deinit {
+        NSLog("老大close了")
+    }
 
 }

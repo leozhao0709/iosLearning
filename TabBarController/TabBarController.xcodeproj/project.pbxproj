@@ -109,6 +109,7 @@
 					D43EC8411D4D239500DDD2B7 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = ZQNTYXCS7L;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -264,6 +265,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lzhao.exercise.TabBarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -275,6 +277,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lzhao.exercise.TabBarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -297,6 +300,7 @@
 				D43EC8561D4D239500DDD2B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

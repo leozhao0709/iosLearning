@@ -17,13 +17,13 @@ class WBScanNavigationController: UINavigationController {
         
         self.navigationBar.barStyle = .blackTranslucent
         self.navigationBar.tintColor = UIColor.orange
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
 
 }

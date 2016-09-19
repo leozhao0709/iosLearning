@@ -14,9 +14,14 @@ class WBQrcodeView: UIView {
     weak var scanBorderImageView: UIImageView?
     weak var scanImageView: UIImageView?
     
+    var scanImageViewOffset = -170
+    
+//    weak var link: CADisplayLink?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupUI()
+//        self.setupSchedule()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,7 +34,7 @@ class WBQrcodeView: UIView {
      */
     
     private func setupUI() {
-        self.backgroundColor = UIColor.white
+//        self.backgroundColor = UIColor.white
         
         let scanBorderImageView = UIImageView()
         let qrcode_border_image = #imageLiteral(resourceName: "qrcode_border")
@@ -46,12 +51,16 @@ class WBQrcodeView: UIView {
         self.addSubview(scanImageView)
         self.scanImageView = scanImageView
         
-        self.scanImageView?.snp.makeConstraints({ (make) in
+        self.scanImageView?.snp.makeConstraints({[weak self] (make) in
             make.height.equalTo(170)
             make.left.equalTo(0)
             make.right.equalTo(0)
-            make.top.equalTo(self).offset(-170)
+            make.top.equalTo(self!).offset(self!.scanImageViewOffset)
+            
         })
+        
+        self.clipsToBounds = true
+        
     }
     
     /**
@@ -61,8 +70,27 @@ class WBQrcodeView: UIView {
         super.layoutSubviews()
         self.scanBorderImageView?.center = self.center
         self.scanBorderImageView?.frame = self.bounds
-        
     }
     
+//    private func setupSchedule() {
+//        let link = CADisplayLink(target: self, selector: #selector(self.update))
+//        self.link = link
+//        self.link?.add(to: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
+//    }
+    
+//    @objc private func update() {
+//        self.scanImageViewOffset += 8
+//        if self.scanImageViewOffset >= 170 {
+//            self.scanImageViewOffset = -170
+//        }
+//        self.scanImageView?.snp.updateConstraints({[weak self] (make) in
+//            make.top.equalTo(self!).offset(self!.scanImageViewOffset)
+//        })
+//    }
+    
+    deinit {
+//        self.link?.remove(from: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
+        printLog("close QR link")
+    }
     
 }

@@ -69,6 +69,7 @@ extension UIImage {
         UIGraphicsEndImageContext()
     }
     
+    
     /**
      Applies gradient color overlay to an image.
      
@@ -673,6 +674,7 @@ extension UIImage {
         
         return outputImage
     }
+    
     
     // MARK: Image From URL
     

@@ -1,0 +1,36 @@
+//
+//  CoreImageExtension.swift
+//  WBWeibo
+//
+//  Created by Lei Zhao on 9/18/16.
+//  Copyright © 2016 Lei Zhao. All rights reserved.
+//
+
+import UIKit
+
+extension CIImage {
+    
+    /// resize CIImage
+    ///
+    /// - parameter size: default CIImage size
+    ///
+    /// - returns: resized UIImage
+    func resizeAndGenerateImageFromCIImage(size: CGSize)->UIImage {
+        let extent = self.extent.integral
+        let scale = min(size.width/extent.width, size.height/extent.height)
+        
+        let width = extent.width * scale
+        let height = extent.height * scale
+        let colorSpace = CGColorSpaceCreateDeviceGray()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.none.rawValue)
+        let bitmapRef = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+        let context = CIContext(options: nil)
+        let bitmapImage = context.createCGImage(self, from: extent)
+        bitmapRef!.interpolationQuality = .none
+        bitmapRef!.scaleBy(x: scale, y: scale)
+        bitmapRef?.draw(bitmapImage!, in: extent)
+        
+        let scaledImage = bitmapRef!.makeImage()
+        return UIImage(cgImage: scaledImage!)
+    }
+}
