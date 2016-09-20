@@ -77,7 +77,8 @@ class WBHomeViewController: UITableViewController {
         menuView.frame = CGRect(x: 0, y: 0, width: menuViewW, height: menuViewH)
         
         printLog("\(fromView.frame)")
-        printLog("\(fromView.superview)")
+        printLog("\(fromView.superview?.frame)")
+        printLog("\(self.navigationController?.navigationBar.frame)")
         let resultFrame = window.convert(fromView.frame, from: fromView.superview)
         printLog("\(resultFrame)")
         menuView.y = resultFrame.maxY
