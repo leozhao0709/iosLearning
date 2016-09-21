@@ -12,6 +12,8 @@ class WBHomeViewController: UITableViewController {
 
     var popMenuWindow: UIWindow?
     
+    weak var titleBtn: UIButton?
+    
     weak var testBtn: UIButton?
     
     override func viewDidLoad() {
@@ -27,9 +29,12 @@ class WBHomeViewController: UITableViewController {
         let titleBtn = WBTitleButton()
         titleBtn.setTitle("首页", for: .normal)
         titleBtn.setImage(#imageLiteral(resourceName: "navigationbar_arrow_down"), highlightImage: nil, selectedImage: #imageLiteral(resourceName: "navigationbar_arrow_up"))
+        titleBtn.sizeToFit()
         titleBtn.addTarget(self, action: #selector(self.titleBtnClick(btn:)), for: UIControlEvents.touchUpInside)
         
         self.navigationItem.titleView = titleBtn
+        
+        self.titleBtn = titleBtn
         
         let view = UIView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
         let btn = UIButton(type: UIButtonType.custom)
@@ -61,26 +66,25 @@ class WBHomeViewController: UITableViewController {
         cover.addTarget(self, action: #selector(self.coverClick), for: UIControlEvents.touchUpInside)
         window.addSubview(cover)
         
-        let menuView = UIImageView()
-        menuView.isUserInteractionEnabled = true
-        let image = #imageLiteral(resourceName: "popover_background")
-        menuView.image = image
+//        let menuView = UIImageView()
+//        menuView.isUserInteractionEnabled = true
+//        let image = #imageLiteral(resourceName: "popover_background")
+//        menuView.image = image
+//        
+//        cover.addSubview(menuView)
+//        
+//        content.x = 15
+//        content.y = 18
+//        menuView.addSubview(content)
+//        
+//        let menuViewW = content.frame.maxX + content.x
+//        let menuViewH = content.frame.maxY + content.y
+//        menuView.frame = CGRect(x: 0, y: 0, width: menuViewW, height: menuViewH)
         
+        let menuView = WBHomeMenuView()
         cover.addSubview(menuView)
         
-        content.x = 15
-        content.y = 18
-        menuView.addSubview(content)
-        
-        let menuViewW = content.frame.maxX + content.x
-        let menuViewH = content.frame.maxY + content.y
-        menuView.frame = CGRect(x: 0, y: 0, width: menuViewW, height: menuViewH)
-        
-        printLog("\(fromView.frame)")
-        printLog("\(fromView.superview?.frame)")
-        printLog("\(self.navigationController?.navigationBar.frame)")
         let resultFrame = window.convert(fromView.frame, from: fromView.superview)
-        printLog("\(resultFrame)")
         menuView.y = resultFrame.maxY
         menuView.centerX = resultFrame.origin.x + resultFrame.size.width * 0.5
     }
@@ -97,6 +101,7 @@ class WBHomeViewController: UITableViewController {
     
     @objc private func coverClick() {
         self.popMenuWindow = nil
+        self.titleBtn?.isSelected = !(self.titleBtn?.isSelected)!
     }
     
     @objc private func titleBtnClick(btn: UIButton) {

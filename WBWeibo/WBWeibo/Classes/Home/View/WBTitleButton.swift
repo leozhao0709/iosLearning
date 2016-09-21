@@ -26,7 +26,7 @@ class WBTitleButton: UIButton {
      */
     private func setupUI() {
         self.setTitleColor(UIColor.black, for: .normal)
-        self.sizeToFit()
+//        self.sizeToFit()
         self.imageView?.contentMode = .center
         self.titleLabel?.contentMode = .center
     }
