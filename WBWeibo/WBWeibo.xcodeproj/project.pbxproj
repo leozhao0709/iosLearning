@@ -40,6 +40,7 @@
 		D4D6572E1D8FB35F00260C77 /* WBTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6572D1D8FB35F00260C77 /* WBTitleButton.swift */; };
 		D4D657321D8FB3A100260C77 /* WBBarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D657301D8FB3A100260C77 /* WBBarcodeView.swift */; };
 		D4D657331D8FB3A100260C77 /* WBQrcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D657311D8FB3A100260C77 /* WBQrcodeView.swift */; };
+		D4D657351D92576F00260C77 /* WBPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D657341D92576F00260C77 /* WBPopMenu.swift */; };
 		D4FD930D1D90C92A005039E2 /* WBHomeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD930C1D90C92A005039E2 /* WBHomeMenuView.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		D4D6572D1D8FB35F00260C77 /* WBTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTitleButton.swift; sourceTree = "<group>"; };
 		D4D657301D8FB3A100260C77 /* WBBarcodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBarcodeView.swift; sourceTree = "<group>"; };
 		D4D657311D8FB3A100260C77 /* WBQrcodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQrcodeView.swift; sourceTree = "<group>"; };
+		D4D657341D92576F00260C77 /* WBPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPopMenu.swift; sourceTree = "<group>"; };
 		D4FD930C1D90C92A005039E2 /* WBHomeMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeMenuView.swift; sourceTree = "<group>"; };
 		D80046CD91153A421C4C0003 /* Pods-WBWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBWeibo/Pods-WBWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +219,7 @@
 				D4FD930B1D90C8FD005039E2 /* TitleMenuView */,
 				D4D6572F1D8FB3A100260C77 /* QRView */,
 				D4D6572D1D8FB35F00260C77 /* WBTitleButton.swift */,
+				D4D657341D92576F00260C77 /* WBPopMenu.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				D4D657331D8FB3A100260C77 /* WBQrcodeView.swift in Sources */,
 				D4D657001D8E33A300260C77 /* WBProfileViewController.swift in Sources */,
 				D4D657111D8E33AB00260C77 /* UIImageViewExtension.swift in Sources */,
+				D4D657351D92576F00260C77 /* WBPopMenu.swift in Sources */,
 				D4D657221D8F89DB00260C77 /* WBScanNavigationController.swift in Sources */,
 				D4D657211D8F89DB00260C77 /* WBQrcodeViewController.swift in Sources */,
 				D4D656FE1D8E33A300260C77 /* AppDelegate.swift in Sources */,
