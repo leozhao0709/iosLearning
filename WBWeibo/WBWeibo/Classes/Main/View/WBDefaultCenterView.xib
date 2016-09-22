@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WBDefaultCenterView" customModule="WBWeibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="Pnl-yC-5FK">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="175" id="TEb-Ox-UUd"/>
+                        <constraint firstAttribute="width" constant="175" id="uFB-Mk-w1E"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="eXp-tQ-Sgv">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="Asl-53-Wqt"/>
+                        <constraint firstAttribute="width" constant="94" id="fdW-gr-Zp9"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当你关注一些人以后, 他们发布的最新消息会显示在这里." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf8-fN-MLi">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="175" id="f9u-de-1vH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVI-He-S34">
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-l2-zrX">
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Pnl-yC-5FK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Tl-ox-liX"/>
+                <constraint firstItem="eXp-tQ-Sgv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5ds-8D-eKv"/>
+                <constraint firstItem="dVI-He-S34" firstAttribute="top" secondItem="Bf8-fN-MLi" secondAttribute="bottom" constant="20" id="L2M-AE-Pwu"/>
+                <constraint firstItem="qWB-l2-zrX" firstAttribute="width" secondItem="dVI-He-S34" secondAttribute="width" id="MK9-Ic-GkE"/>
+                <constraint firstItem="qWB-l2-zrX" firstAttribute="trailing" secondItem="Bf8-fN-MLi" secondAttribute="trailing" id="NtP-Ft-rxT"/>
+                <constraint firstItem="Pnl-yC-5FK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ojn-7J-6uC"/>
+                <constraint firstItem="Bf8-fN-MLi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WLd-ut-vLH"/>
+                <constraint firstItem="dVI-He-S34" firstAttribute="leading" secondItem="Bf8-fN-MLi" secondAttribute="leading" id="cnb-bb-eSw"/>
+                <constraint firstItem="qWB-l2-zrX" firstAttribute="top" secondItem="dVI-He-S34" secondAttribute="top" id="fXC-Q0-8ey"/>
+                <constraint firstItem="qWB-l2-zrX" firstAttribute="height" secondItem="dVI-He-S34" secondAttribute="height" id="g0c-fj-zTe"/>
+                <constraint firstItem="eXp-tQ-Sgv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="25" id="g35-HL-CHG"/>
+                <constraint firstItem="Bf8-fN-MLi" firstAttribute="top" secondItem="Pnl-yC-5FK" secondAttribute="bottom" constant="8" id="jgN-Hl-hCK"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="visitordiscover_feed_image_house" width="94" height="90"/>
+        <image name="visitordiscover_feed_image_smallicon" width="175" height="175"/>
+    </resources>
+</document>
