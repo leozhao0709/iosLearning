@@ -9,10 +9,12 @@
 import UIKit
 
 extension UIBarButtonItem {
+    
     convenience init?(normalImage: UIImage?, highlightImage: UIImage?, target: AnyObject?, action: Selector) {
         let btn = UIButton(normalImage: normalImage, highlightImage: highlightImage)
         btn.sizeToFit()
         btn.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
         self.init(customView: btn)
     }
+    
 }

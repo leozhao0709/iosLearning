@@ -11,16 +11,26 @@ import UIKit
 extension UITabBarItem {
     
     func setImageWithOriginalImage(_ normalImage: UIImage?, selectedImage: UIImage?) {
-        self.image = normalImage!.withRenderingMode(.alwaysOriginal)
-        self.selectedImage = selectedImage!.withRenderingMode(.alwaysOriginal)
+        if let normalImage = normalImage {
+            self.image = normalImage.withRenderingMode(.alwaysOriginal)
+        }
+        
+        if let selectedImage = selectedImage {
+            self.selectedImage = selectedImage.withRenderingMode(.alwaysOriginal)
+        }
     }
     
     func setTitleTextColor(_ normalColor: UIColor?, selectedColor: UIColor?) {
-        let nomalTitleAttribute: [String: AnyObject]? = [NSForegroundColorAttributeName: normalColor!]
-        self.setTitleTextAttributes(nomalTitleAttribute, for: UIControlState())
+        if let normalColor = normalColor {
+            let nomalTitleAttribute: [String: AnyObject]? = [NSForegroundColorAttributeName: normalColor]
+            self.setTitleTextAttributes(nomalTitleAttribute, for: UIControlState())
+        }
+        if let selectedColor = selectedColor {
+            let selectedTitleAttribute: [String: AnyObject]? = [NSForegroundColorAttributeName: selectedColor]
+            self.setTitleTextAttributes(selectedTitleAttribute, for: UIControlState.selected)
+        }
         
-        let selectedTitleAttribute: [String: AnyObject]? = [NSForegroundColorAttributeName: selectedColor!]
-        self.setTitleTextAttributes(selectedTitleAttribute, for: UIControlState.selected)
+        
     }
     
 }

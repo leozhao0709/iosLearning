@@ -44,8 +44,11 @@ class WBPopMenu: NSObject {
     
     
     @objc static func coverClick() {
-        WBPopMenu.popMenuWindow = nil
+        for view in (WBPopMenu.popMenuWindow?.subviews)! {
+            view.removeFromSuperview()
+        }
         
+        WBPopMenu.popMenuWindow = nil
         if let dismiss = self.dismiss {
             dismiss()
         }

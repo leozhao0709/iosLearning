@@ -63,12 +63,12 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
         message.tabBarItem.badgeValue = "3"
         self.setupChildControllerView(message, title: "消息", tabBarNormolImage: UIImage(named: "tabbar_message_center")!, tabBarSelectedImage: UIImage(named: "tabbar_message_center_selected")!)
         
-        message.view.backgroundColor = UIColor.blue
+        message.view.backgroundColor = UIColor.cyan
         
         let discover = WBDiscoverViewController()
         self.setupChildControllerView(discover, title: "发现", tabBarNormolImage: UIImage(named: "tabbar_discover")!, tabBarSelectedImage: UIImage(named: "tabbar_discover_selected")!)
         
-        discover.view.backgroundColor = UIColor.purple
+        discover.view.backgroundColor = UIColor.orange
         
         let profile = WBProfileViewController()
         self.setupChildControllerView(profile, title: "我", tabBarNormolImage: UIImage(named: "tabbar_profile")!, tabBarSelectedImage: UIImage(named: "tabbar_profile_selected")!)
@@ -91,7 +91,7 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
         
         self.customerTabBar?.addItem(viewController.tabBarItem)
         
-        let nav = UINavigationController.init(rootViewController: viewController)
+        let nav = WBNavigationController(rootViewController: viewController)
         
         self.addChildViewController(nav)
     }
