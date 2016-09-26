@@ -1,12 +1,18 @@
 PODS:
-  - SnapKit (3.0.0)
+  - Alamofire (4.0.1)
+  - KRProgressHUD (2.0.0)
+  - SnapKit (3.0.1)
 
 DEPENDENCIES:
+  - Alamofire
+  - KRProgressHUD
   - SnapKit
 
 SPEC CHECKSUMS:
-  SnapKit: 98af0a4e9369d3c58f758967518081dbdc7eb1d9
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  KRProgressHUD: fa77b02194e532579579d5f0953282dab1c961c5
+  SnapKit: f818b8326d45b4e1c777d0ab27b5c0a3624bfdeb
 
-PODFILE CHECKSUM: b584fe2c4cc1801026b475afd52ff12c8eada6b8
+PODFILE CHECKSUM: 4c6582e4ca6d670d9849be8cd5e6304c7ab2e634
 
 COCOAPODS: 1.1.0.rc.2

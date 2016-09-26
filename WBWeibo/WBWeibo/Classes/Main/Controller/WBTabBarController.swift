@@ -55,25 +55,18 @@ class WBTabBarController: UITabBarController, WBTabBarDelegate {
         let home = WBHomeViewController()
         self.setupChildControllerView(home, title: "首页", tabBarNormolImage: UIImage(named: "tabbar_home")!, tabBarSelectedImage: UIImage(named: "tabbar_home_selected")!)
         
-        home.view.backgroundColor = UIColor.green
-        
-        
         
         let message = WBMessageViewController()
         message.tabBarItem.badgeValue = "3"
         self.setupChildControllerView(message, title: "消息", tabBarNormolImage: UIImage(named: "tabbar_message_center")!, tabBarSelectedImage: UIImage(named: "tabbar_message_center_selected")!)
         
-        message.view.backgroundColor = UIColor.cyan
         
         let discover = WBDiscoverViewController()
         self.setupChildControllerView(discover, title: "发现", tabBarNormolImage: UIImage(named: "tabbar_discover")!, tabBarSelectedImage: UIImage(named: "tabbar_discover_selected")!)
         
-        discover.view.backgroundColor = UIColor.orange
         
         let profile = WBProfileViewController()
         self.setupChildControllerView(profile, title: "我", tabBarNormolImage: UIImage(named: "tabbar_profile")!, tabBarSelectedImage: UIImage(named: "tabbar_profile_selected")!)
-        
-        profile.view.backgroundColor = UIColor.lightGray
         
     }
     

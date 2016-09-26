@@ -8,18 +8,22 @@
 
 import UIKit
 
-class WBHomeViewController: UITableViewController {
-
-    
+class WBHomeViewController: WBBaseTableViewController {
     
     weak var titleBtn: UIButton?
     
-    weak var testBtn: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupNav()
         
+        self.defaultCenterView?.iconImage = #imageLiteral(resourceName: "visitordiscover_feed_image_house")
+        self.defaultCenterView?.info = "当你关注一些人以后, 他们发布的最新消息会显示在这里"
+        
+    }
+    
+    private func setupNav() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(normalImage: UIImage(named: "navigationbar_friendsearch"), highlightImage: UIImage(named: "navigationbar_friendsearch_highlighted"), target: self, action: #selector(self.friendSearch))
         
         
@@ -35,22 +39,18 @@ class WBHomeViewController: UITableViewController {
         self.navigationItem.titleView = titleBtn
         
         self.titleBtn = titleBtn
-        
-        let view = UIView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
-        let btn = UIButton(type: UIButtonType.custom)
-        btn.setTitle("My Card", for: UIControlState.normal)
-        btn.setTitleColor(UIColor.orange, for: .normal)
-        btn.sizeToFit()
-        btn.center = CGPoint(x: 100, y: 100)
-        view.addSubview(btn)
-        view.bringSubview(toFront: btn)
-        view.backgroundColor = UIColor.red
-//        view.addSubview(btn)
-        self.testBtn = btn
-        self.view.addSubview(view)
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.defaultCenterView?.startTurnTableRotate()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.defaultCenterView?.stopTurnTableRotate()
+    }
 
     
     @objc private func titleBtnClick(btn: UIButton) {

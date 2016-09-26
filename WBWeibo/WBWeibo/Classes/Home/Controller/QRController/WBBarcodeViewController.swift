@@ -51,35 +51,40 @@ class WBBarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         //1. 获取输入设备
         let inputDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         // 2. 根据输入设备, 创建输入对象
-        let input = try! AVCaptureDeviceInput(device: inputDevice)
-        
-        //3. 创建输出对象
-        let output = AVCaptureMetadataOutput()
-        //4. 设置输出对象的delegate
-        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-        //5. 创建session, 注意session是一个持久的过程, 所以必须定义成global variable
-        let session = AVCaptureSession()
-        self.session = session
-        //6. 将输入和输出添加到session中, 注意不能重复添加
-        if session.canAddInput(input) {
-            session.addInput(input)
+        do {
+            let input = try AVCaptureDeviceInput(device: inputDevice)
+            
+            //3. 创建输出对象
+            let output = AVCaptureMetadataOutput()
+            //4. 设置输出对象的delegate
+            output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            //5. 创建session, 注意session是一个持久的过程, 所以必须定义成global variable
+            let session = AVCaptureSession()
+            self.session = session
+            //6. 将输入和输出添加到session中, 注意不能重复添加
+            if session.canAddInput(input) {
+                session.addInput(input)
+            }
+            
+            if session.canAddOutput(output) {
+                session.addOutput(output)
+            }
+            
+            //7. 设置输出的数据类型
+            output.metadataObjectTypes = [AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode39Mod43Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypePDF417Code,AVMetadataObjectTypeAztecCode, AVMetadataObjectTypeInterleaved2of5Code, AVMetadataObjectTypeITF14Code, AVMetadataObjectTypeDataMatrixCode]
+            
+            //8. 设置预览界面
+            let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+            previewLayer?.frame = self.view.bounds
+            //        self.view.layer.addSublayer(previewLayer!)
+            self.view.layer.insertSublayer(previewLayer!, at: 0)
+            self.previewLayer = previewLayer
+            //9. 开始采集数据
+            session.startRunning()
         }
-        
-        if session.canAddOutput(output) {
-            session.addOutput(output)
+        catch {
+            printLog("Device not support for BarCode scan")
         }
-        
-        //7. 设置输出的数据类型
-        output.metadataObjectTypes = [AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode39Mod43Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypePDF417Code,AVMetadataObjectTypeAztecCode, AVMetadataObjectTypeInterleaved2of5Code, AVMetadataObjectTypeITF14Code, AVMetadataObjectTypeDataMatrixCode]
-        
-        //8. 设置预览界面
-        let previewLayer = AVCaptureVideoPreviewLayer(session: session)
-        previewLayer?.frame = self.view.bounds
-        //        self.view.layer.addSublayer(previewLayer!)
-        self.view.layer.insertSublayer(previewLayer!, at: 0)
-        self.previewLayer = previewLayer
-        //9. 开始采集数据
-        session.startRunning()
         
         printLog("Barcode controller will appear")
     }

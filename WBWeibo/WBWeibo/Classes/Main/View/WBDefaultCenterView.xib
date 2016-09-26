@@ -18,27 +18,41 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="eXp-tQ-Sgv">
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="90" id="Asl-53-Wqt"/>
                         <constraint firstAttribute="width" constant="94" id="fdW-gr-Zp9"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当你关注一些人以后, 他们发布的最新消息会显示在这里." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf8-fN-MLi">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当你关注一些人以后, 他们发布的最新消息会显示在这里." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf8-fN-MLi">
                     <constraints>
                         <constraint firstAttribute="width" constant="175" id="f9u-de-1vH"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVI-He-S34">
-                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="qaq-dP-HnL"/>
+                    </constraints>
+                    <state key="normal" title="注册" backgroundImage="common_button_white">
+                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="common_button_white_highlighted"/>
+                    <connections>
+                        <action selector="registerBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="r7s-t8-TiS"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-l2-zrX">
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="登录" backgroundImage="common_button_white"/>
+                    <state key="highlighted" backgroundImage="common_button_white_highlighted"/>
+                    <connections>
+                        <action selector="loginBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="F4c-cJ-L7u"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Pnl-yC-5FK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Tl-ox-liX"/>
                 <constraint firstItem="eXp-tQ-Sgv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5ds-8D-eKv"/>
@@ -48,15 +62,25 @@
                 <constraint firstItem="Pnl-yC-5FK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ojn-7J-6uC"/>
                 <constraint firstItem="Bf8-fN-MLi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WLd-ut-vLH"/>
                 <constraint firstItem="dVI-He-S34" firstAttribute="leading" secondItem="Bf8-fN-MLi" secondAttribute="leading" id="cnb-bb-eSw"/>
+                <constraint firstItem="qWB-l2-zrX" firstAttribute="leading" secondItem="dVI-He-S34" secondAttribute="trailing" constant="20" id="dOo-BM-4e2"/>
                 <constraint firstItem="qWB-l2-zrX" firstAttribute="top" secondItem="dVI-He-S34" secondAttribute="top" id="fXC-Q0-8ey"/>
                 <constraint firstItem="qWB-l2-zrX" firstAttribute="height" secondItem="dVI-He-S34" secondAttribute="height" id="g0c-fj-zTe"/>
                 <constraint firstItem="eXp-tQ-Sgv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="25" id="g35-HL-CHG"/>
                 <constraint firstItem="Bf8-fN-MLi" firstAttribute="top" secondItem="Pnl-yC-5FK" secondAttribute="bottom" constant="8" id="jgN-Hl-hCK"/>
             </constraints>
+            <connections>
+                <outlet property="descriptionLabel" destination="Bf8-fN-MLi" id="pHI-4R-tIW"/>
+                <outlet property="iconImageView" destination="eXp-tQ-Sgv" id="foV-T3-Zx6"/>
+                <outlet property="loginBtn" destination="qWB-l2-zrX" id="7ox-kU-OcA"/>
+                <outlet property="registerBtn" destination="dVI-He-S34" id="MyI-l7-Cc4"/>
+                <outlet property="turnTableImageView" destination="Pnl-yC-5FK" id="IBZ-fm-RS3"/>
+            </connections>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
     <resources>
+        <image name="common_button_white" width="11" height="9"/>
+        <image name="common_button_white_highlighted" width="11" height="9"/>
         <image name="visitordiscover_feed_image_house" width="94" height="90"/>
         <image name="visitordiscover_feed_image_smallicon" width="175" height="175"/>
     </resources>

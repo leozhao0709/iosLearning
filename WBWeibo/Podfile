@@ -7,4 +7,6 @@ target 'WBWeibo' do
 
   # Pods for WBWeibo
   pod 'SnapKit'
+  pod "KRProgressHUD"
+  pod 'Alamofire'
 end
