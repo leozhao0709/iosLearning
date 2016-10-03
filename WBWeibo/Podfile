@@ -9,4 +9,5 @@ target 'WBWeibo' do
   pod 'SnapKit'
   pod "KRProgressHUD"
   pod 'Alamofire'
+  pod 'RealmSwift'
 end
