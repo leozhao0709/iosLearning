@@ -10,4 +10,5 @@ target 'WBWeibo' do
   pod "KRProgressHUD"
   pod 'Alamofire'
   pod 'RealmSwift'
+  pod 'SwiftyJSON'
 end

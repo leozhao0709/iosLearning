@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F44E441B61BEF3E8492681E /* Pods_WBWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D1EF77F4C3D138DB0C4DB /* Pods_WBWeibo.framework */; };
+		D4AAED371DA223D0001B3705 /* WBAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAED351DA223D0001B3705 /* WBAccount.swift */; };
 		D4B803B41D93738800E13F6D /* WBSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B803B31D93738800E13F6D /* WBSearchBar.swift */; };
 		D4B803B61D948A6F00E13F6D /* WBDefaultCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B803B51D948A6F00E13F6D /* WBDefaultCenterView.swift */; };
 		D4B803B81D948A8800E13F6D /* WBDefaultCenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B803B71D948A8800E13F6D /* WBDefaultCenterView.xib */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		A1099CFDDBAC7FF98F9EC29A /* Pods-WBWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBWeibo/Pods-WBWeibo.release.xcconfig"; sourceTree = "<group>"; };
 		D20D1EF77F4C3D138DB0C4DB /* Pods_WBWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4AAED351DA223D0001B3705 /* WBAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBAccount.swift; sourceTree = "<group>"; };
 		D4B803B31D93738800E13F6D /* WBSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WBSearchBar.swift; path = WBWeibo/Extension/UIExtension/WBSearchBar.swift; sourceTree = SOURCE_ROOT; };
 		D4B803B51D948A6F00E13F6D /* WBDefaultCenterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDefaultCenterView.swift; sourceTree = "<group>"; };
 		D4B803B71D948A8800E13F6D /* WBDefaultCenterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBDefaultCenterView.xib; sourceTree = "<group>"; };
@@ -126,6 +128,21 @@
 				A1099CFDDBAC7FF98F9EC29A /* Pods-WBWeibo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4AAED341DA223D0001B3705 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4AAED351DA223D0001B3705 /* WBAccount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4AAED361DA223D0001B3705 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D4D656AA1D8E32D200260C77 = {
@@ -453,9 +470,9 @@
 		D4D657381D97AE9600260C77 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				D4AAED341DA223D0001B3705 /* Model */,
+				D4AAED361DA223D0001B3705 /* View */,
 				D4D657391D97AE9600260C77 /* Controller */,
-				D4D6573A1D97AE9600260C77 /* Model */,
-				D4D6573B1D97AE9600260C77 /* View */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -466,20 +483,6 @@
 				D4D6573C1D97AED400260C77 /* WBOAuthViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		D4D6573A1D97AE9600260C77 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D4D6573B1D97AE9600260C77 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D4FD930B1D90C8FD005039E2 /* TitleMenuView */ = {
@@ -681,6 +684,7 @@
 				D4D657331D8FB3A100260C77 /* WBQrcodeView.swift in Sources */,
 				D4D6573D1D97AED400260C77 /* WBOAuthViewController.swift in Sources */,
 				D4D657001D8E33A300260C77 /* WBProfileViewController.swift in Sources */,
+				D4AAED371DA223D0001B3705 /* WBAccount.swift in Sources */,
 				D4D657111D8E33AB00260C77 /* UIImageViewExtension.swift in Sources */,
 				D4D657351D92576F00260C77 /* WBPopMenu.swift in Sources */,
 				D4D657221D8F89DB00260C77 /* WBScanNavigationController.swift in Sources */,

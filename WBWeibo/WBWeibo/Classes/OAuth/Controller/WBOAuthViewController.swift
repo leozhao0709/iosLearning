@@ -9,6 +9,7 @@
 import UIKit
 import KRProgressHUD
 import Alamofire
+import SwiftyJSON
 
 class WBOAuthViewController: UIViewController, UIWebViewDelegate {
 
@@ -59,6 +60,12 @@ class WBOAuthViewController: UIViewController, UIWebViewDelegate {
                  */
                 
                 printLog("\(value)")
+                
+                let json = JSON(value)
+                
+                let account = WBAccount(json: json)
+                account.save()
+                
             case .failure(let error):
                 printLog("\(error)")
             }
