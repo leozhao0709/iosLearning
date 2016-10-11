@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,13 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //创建tabBarVc
         let tabBarVc = WBTabBarController()
         
-            
         self.window?.rootViewController = tabBarVc
         
         self.window?.makeKeyAndVisible()
         
-        let realm = try! Realm()
-        printLog("\(realm.configuration.fileURL)")
+        printLog("****\(NSHomeDirectory())")
         
         return true
     }

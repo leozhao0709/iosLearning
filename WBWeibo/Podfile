@@ -9,6 +9,6 @@ target 'WBWeibo' do
   pod 'SnapKit'
   pod "KRProgressHUD"
   pod 'Alamofire'
-  pod 'RealmSwift'
   pod 'SwiftyJSON'
+  pod 'MJExtension'
 end

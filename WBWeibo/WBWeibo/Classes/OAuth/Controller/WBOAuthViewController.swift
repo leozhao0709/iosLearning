@@ -10,6 +10,7 @@ import UIKit
 import KRProgressHUD
 import Alamofire
 import SwiftyJSON
+import MJExtension
 
 class WBOAuthViewController: UIViewController, UIWebViewDelegate {
 
@@ -61,9 +62,10 @@ class WBOAuthViewController: UIViewController, UIWebViewDelegate {
                 
                 printLog("\(value)")
                 
-                let json = JSON(value)
+//                let json = JSON(value)
                 
-                let account = WBAccount(json: json)
+                let account = WBAccount.mj_object(withKeyValues: value)!
+                printLog("\(account)")
                 account.save()
                 
             case .failure(let error):

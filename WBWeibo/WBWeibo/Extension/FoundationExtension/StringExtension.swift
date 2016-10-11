@@ -28,4 +28,24 @@ extension String {
         return qrcodeImage!
     }
     
+    
+    /// file system
+    ///
+    /// - returns: file path
+    func addToDocumentDir()->String? {
+        return self.addToDir(dir: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!)
+    }
+    
+    func addToCacheDir()->String? {
+        return self.addToDir(dir: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!)
+    }
+    
+    func addToTempDir()->String? {
+        return self.addToDir(dir: NSTemporaryDirectory())
+    }
+    
+    func addToDir(dir: String)->String {
+        return (dir as NSString).appendingPathComponent(self)
+    }
+    
 }

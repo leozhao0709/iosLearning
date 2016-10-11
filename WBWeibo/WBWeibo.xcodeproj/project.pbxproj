@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F44E441B61BEF3E8492681E /* Pods_WBWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20D1EF77F4C3D138DB0C4DB /* Pods_WBWeibo.framework */; };
-		D4AAED371DA223D0001B3705 /* WBAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAED351DA223D0001B3705 /* WBAccount.swift */; };
 		D4B803B41D93738800E13F6D /* WBSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B803B31D93738800E13F6D /* WBSearchBar.swift */; };
 		D4B803B61D948A6F00E13F6D /* WBDefaultCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B803B51D948A6F00E13F6D /* WBDefaultCenterView.swift */; };
 		D4B803B81D948A8800E13F6D /* WBDefaultCenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B803B71D948A8800E13F6D /* WBDefaultCenterView.xib */; };
@@ -49,13 +48,13 @@
 		D4D6573D1D97AED400260C77 /* WBOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6573C1D97AED400260C77 /* WBOAuthViewController.swift */; };
 		D4D6573F1D97B14600260C77 /* WBUrlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6573E1D97B14600260C77 /* WBUrlInfo.swift */; };
 		D4D73F6D1D93629200BB6CE5 /* WBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D73F6C1D93629200BB6CE5 /* WBNavigationController.swift */; };
+		D4F687B51DAD72D300C1ADB4 /* WBAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F687B41DAD72D300C1ADB4 /* WBAccount.swift */; };
 		D4FD930D1D90C92A005039E2 /* WBHomeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD930C1D90C92A005039E2 /* WBHomeMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A1099CFDDBAC7FF98F9EC29A /* Pods-WBWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBWeibo/Pods-WBWeibo.release.xcconfig"; sourceTree = "<group>"; };
 		D20D1EF77F4C3D138DB0C4DB /* Pods_WBWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4AAED351DA223D0001B3705 /* WBAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBAccount.swift; sourceTree = "<group>"; };
 		D4B803B31D93738800E13F6D /* WBSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WBSearchBar.swift; path = WBWeibo/Extension/UIExtension/WBSearchBar.swift; sourceTree = SOURCE_ROOT; };
 		D4B803B51D948A6F00E13F6D /* WBDefaultCenterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDefaultCenterView.swift; sourceTree = "<group>"; };
 		D4B803B71D948A8800E13F6D /* WBDefaultCenterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBDefaultCenterView.xib; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		D4D6573C1D97AED400260C77 /* WBOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBOAuthViewController.swift; sourceTree = "<group>"; };
 		D4D6573E1D97B14600260C77 /* WBUrlInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUrlInfo.swift; sourceTree = "<group>"; };
 		D4D73F6C1D93629200BB6CE5 /* WBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationController.swift; sourceTree = "<group>"; };
+		D4F687B41DAD72D300C1ADB4 /* WBAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBAccount.swift; sourceTree = "<group>"; };
 		D4FD930C1D90C92A005039E2 /* WBHomeMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeMenuView.swift; sourceTree = "<group>"; };
 		D80046CD91153A421C4C0003 /* Pods-WBWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBWeibo/Pods-WBWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +133,7 @@
 		D4AAED341DA223D0001B3705 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D4AAED351DA223D0001B3705 /* WBAccount.swift */,
+				D4F687B41DAD72D300C1ADB4 /* WBAccount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -675,6 +675,7 @@
 				D4D73F6D1D93629200BB6CE5 /* WBNavigationController.swift in Sources */,
 				D4D6571A1D8F749300260C77 /* UIViewControllerExtension.swift in Sources */,
 				D4D657121D8E33AB00260C77 /* UITabBarItemExtension.swift in Sources */,
+				D4F687B51DAD72D300C1ADB4 /* WBAccount.swift in Sources */,
 				D4D6570F1D8E33AB00260C77 /* UIButtonExtension.swift in Sources */,
 				D4D657101D8E33AB00260C77 /* UIImageExtension.swift in Sources */,
 				D4D657231D8F89DB00260C77 /* WBScanViewController.swift in Sources */,
@@ -684,7 +685,6 @@
 				D4D657331D8FB3A100260C77 /* WBQrcodeView.swift in Sources */,
 				D4D6573D1D97AED400260C77 /* WBOAuthViewController.swift in Sources */,
 				D4D657001D8E33A300260C77 /* WBProfileViewController.swift in Sources */,
-				D4AAED371DA223D0001B3705 /* WBAccount.swift in Sources */,
 				D4D657111D8E33AB00260C77 /* UIImageViewExtension.swift in Sources */,
 				D4D657351D92576F00260C77 /* WBPopMenu.swift in Sources */,
 				D4D657221D8F89DB00260C77 /* WBScanNavigationController.swift in Sources */,
