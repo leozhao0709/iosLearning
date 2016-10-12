@@ -68,6 +68,9 @@ class WBOAuthViewController: UIViewController, UIWebViewDelegate {
                 printLog("\(account)")
                 account.save()
                 
+                let readAccount = WBAccount.accountFromSandbox()
+                printLog("\(readAccount)")
+                
             case .failure(let error):
                 printLog("\(error)")
             }
