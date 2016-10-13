@@ -31,9 +31,17 @@ class WBHomeViewController: WBBaseTableViewController {
         
         let urlString = "https://api.weibo.com/2/users/show.json"
         var parameters:[String: Any] = [:]
-        Parameters["accesstoken"] = 
+        parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token
         
-        Alamofire.request(urlString, method: .get, parameters: Parameters)
+        Alamofire.request(urlString, method: .get, parameters: parameters).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                printLog("\(value)")
+            case .failure(let error):
+                printLog("\(error)")
+            }
+            
+        }
         
     }
     
