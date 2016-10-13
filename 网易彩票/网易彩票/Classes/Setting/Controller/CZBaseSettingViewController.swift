@@ -13,7 +13,7 @@ class CZBaseSettingViewController: UITableViewController {
     var cellData: [CZSettingGroup] = []
     
     init() {
-        super.init(style: UITableViewStyle.Grouped)
+        super.init(style: UITableViewStyle.grouped)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,12 +40,12 @@ class CZBaseSettingViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return self.cellData.count
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
         let group = self.cellData[section]
@@ -53,22 +53,22 @@ class CZBaseSettingViewController: UITableViewController {
         return group.items.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CZSettingCell.cellWithTableView(tableView)
         
         
         
-        let group = self.cellData[indexPath.section]
-        let item = group.items[indexPath.row]
+        let group = self.cellData[(indexPath as NSIndexPath).section]
+        let item = group.items[(indexPath as NSIndexPath).row]
         
         cell.item = item
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let group = self.cellData[indexPath.section]
-        let item = group.items[indexPath.row]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let group = self.cellData[(indexPath as NSIndexPath).section]
+        let item = group.items[(indexPath as NSIndexPath).row]
         
         //判断item4
         if let completion = item.operation {
@@ -85,12 +85,12 @@ class CZBaseSettingViewController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let group = self.cellData[section]
         return group.headerTitle
     }
     
-    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         let group = self.cellData[section]
         return group.footerTitle
     }

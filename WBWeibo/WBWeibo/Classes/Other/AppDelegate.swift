@@ -17,15 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        //创建tabBarVc
-        let tabBarVc = WBTabBarController()
-        
-        self.window?.rootViewController = tabBarVc
-        
         self.window?.makeKeyAndVisible()
         
         printLog("****\(NSHomeDirectory())")
+        
+        //是否oauth授权
+        if WBAccount.accountFromSandbox() != nil {
+            self.window?.chooseRootViewController()
+        } else {
+            //创建tabBarVc
+            let tabBarVc = WBTabBarController()
+            
+            self.window?.rootViewController = tabBarVc
+        }
         
         return true
     }

@@ -12,10 +12,10 @@ extension CIImage {
     
     /// resize CIImage
     ///
-    /// - parameter size: default CIImage size
+    /// - parameter size: desired CIImage size
     ///
-    /// - returns: resized UIImage
-    func resizeAndGenerateImageFromCIImage(size: CGSize)->UIImage {
+    /// - returns: resized CIImage
+    func resizeCIImage(size: CGSize)->CIImage {
         let extent = self.extent.integral
         let scale = min(size.width/extent.width, size.height/extent.height)
         
@@ -31,6 +31,6 @@ extension CIImage {
         bitmapRef?.draw(bitmapImage!, in: extent)
         
         let scaledImage = bitmapRef!.makeImage()
-        return UIImage(cgImage: scaledImage!)
+        return CIImage(cgImage: scaledImage!)
     }
 }

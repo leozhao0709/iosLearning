@@ -28,21 +28,21 @@ class CZNavigationController: UINavigationController {
         let navBar = UINavigationBar.appearance()
         
         //1. 设置背景
-        navBar.setBackgroundImage(UIImage(named: "NavBar64"), forBarMetrics: .Default) //此方法连写没代码提示0.0
+        navBar.setBackgroundImage(UIImage(named: "NavBar64"), for: .default) //此方法连写没代码提示0.0
         
         //2. UIApplication设置状态栏样式, 需要添加 View controller-based status bar appearance 进info.plist
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.shared.statusBarStyle = .lightContent
         
         //3. 设置导航条的字体和颜色
-        let titleAttr = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(24)]
+        let titleAttr = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 24)]
         
         navBar.titleTextAttributes = titleAttr
         //设置返回按钮的样式
-        navBar.tintColor = UIColor.whiteColor()
+        navBar.tintColor = UIColor.white
         
         
         let navItem = UIBarButtonItem.appearance()
-        navItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFontOfSize(15)], forState: UIControlState.Normal)
+        navItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 15)], for: UIControlState())
         
 //        //改变整个按钮
 //        navItem.setBackgroundImage(<#T##backgroundImage: UIImage?##UIImage?#>, forState: <#T##UIControlState#>, barMetrics: <#T##UIBarMetrics#>)
@@ -74,11 +74,11 @@ class CZNavigationController: UINavigationController {
 //        return .LightContent
 //    }
     
-    override func popViewControllerAnimated(animated: Bool) -> UIViewController? {
-        return super.popViewControllerAnimated(animated)
+    override func popViewController(animated: Bool) -> UIViewController? {
+        return super.popViewController(animated: animated)
     }
     
-    override func pushViewController(viewController: UIViewController, animated: Bool) {
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         viewController.hidesBottomBarWhenPushed = true
         return super.pushViewController(viewController, animated: animated)
     }

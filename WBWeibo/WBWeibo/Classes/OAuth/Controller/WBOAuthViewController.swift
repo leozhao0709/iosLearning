@@ -60,16 +60,14 @@ class WBOAuthViewController: UIViewController, UIWebViewDelegate {
                  }
                  */
                 
-                printLog("\(value)")
-                
-//                let json = JSON(value)
-                
                 let account = WBAccount.mj_object(withKeyValues: value)!
-                printLog("\(account)")
-                account.save()
-                
-                let readAccount = WBAccount.accountFromSandbox()
-                printLog("\(readAccount)")
+                if (account.save()) {
+                    printLog("account saved successfully")
+                    
+                    UIApplication.shared.keyWindow?.chooseRootViewController()
+                } else {
+                    printLog("account saved failed")
+                }
                 
             case .failure(let error):
                 printLog("\(error)")

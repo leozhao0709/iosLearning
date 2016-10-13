@@ -69,6 +69,18 @@ extension UIImage {
         UIGraphicsEndImageContext()
     }
     
+    convenience init?(QRCodeString: String, size: CGSize) {
+        let filter = CIFilter(name: "CIQRCodeGenerator")
+        filter?.setDefaults()
+        let data = QRCodeString.data(using: String.Encoding.utf8)
+        filter?.setValue(data, forKey: "inputMessage")
+        
+        let qrcodeCIImage = filter?.outputImage
+        let resizedQrcodeCIImage = qrcodeCIImage?.resizeCIImage(size: size)
+        
+        self.init(ciImage: resizedQrcodeCIImage!)
+    }
+    
     
     /**
      Applies gradient color overlay to an image.

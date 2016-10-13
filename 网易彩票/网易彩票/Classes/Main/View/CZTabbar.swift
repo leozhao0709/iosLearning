@@ -10,7 +10,7 @@ import UIKit
 
 class CZTabbar: UIView {
 
-    weak private var selectedBtn: UIButton!
+    weak fileprivate var selectedBtn: UIButton!
     var delegate: CZTabbarDelegate?
     
     override init(frame: CGRect) {
@@ -25,12 +25,12 @@ class CZTabbar: UIView {
     
     func addTabbarBtnWithImage(normalImage normalImg: String, selectedImage selectedImg: String) {
         
-        let btn = UIButton(type: UIButtonType.Custom)
+        let btn = UIButton(type: UIButtonType.custom)
         
-        btn.setBackgroundImage(UIImage(named: normalImg)!, forState: UIControlState.Normal)
-        btn.setBackgroundImage(UIImage(named: selectedImg)!, forState: UIControlState.Selected)
+        btn.setBackgroundImage(UIImage(named: normalImg)!, for: UIControlState())
+        btn.setBackgroundImage(UIImage(named: selectedImg)!, for: UIControlState.selected)
         
-        btn.addTarget(self, action: #selector(self.btnClick(_:)), forControlEvents: UIControlEvents.TouchDown)
+        btn.addTarget(self, action: #selector(self.btnClick(_:)), for: UIControlEvents.touchDown)
         
         btn.tag = self.subviews.count
         
@@ -38,20 +38,20 @@ class CZTabbar: UIView {
         
         if btn.tag == 0 {
             self.selectedBtn = btn
-            btn.selected = true
+            btn.isSelected = true
         }
     }
     
-    @objc private func btnClick(btn: UIButton) {
+    @objc fileprivate func btnClick(_ btn: UIButton) {
         
-        btn.highlighted = false
+        btn.isHighlighted = false
         
         if let delegate = self.delegate {
             delegate.tabbar(self, didSelectedFrom: self.selectedBtn.tag, to: btn.tag)
         }
         
-        self.selectedBtn.selected = false
-        btn.selected = true
+        self.selectedBtn.isSelected = false
+        btn.isSelected = true
         self.selectedBtn = btn
     }
     
@@ -65,7 +65,7 @@ class CZTabbar: UIView {
         
         for btn in self.subviews {
             
-            btn.frame = CGRectMake(btnW * CGFloat(btn.tag), 0, btnW, btnH)
+            btn.frame = CGRect(x: btnW * CGFloat(btn.tag), y: 0, width: btnW, height: btnH)
         }
         
     }

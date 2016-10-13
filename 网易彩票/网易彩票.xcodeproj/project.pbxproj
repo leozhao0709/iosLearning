@@ -537,12 +537,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4BFDBAD1D58047D00D44595 /* Build configuration list for PBXNativeTarget "网易彩票" */;
 			buildPhases = (
-				42A8F2B46DE6E4DFAF66E15B /* 📦 Check Pods Manifest.lock */,
+				42A8F2B46DE6E4DFAF66E15B /* [CP] Check Pods Manifest.lock */,
 				D4BFDB971D58047D00D44595 /* Sources */,
 				D4BFDB981D58047D00D44595 /* Frameworks */,
 				D4BFDB991D58047D00D44595 /* Resources */,
-				0701D3E68B3E319BBA0AA96A /* 📦 Embed Pods Frameworks */,
-				10A72C71BE55229C0363E282 /* 📦 Copy Pods Resources */,
+				0701D3E68B3E319BBA0AA96A /* [CP] Embed Pods Frameworks */,
+				10A72C71BE55229C0363E282 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -567,6 +567,7 @@
 					D4BFDB9A1D58047D00D44595 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = ZQNTYXCS7L;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -634,14 +635,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0701D3E68B3E319BBA0AA96A /* 📦 Embed Pods Frameworks */ = {
+		0701D3E68B3E319BBA0AA96A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,14 +650,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-网易彩票/Pods-网易彩票-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		10A72C71BE55229C0363E282 /* 📦 Copy Pods Resources */ = {
+		10A72C71BE55229C0363E282 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,19 +665,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-网易彩票/Pods-网易彩票-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		42A8F2B46DE6E4DFAF66E15B /* 📦 Check Pods Manifest.lock */ = {
+		42A8F2B46DE6E4DFAF66E15B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -837,6 +838,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lzhao.exercise.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -851,6 +853,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lzhao.exercise.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

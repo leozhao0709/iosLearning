@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WBWelcomeViewController" customModule="WBWeibo" customModuleProvider="target">
+            <connections>
+                <outlet property="iconConsY" destination="hEE-1Q-qCz" id="ZMx-uK-x0e"/>
+                <outlet property="iconImageView" destination="bQR-9e-MsE" id="Qlb-IC-dUD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="welcomeBackLabel" destination="F11-pZ-QKE" id="mzo-r3-gdy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="g18-Xa-qYi"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-9e-MsE">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="chc-s7-xC9"/>
+                        <constraint firstAttribute="width" constant="100" id="o0V-sk-jrj"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F11-pZ-QKE">
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="g18-Xa-qYi" secondAttribute="trailing" id="5I0-lV-JuO"/>
+                <constraint firstItem="F11-pZ-QKE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-70" id="FL8-u8-xbc"/>
+                <constraint firstItem="g18-Xa-qYi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pmt-bs-od0"/>
+                <constraint firstItem="F11-pZ-QKE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RqD-7j-OIX"/>
+                <constraint firstItem="bQR-9e-MsE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="U5V-q7-ihg"/>
+                <constraint firstAttribute="bottom" secondItem="g18-Xa-qYi" secondAttribute="bottom" id="aFZ-qR-0MF"/>
+                <constraint firstItem="bQR-9e-MsE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hEE-1Q-qCz"/>
+                <constraint firstItem="g18-Xa-qYi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ogb-Ya-JCf"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="ad_background" width="320" height="480"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>

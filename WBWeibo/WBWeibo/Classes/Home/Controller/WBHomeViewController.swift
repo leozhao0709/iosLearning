@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class WBHomeViewController: WBBaseTableViewController {
     
@@ -18,8 +19,21 @@ class WBHomeViewController: WBBaseTableViewController {
         
         self.setupNav()
         
-        self.defaultCenterView?.iconImage = #imageLiteral(resourceName: "visitordiscover_feed_image_house")
-        self.defaultCenterView?.info = "当你关注一些人以后, 他们发布的最新消息会显示在这里"
+        if self.defaultCenterView != nil {
+            self.defaultCenterView?.iconImage = #imageLiteral(resourceName: "visitordiscover_feed_image_house")
+            self.defaultCenterView?.info = "当你关注一些人以后, 他们发布的最新消息会显示在这里"
+        } else {
+            self.setupUserInfo()
+        }
+    }
+    
+    private func setupUserInfo() {
+        
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        var parameters:[String: Any] = [:]
+        Parameters["accesstoken"] = 
+        
+        Alamofire.request(urlString, method: .get, parameters: Parameters)
         
     }
     
@@ -43,13 +57,17 @@ class WBHomeViewController: WBBaseTableViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.defaultCenterView?.startTurnTableRotate()
+        if self.defaultCenterView != nil {
+            super.viewWillAppear(animated)
+            self.defaultCenterView?.startTurnTableRotate()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.defaultCenterView?.stopTurnTableRotate()
+        if self.defaultCenterView != nil {
+            super.viewWillDisappear(animated)
+            self.defaultCenterView?.stopTurnTableRotate()
+        }
     }
 
     

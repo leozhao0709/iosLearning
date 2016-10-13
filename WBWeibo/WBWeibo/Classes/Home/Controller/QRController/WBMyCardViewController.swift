@@ -20,7 +20,9 @@ class WBMyCardViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let qrcode = "Lei Zhao"
-        self.qrcodeImageView.image =  qrcode.generateQrCodeImage(size: self.qrcodeImageView.frame.size)
+//        self.qrcodeImageView.image =  qrcode.generateQrCodeImage(size: self.qrcodeImageView.frame.size)
+        
+        self.qrcodeImageView.image = UIImage(QRCodeString: qrcode, size: self.qrcodeImageView.frame.size)
     }
     
 

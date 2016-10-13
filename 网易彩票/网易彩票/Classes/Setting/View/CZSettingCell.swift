@@ -16,14 +16,14 @@ class CZSettingCell: UITableViewCell {
     
     lazy var mySwitch: UISwitch? = {
         let mSwitch = UISwitch()
-        mSwitch.addTarget(self, action: #selector(self.valueChanged), forControlEvents: UIControlEvents.ValueChanged)
+        mSwitch.addTarget(self, action: #selector(self.valueChanged), for: UIControlEvents.valueChanged)
         
         return mSwitch
     }()
     
     lazy var myLabel: UILabel? = {
         let label = UILabel()
-        label.bounds = CGRectMake(0, 0, 80, 44)
+        label.bounds = CGRect(x: 0, y: 0, width: 80, height: 44)
         label.text = "00:00"
         
         return label
@@ -42,45 +42,45 @@ class CZSettingCell: UITableViewCell {
             //        cell?.accessoryType = .DisclosureIndicator
             //        cell?.accessoryView = UIImageView(image: UIImage(named: "CellArrow"))
             
-            if item .isKindOfClass(CZSettingArrowItem) {
+            if item .isKind(of: CZSettingArrowItem.self) {
                 self.accessoryView = self.myArrow
                 
-                self.selectionStyle = .Default
+                self.selectionStyle = .default
             }
-            else if item.isKindOfClass(CZSettingSwitchItem){
+            else if item.isKind(of: CZSettingSwitchItem.self){
                 let switchView = mySwitch
-                switchView!.on = NSUserDefaults.standardUserDefaults().boolForKey(item.title)
+                switchView!.isOn = UserDefaults.standard.bool(forKey: item.title)
                 self.accessoryView = switchView
                 
-                self.selectionStyle = .None
+                self.selectionStyle = .none
             }
-            else if item.isKindOfClass(CZSettingLabelItem) {
+            else if item.isKind(of: CZSettingLabelItem.self) {
                 
                 
                 self.accessoryView = self.myLabel
                 
-                self.selectionStyle = .Default
+                self.selectionStyle = .default
             }
         }
     }
 
-    static func cellWithTableView(tableView: UITableView)-> CZSettingCell {
+    static func cellWithTableView(_ tableView: UITableView)-> CZSettingCell {
         
         let cellIdentity = "SettingCell"
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentity) as? CZSettingCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentity) as? CZSettingCell
         
         if cell == nil {
-            cell = CZSettingCell(style: .Value1, reuseIdentifier: cellIdentity)
+            cell = CZSettingCell(style: .value1, reuseIdentifier: cellIdentity)
         }
         
         return cell!
         
     }
     
-    @objc private func valueChanged(mySwitch: UISwitch) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setBool(mySwitch.on, forKey: self.item.title)
+    @objc fileprivate func valueChanged(_ mySwitch: UISwitch) {
+        let defaults = UserDefaults.standard
+        defaults.set(mySwitch.isOn, forKey: self.item.title)
         defaults.synchronize()
     }
 

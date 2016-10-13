@@ -19,9 +19,9 @@ class CZWebViewController: UIViewController, UIWebViewDelegate {
 
         // Do any additional setup after loading the view.
         self.title = "网页"
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(self.btnClick))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.btnClick))
         
     }
 
@@ -30,8 +30,8 @@ class CZWebViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @objc private func btnClick() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @objc fileprivate func btnClick() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func loadView() {
@@ -42,16 +42,16 @@ class CZWebViewController: UIViewController, UIWebViewDelegate {
         
 //        let url = NSURL(string: <#T##String#>)
         
-        let url = NSBundle.mainBundle().URLForResource(self.htmlPage?.html, withExtension: nil)
-        let request = NSURLRequest(URL: url!)
+        let url = Bundle.main.url(forResource: self.htmlPage?.html, withExtension: nil)
+        let request = URLRequest(url: url!)
         self.webView?.loadRequest(request)
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         
         let js = "window.location.href='#\(self.htmlPage!.ID)'"
         NSLog("\(js)")
-        webView.stringByEvaluatingJavaScriptFromString(js)
+        webView.stringByEvaluatingJavaScript(from: js)
     }
 
 }

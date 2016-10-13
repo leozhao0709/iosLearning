@@ -39,7 +39,7 @@ class CZTabBarController: UITabBarController, CZTabbarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func tabbar(tabbar: CZTabbar, didSelectedFrom from: Int, to: Int) {
+    func tabbar(_ tabbar: CZTabbar, didSelectedFrom from: Int, to: Int) {
         self.selectedIndex = to
     }
     

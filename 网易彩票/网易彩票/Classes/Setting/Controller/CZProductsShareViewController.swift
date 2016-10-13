@@ -13,14 +13,14 @@ private let reuseIdentifier = "Cell"
 class CZProductsShareViewController: UICollectionViewController {
 
     lazy var products:[CZProduct]! = {
-        let path = NSBundle.mainBundle().pathForResource("products.json", ofType: nil)
+        let path = Bundle.main.path(forResource: "products.json", ofType: nil)
         
-        let data = NSData(contentsOfFile: path!)
+        let data = try? Data(contentsOf: URL(fileURLWithPath: path!))
         
         var tempArray:[CZProduct] = []
         
         do {
-            let producsArr = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions([])) as! NSArray
+            let producsArr = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions([])) as! NSArray
             
             for dict in producsArr {
                 let product = CZProduct(dict: dict as! [String : String])
@@ -40,7 +40,7 @@ class CZProductsShareViewController: UICollectionViewController {
         let flowLayout = UICollectionViewFlowLayout()
         super.init(collectionViewLayout: flowLayout)
         
-        flowLayout.itemSize = CGSizeMake(60, 80)
+        flowLayout.itemSize = CGSize(width: 60, height: 80)
         
         flowLayout.minimumLineSpacing = 25
 //        flowLayout.minimumInteritemSpacing = 10
@@ -56,14 +56,14 @@ class CZProductsShareViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.collectionView?.backgroundColor = UIColor.whiteColor()
+        self.collectionView?.backgroundColor = UIColor.white
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
 //        self.collectionView!.registerClass(CZProductCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        self.collectionView?.registerNib(UINib(nibName: "CZProductCell", bundle: nil) , forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView?.register(UINib(nibName: "CZProductCell", bundle: nil) , forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -85,23 +85,23 @@ class CZProductsShareViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return self.products.count
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CZProductCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CZProductCell
 
     
         // Configure the cell
-        cell.product = self.products[indexPath.row]
+        cell.product = self.products[(indexPath as NSIndexPath).row]
     
         return cell
     }

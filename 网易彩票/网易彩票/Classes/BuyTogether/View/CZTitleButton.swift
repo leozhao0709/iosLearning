@@ -21,38 +21,38 @@ class CZTitleButton: UIButton {
     let ImageW: CGFloat = 30
     
     //去除按钮高亮状态
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         set {}
         get {
-            return super.highlighted
+            return super.isHighlighted
         }
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.imageView?.contentMode = UIViewContentMode.Center
+        self.imageView?.contentMode = UIViewContentMode.center
         
 //        self.imageView?.backgroundColor = UIColor.yellowColor()
     }
     
     //设置按钮标题位置
-    override func titleRectForContentRect(contentRect: CGRect) -> CGRect {
+    override func titleRect(forContentRect contentRect: CGRect) -> CGRect {
         
         let titleW = contentRect.width - ImageW
         let titleH = contentRect.height
         
-        return CGRectMake(0, 0, titleW, titleH)
+        return CGRect(x: 0, y: 0, width: titleW, height: titleH)
     }
     
     //设置按钮图片
-    override func imageRectForContentRect(contentRect: CGRect) -> CGRect {
+    override func imageRect(forContentRect contentRect: CGRect) -> CGRect {
         
         let imageW = ImageW
         let imageH = contentRect.height
         let imageX = contentRect.width - imageW
         
-        return CGRectMake(imageX, 0, imageW, imageH)
+        return CGRect(x: imageX, y: 0, width: imageW, height: imageH)
     }
 
 }

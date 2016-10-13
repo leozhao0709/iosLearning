@@ -21,15 +21,15 @@ class CZBuyTogetherViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func btnClick(btn: CZTitleButton) {
-        UIView.animateWithDuration(0.25) {
-            if CGAffineTransformIsIdentity((btn.imageView?.transform)!){
-                btn.imageView?.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+    @IBAction func btnClick(_ btn: CZTitleButton) {
+        UIView.animate(withDuration: 0.25, animations: {
+            if (btn.imageView?.transform)!.isIdentity{
+                btn.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
             } else{
-                btn.imageView?.transform = CGAffineTransformIdentity
+                btn.imageView?.transform = CGAffineTransform.identity
             }
             
-        }
+        }) 
         
         
     }

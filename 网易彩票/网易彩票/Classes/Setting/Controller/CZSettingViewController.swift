@@ -36,7 +36,7 @@ class CZSettingViewController: CZBaseSettingViewController {
         let item4 = CZSettingArrowItem(icon: "MoreUpdate", title: "检查版本更新")
         item4.operation = {
             
-            let info =  NSBundle.mainBundle().infoDictionary!
+            let info =  Bundle.main.infoDictionary!
             
             NSLog("\(info["CFBundleShortVersionString"]!)")
             
@@ -44,11 +44,11 @@ class CZSettingViewController: CZBaseSettingViewController {
             
             //            NSLog("正在检查版本更新")
             
-            KRProgressHUD.show(message: "正在检查版本", progressHUDStyle: .Black)
+            KRProgressHUD.show(progressHUDStyle: .black, message: "正在检查版本")
             
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(2 * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
                 
-                KRProgressHUD.showSuccess(message: "当前版本已是最新", progressHUDStyle: .Black)
+                KRProgressHUD.showSuccess(progressHUDStyle: .black, message: "当前版本已是最新")
                 KRProgressHUD.dismiss()
             })
         }

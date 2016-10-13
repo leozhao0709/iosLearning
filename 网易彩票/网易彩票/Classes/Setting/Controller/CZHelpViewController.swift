@@ -13,14 +13,14 @@ class CZHelpViewController: CZBaseSettingViewController {
 
     lazy var htmls: [CZHtmlPage] = {
         
-        let path = NSBundle.mainBundle().pathForResource("help.json", ofType: nil)
+        let path = Bundle.main.path(forResource: "help.json", ofType: nil)
         
-        let data = NSData(contentsOfFile: path!)
+        let data = try? Data(contentsOf: URL(fileURLWithPath: path!))
         
         var tempArray:[CZHtmlPage] = []
         
         do {
-            let helpArr = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions([])) as! NSArray
+            let helpArr = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions([])) as! NSArray
             
             for dict in helpArr {
                 let htmlPage = CZHtmlPage(dict: dict as! [String : String])
@@ -62,13 +62,13 @@ class CZHelpViewController: CZBaseSettingViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let webVc = CZWebViewController()
-        webVc.htmlPage = self.htmls[indexPath.row]
+        webVc.htmlPage = self.htmls[(indexPath as NSIndexPath).row]
         
         let nav = UINavigationController(rootViewController: webVc)
         
-        self.presentViewController(nav, animated: true, completion: nil)
+        self.present(nav, animated: true, completion: nil)
         
     }
 }

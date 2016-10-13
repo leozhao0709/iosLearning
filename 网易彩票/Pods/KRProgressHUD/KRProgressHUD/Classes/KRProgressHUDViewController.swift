@@ -8,6 +8,7 @@
 import UIKit
 
 class KRProgressHUDViewController: UIViewController {
+    var statusBarStyle = UIStatusBarStyle.default
     var statusBarHidden = false
 
     override func viewDidLoad() {
@@ -15,10 +16,18 @@ class KRProgressHUDViewController: UIViewController {
         view.backgroundColor = UIColor(white: 0, alpha: 0.4)
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        guard let vc = UIApplication.topViewController() else { return statusBarStyle }
+        if !vc.isKind(of: KRProgressHUDViewController.self) {
+            statusBarStyle = vc.preferredStatusBarStyle
+        }
+        return statusBarStyle
+    }
+
+    override var prefersStatusBarHidden: Bool {
         guard let vc = UIApplication.topViewController() else { return statusBarHidden }
-        if !vc.isKindOfClass(KRProgressHUDViewController) {
-            statusBarHidden = vc.prefersStatusBarHidden()
+        if !vc.isKind(of: KRProgressHUDViewController.self) {
+            statusBarHidden = vc.prefersStatusBarHidden
         }
         return statusBarHidden
     }

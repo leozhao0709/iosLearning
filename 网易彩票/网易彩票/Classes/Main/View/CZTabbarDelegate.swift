@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CZTabbarDelegate {
-    func tabbar(tabbar: CZTabbar, didSelectedFrom from: Int, to: Int )
+    func tabbar(_ tabbar: CZTabbar, didSelectedFrom from: Int, to: Int )
 }

@@ -22,6 +22,7 @@ class WBDiscoverViewController: UITableViewController, UITextFieldDelegate {
         self.searchBar = searchBar
     }
     
+    //MARK: textField delegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.cancel))
         

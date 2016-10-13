@@ -39,7 +39,7 @@ class CZShareViewController: CZBaseSettingViewController, MFMessageComposeViewCo
             
             msgVc.body = "恭喜中奖，请选择汇款....."
             
-            self!.presentViewController(msgVc, animated: true, completion: nil)
+            self!.present(msgVc, animated: true, completion: nil)
         }
         
         let item3 = CZSettingArrowItem(icon: "MailShare", title: "邮件分享")
@@ -58,7 +58,7 @@ class CZShareViewController: CZBaseSettingViewController, MFMessageComposeViewCo
             
             mailVc.setMessageBody("恭喜你中奖", isHTML: false)
             
-            self?.presentViewController(mailVc, animated: true, completion: nil)
+            self?.present(mailVc, animated: true, completion: nil)
         }
         
         let group1 = CZSettingGroup()
@@ -66,22 +66,22 @@ class CZShareViewController: CZBaseSettingViewController, MFMessageComposeViewCo
         self.cellData.append(group1)
     }
 
-    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         //public var MessageComposeResultCancelled: MessageComposeResult { get }
         //public var MessageComposeResultSent: MessageComposeResult { get }
         //public var MessageComposeResultFailed: MessageComposeResult { get }
         
-        if result == MessageComposeResultCancelled || result == MessageComposeResultSent {
-            self.dismissViewControllerAnimated(true, completion: nil)
+        if result == MessageComposeResult.cancelled || result == MessageComposeResult.sent {
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
 //        @constant   MFMailComposeResultCancelled   User canceled the composition.
 //        @constant   MFMailComposeResultSaved       User successfully saved the message.
 //        @constant   MFMailComposeResultSent        User successfully sent/queued the message.
 //        @constant   MFMailComposeResultFailed      User's attempt to save or send was unsuccessful.
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     deinit {

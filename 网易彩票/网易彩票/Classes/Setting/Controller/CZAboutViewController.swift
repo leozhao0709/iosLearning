@@ -19,14 +19,14 @@ class CZAboutViewController: CZBaseSettingViewController {
         item1.operation = {
             
             let url = "itms-apps://itunes.apple.com/cn/app/\("725296055")?mt=8"
-            UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+            UIApplication.shared.openURL(URL(string: url)!)
         }
         
         let item2 = CZSettingArrowItem(icon: nil, title: "客户电话")
         item2.subtitle = "10086"
         item2.operation = {
-            let url = NSURL(string: "tel://10010")
-            UIApplication.sharedApplication().openURL(url!)
+            let url = URL(string: "tel://10010")
+            UIApplication.shared.openURL(url!)
         }
         
         let group1 = CZSettingGroup()

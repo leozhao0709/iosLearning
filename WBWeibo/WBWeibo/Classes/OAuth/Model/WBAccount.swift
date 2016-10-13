@@ -41,7 +41,7 @@ class WBAccount:NSObject, NSCoding {
     }
     
     func save()->Bool {
-        let accountPath = WBAccountFileName.addToCacheDir()
+        let accountPath = FileManager.getCacheDir().appendFilePath(path: WBAccountFileName)
         printLog("\(accountPath)")
         self.expires_time = NSDate(timeIntervalSinceNow: self.expires_in as! TimeInterval)
         
@@ -49,15 +49,19 @@ class WBAccount:NSObject, NSCoding {
     }
     
     static func accountFromSandbox()->WBAccount? {
-        let accountPath = WBAccountFileName.addToCacheDir()
-        let account = NSKeyedUnarchiver.unarchiveObject(withFile: accountPath!) as! WBAccount
+        let accountPath = FileManager.getCacheDir().appendFilePath(path: WBAccountFileName)
         
-        let now = NSDate()
-        if now.compare(account.expires_time as! Date) == .orderedDescending  {
+        if let account = NSKeyedUnarchiver.unarchiveObject(withFile: accountPath!) as? WBAccount {
+            let now = NSDate()
+            if now.compare(account.expires_time as! Date) == .orderedDescending  {
+                return nil
+            }
+            return account
+        }
+        else {
             return nil
         }
-        
-        return account
+
     }
     
 }

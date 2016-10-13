@@ -1,19 +1,20 @@
 //
-//  CZMineViewController.swift
-//  网易彩票
+//  WBNewfeatureViewController.swift
+//  WBWeibo
 //
-//  Created by Lei Zhao on 8/10/16.
+//  Created by Lei Zhao on 10/12/16.
 //  Copyright © 2016 Lei Zhao. All rights reserved.
 //
 
 import UIKit
 
-class CZMineViewController: UIViewController {
+class WBNewfeatureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.cyan
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,13 +22,13 @@ class CZMineViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func settingBtnClick(_ sender: UIBarButtonItem) {
+    @IBAction func start(_ sender: UIButton) {
+        let tabbarVC = WBTabBarController()
         
-        let settingVC = CZSettingViewController()
+        let window = UIApplication.shared.keyWindow
         
-        self.navigationController?.pushViewController(settingVC, animated: true)
+        window?.rootViewController = tabbarVC
         
     }
-
 
 }
