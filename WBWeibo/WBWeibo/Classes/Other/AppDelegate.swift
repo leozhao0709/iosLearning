@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         
-        printLog("****\(NSHomeDirectory())")
+        printLog(message: "****\(NSHomeDirectory())")
         
         //是否oauth授权
         if WBAccount.accountFromSandbox() != nil {

@@ -30,15 +30,19 @@ class WBHomeViewController: WBBaseTableViewController {
     private func setupUserInfo() {
         
         let urlString = "https://api.weibo.com/2/users/show.json"
+        
         var parameters:[String: Any] = [:]
-        parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token
+        parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token!
+        parameters["uid"] = WBAccount.accountFromSandbox()?.uid!
+        
+        printLog(message: "\(parameters)")
         
         Alamofire.request(urlString, method: .get, parameters: parameters).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
-                printLog("\(value)")
+                printLog(message: "\(value)")
             case .failure(let error):
-                printLog("\(error)")
+                printLog(message: "\(error)")
             }
             
         }
@@ -91,11 +95,11 @@ class WBHomeViewController: WBBaseTableViewController {
     }
     
     @objc fileprivate func friendSearch() {
-        printLog(#function)
+        printLog(message: #function)
     }
     
     @objc fileprivate func scan() {
-        printLog(#function)
+        printLog(message: #function)
         
         let scanVC = WBScanViewController()
         self.present(scanVC, animated: true, completion: nil)

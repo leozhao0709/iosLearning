@@ -23,7 +23,7 @@ class WBMessageViewController: WBBaseTableViewController {
     }
     
     @objc private func compose() {
-        printLog(#function)
+        printLog(message: #function)
     }
 
 }

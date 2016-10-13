@@ -13,8 +13,9 @@ import Foundation
  
  - parameter format: Log String
  */
-func printLog(_ format: String) {
+func printLog(message: String, fileName: String = #file, lineNumber: Int = #line, columnNumber: Int = #column) {
     #if DEBUG
-    NSLog(format)
+        
+        NSLog("\((fileName as NSString).lastPathComponent)[\(lineNumber):\(columnNumber)]: \(message)")
     #endif
 }

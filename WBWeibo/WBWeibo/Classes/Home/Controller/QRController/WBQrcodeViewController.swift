@@ -54,7 +54,7 @@ class WBQrcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
             make.centerX.equalTo((self?.view)!)
         }
         
-        printLog("QR controller didload")
+        printLog(message: "QR controller didload")
         
     }
     
@@ -109,10 +109,10 @@ class WBQrcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
             session.startRunning()
         }
         catch {
-            printLog("Device not support for QRcode scan")
+            printLog(message: "Device not support for QRcode scan")
         }
         
-        printLog("QR controller will appear")
+        printLog(message: "QR controller will appear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -121,7 +121,7 @@ class WBQrcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         self.session?.stopRunning()
         self.link?.invalidate()
         
-        printLog("QR controller did disappear")
+        printLog(message: "QR controller did disappear")
     }
     
     @objc func closeBtnClick() {
@@ -143,7 +143,7 @@ class WBQrcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
             
             let obj = metadataObjects.last
             
-            printLog((obj! as AnyObject).stringValue)
+            printLog(message: (obj! as AnyObject).stringValue)
             
 
             self.link?.invalidate()
@@ -173,7 +173,7 @@ class WBQrcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
     }
     
     deinit {
-        printLog("qrcode controller close")
+        printLog(message: "qrcode controller close")
     }
 
 }

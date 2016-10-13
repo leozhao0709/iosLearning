@@ -62,15 +62,16 @@ class WBOAuthViewController: UIViewController, UIWebViewDelegate {
                 
                 let account = WBAccount.mj_object(withKeyValues: value)!
                 if (account.save()) {
-                    printLog("account saved successfully")
+                    printLog(message: "account saved successfully")
                     
                     UIApplication.shared.keyWindow?.chooseRootViewController()
                 } else {
-                    printLog("account saved failed")
+                    printLog(message: "account saved failed")
                 }
                 
+                printLog(message: "\(value)")
             case .failure(let error):
-                printLog("\(error)")
+                printLog(message: "\(error)")
             }
         }
         
@@ -78,11 +79,10 @@ class WBOAuthViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        printLog("\(request.url?.absoluteString)")
+        printLog(message: "\(request.url?.absoluteString)")
         
         let urlString = request.url?.absoluteString
         let range = urlString?.localizedStandardRange(of: "code=")
-        
         if let range = range{
             let startIndex = range.upperBound
             let code = urlString?.substring(from: startIndex)

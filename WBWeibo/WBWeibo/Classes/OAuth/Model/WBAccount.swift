@@ -42,7 +42,7 @@ class WBAccount:NSObject, NSCoding {
     
     func save()->Bool {
         let accountPath = FileManager.getCacheDir().appendFilePath(path: WBAccountFileName)
-        printLog("\(accountPath)")
+        printLog(message: "\(accountPath)")
         self.expires_time = NSDate(timeIntervalSinceNow: self.expires_in as! TimeInterval)
         
         return NSKeyedArchiver.archiveRootObject(self, toFile: accountPath!)

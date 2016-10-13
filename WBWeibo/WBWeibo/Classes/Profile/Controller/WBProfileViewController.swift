@@ -23,7 +23,7 @@ class WBProfileViewController: WBBaseTableViewController {
     
     
     @objc private func setting() {
-        printLog(#function)
+        printLog(message: #function)
     }
 
 

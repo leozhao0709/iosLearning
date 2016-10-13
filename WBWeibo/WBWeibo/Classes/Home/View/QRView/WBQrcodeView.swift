@@ -90,7 +90,7 @@ class WBQrcodeView: UIView {
     
     deinit {
 //        self.link?.remove(from: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
-        printLog("close QR link")
+        printLog(message: "close QR link")
     }
     
 }

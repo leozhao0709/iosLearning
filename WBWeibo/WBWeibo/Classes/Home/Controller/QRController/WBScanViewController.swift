@@ -48,7 +48,7 @@ class WBScanViewController: UITabBarController {
     }
     
     deinit {
-        printLog("scan tabar controller close")
+        printLog(message: "scan tabar controller close")
     }
 
 }

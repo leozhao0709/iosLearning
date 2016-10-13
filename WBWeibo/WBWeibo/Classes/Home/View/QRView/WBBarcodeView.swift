@@ -69,7 +69,7 @@ class WBBarcodeView: UIView {
     }
     
     deinit {
-        printLog("close barcode link")
+        printLog(message: "close barcode link")
     }
 
 }

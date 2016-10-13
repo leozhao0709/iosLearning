@@ -35,7 +35,7 @@ class WBBarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsD
             make.center.equalTo((self?.view)!)
         }
         
-        printLog("Barcode controller didload")
+        printLog(message: "Barcode controller didload")
     }
     
 
@@ -83,10 +83,10 @@ class WBBarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsD
             session.startRunning()
         }
         catch {
-            printLog("Device not support for BarCode scan")
+            printLog(message: "Device not support for BarCode scan")
         }
         
-        printLog("Barcode controller will appear")
+        printLog(message: "Barcode controller will appear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -95,7 +95,7 @@ class WBBarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         self.session?.stopRunning()
         self.link?.invalidate()
         
-        printLog("Barcode controller diddisappear")
+        printLog(message: "Barcode controller diddisappear")
     }
     
     @objc func closeBtnClick() {
@@ -144,7 +144,7 @@ class WBBarcodeViewController: UIViewController, AVCaptureMetadataOutputObjectsD
     }
     
     deinit {
-        printLog("barcode controller close")
+        printLog(message: "barcode controller close")
     }
 
 }
