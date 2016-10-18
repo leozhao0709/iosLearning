@@ -47,11 +47,11 @@ class WBWelcomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 1, animations: {
             self.iconConsY.constant -= 150
             self.view.layoutIfNeeded()
             }) { (finished) in
-                UIView.animate(withDuration: 2, animations: { 
+                UIView.animate(withDuration: 1, animations: {
                     self.welcomeBackLabel.alpha = 1
                     }, completion: { (finished) in
                         let tabbarVC = WBTabBarController()

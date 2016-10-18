@@ -28,7 +28,9 @@ class WBHomeViewController: WBBaseTableViewController {
         } else {
             self.setupUserInfo()
             
-            self.loadNewStatuses()
+//            self.loadNewStatuses()
+            
+            self.setupRefresh()
         }
     }
     
@@ -101,25 +103,41 @@ class WBHomeViewController: WBBaseTableViewController {
         }
     }
     
-    private func loadNewStatuses() {
+    @objc private func loadNewStatuses() {
         let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
         var parameters:[String: Any] = [:]
         parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token as String?
         
+        if let id = self.status.first?.id {
+            parameters["since_id"] = id
+        }
+        
         Alamofire.request(urlString, method: .get, parameters: parameters).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
-                printLog(message: "\(value)")
                 let json = JSON(value)
                 let newStatus = json["statuses"].arrayObject
-                for object in newStatus!{
-                    self.status.append(WBStatus.mj_object(withKeyValues: object) )
+                for object in newStatus!.reversed(){
+                    self.status.insert(WBStatus.mj_object(withKeyValues: object) , at: 0)
                 }
                 self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
             case .failure(let error):
                 printLog(message: "\(error)")
+                self.refreshControl?.endRefreshing()
             }
         }
+    }
+    
+    private func setupRefresh() {
+        let refreshControl = UIRefreshControl()
+        self.tableView.addSubview(refreshControl)
+        self.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(self.loadNewStatuses), for: UIControlEvents.valueChanged)
+        
+        refreshControl.beginRefreshing()
+        
+        self.loadNewStatuses()
     }
 
     
