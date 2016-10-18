@@ -9,12 +9,13 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MJExtension
 
 class WBHomeViewController: WBBaseTableViewController {
     
     weak var titleBtn: UIButton?
     
-    var status:[Any] = []
+    var status:[WBStatus] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,15 +105,17 @@ class WBHomeViewController: WBBaseTableViewController {
         let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
         var parameters:[String: Any] = [:]
         parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token as String?
-        parameters["count"] = 1
         
         Alamofire.request(urlString, method: .get, parameters: parameters).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
-//                printLog(message: "\(value)")
+                printLog(message: "\(value)")
                 let json = JSON(value)
-                let newStatus = json["statuses"]
-                printLog(message: "\(json["statuses"][0]["user"])")
+                let newStatus = json["statuses"].arrayObject
+                for object in newStatus!{
+                    self.status.append(WBStatus.mj_object(withKeyValues: object) )
+                }
+                self.tableView.reloadData()
             case .failure(let error):
                 printLog(message: "\(error)")
             }
@@ -140,6 +143,34 @@ class WBHomeViewController: WBBaseTableViewController {
         
         let scanVC = WBScanViewController()
         self.present(scanVC, animated: true, completion: nil)
+    }
+    
+    //MARK: - tableView dataSource
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.status.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let identifier = "cell"
+        var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
+        if cell == nil {
+           cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: identifier)
+        }
+        
+        let status = self.status[indexPath.row]
+        
+        let user = status.user
+        cell?.textLabel?.text = user?.name as String?
+        cell?.detailTextLabel?.text = status.text as String?
+        
+        let url = URL(string: (user?.profile_image_url)! as String)
+        cell?.imageView?.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "avatar_default"))
+        
+        return cell!
     }
 
 }
