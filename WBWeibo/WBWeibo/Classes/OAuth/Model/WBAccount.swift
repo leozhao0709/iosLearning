@@ -17,7 +17,7 @@ class WBAccount:NSObject, NSCoding {
     var remind_in: NSNumber?
     var expires_time: NSDate?
     var uid: NSNumber?
-    var profile_image_url: NSString?
+    var profile_image_url: String?
     
     override init() {
         
@@ -30,6 +30,7 @@ class WBAccount:NSObject, NSCoding {
         self.remind_in = aDecoder.decodeObject(forKey: "remind_in") as! NSNumber?
         self.uid = aDecoder.decodeObject(forKey: "uid") as! NSNumber?
         self.expires_time = aDecoder.decodeObject(forKey: "expires_time") as! NSDate?
+        self.profile_image_url = aDecoder.decodeObject(forKey: "profile_image_url") as? String
     }
     
     func encode(with aCoder: NSCoder) {
@@ -38,11 +39,13 @@ class WBAccount:NSObject, NSCoding {
         aCoder.encode(self.remind_in, forKey: "remind_in")
         aCoder.encode(self.uid, forKey: "uid")
         aCoder.encode(self.expires_time, forKey: "expires_time")
+        if let profile_image_url = self.profile_image_url {
+            aCoder.encode(profile_image_url, forKey: "profile_image_url")
+        }
     }
     
     func save()->Bool {
         let accountPath = FileManager.getCacheDir().appendFilePath(path: WBAccountFileName)
-        printLog(message: "\(accountPath)")
         self.expires_time = NSDate(timeIntervalSinceNow: self.expires_in as! TimeInterval)
         
         return NSKeyedArchiver.archiveRootObject(self, toFile: accountPath!)

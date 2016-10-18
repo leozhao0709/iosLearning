@@ -8,11 +8,13 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class WBHomeViewController: WBBaseTableViewController {
     
     weak var titleBtn: UIButton?
     
+    var status:[Any] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,8 @@ class WBHomeViewController: WBBaseTableViewController {
             self.defaultCenterView?.info = "当你关注一些人以后, 他们发布的最新消息会显示在这里"
         } else {
             self.setupUserInfo()
+            
+            self.loadNewStatuses()
         }
     }
     
@@ -31,16 +35,30 @@ class WBHomeViewController: WBBaseTableViewController {
         
         let urlString = "https://api.weibo.com/2/users/show.json"
         
-        var parameters:[String: Any] = [:]
-        parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token!
-        parameters["uid"] = WBAccount.accountFromSandbox()?.uid!
+        let account = WBAccount.accountFromSandbox()
         
-        printLog(message: "\(parameters)")
+        var parameters:[String: Any] = [:]
+        parameters["access_token"] = account?.access_token!
+        parameters["uid"] = account?.uid!
         
         Alamofire.request(urlString, method: .get, parameters: parameters).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
-                printLog(message: "\(value)")
+//                printLog(message: "\(value)")
+                let json = JSON(value)
+                
+                if account?.profile_image_url == json["profile_image_url"].string {
+                    printLog(message: "don't need update profile image url")
+                    return
+                }
+                
+                account?.profile_image_url = json["profile_image_url"].string
+                
+                if (account?.save())! {
+                    printLog(message: "save new profile image url")
+                } else {
+                    printLog(message: "save profile image url fail")
+                }
             case .failure(let error):
                 printLog(message: "\(error)")
             }
@@ -79,6 +97,25 @@ class WBHomeViewController: WBBaseTableViewController {
         if self.defaultCenterView != nil {
             super.viewWillDisappear(animated)
             self.defaultCenterView?.stopTurnTableRotate()
+        }
+    }
+    
+    private func loadNewStatuses() {
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        var parameters:[String: Any] = [:]
+        parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token as String?
+        parameters["count"] = 1
+        
+        Alamofire.request(urlString, method: .get, parameters: parameters).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+//                printLog(message: "\(value)")
+                let json = JSON(value)
+                let newStatus = json["statuses"]
+                printLog(message: "\(json["statuses"][0]["user"])")
+            case .failure(let error):
+                printLog(message: "\(error)")
+            }
         }
     }
 

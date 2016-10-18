@@ -19,8 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         
-        printLog(message: "****\(NSHomeDirectory())")
-        
         //是否oauth授权
         if WBAccount.accountFromSandbox() != nil {
             self.window?.chooseRootViewController()

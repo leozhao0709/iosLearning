@@ -11,4 +11,5 @@ target 'WBWeibo' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'MJExtension'
+  pod 'SDWebImage'
 end

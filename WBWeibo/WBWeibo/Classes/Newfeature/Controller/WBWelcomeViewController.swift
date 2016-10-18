@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class WBWelcomeViewController: UIViewController {
 
@@ -22,6 +23,20 @@ class WBWelcomeViewController: UIViewController {
         self.iconImageView.layer.cornerRadius = 50
         self.iconImageView.layer.masksToBounds = true
         
+        let account = WBAccount.accountFromSandbox()
+        if let url = account?.profile_image_url {
+            let iconUrl = URL(string: url)
+//            self.iconImageView.sd_setImage(with: iconUrl, placeholderImage: #imageLiteral(resourceName: "avatar_default"))
+            
+            let SDManager = SDWebImageManager.shared()
+            
+            _ = SDManager?.downloadImage(with: iconUrl, options: [], progress: nil, completed: { (image: UIImage?, error: Error?, cacheType: SDImageCacheType, finished: Bool, imageUrl: URL?) in
+                if finished {
+                    self.iconImageView.image = image
+                }
+            })
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +47,7 @@ class WBWelcomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 2, animations: { 
+        UIView.animate(withDuration: 2, animations: {
             self.iconConsY.constant -= 150
             self.view.layoutIfNeeded()
             }) { (finished) in
