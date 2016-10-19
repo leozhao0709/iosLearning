@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import MJExtension
+import MJRefresh
 
 class WBHomeViewController: WBBaseTableViewController {
     
@@ -121,23 +122,66 @@ class WBHomeViewController: WBBaseTableViewController {
                     self.status.insert(WBStatus.mj_object(withKeyValues: object) , at: 0)
                 }
                 self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
+//                self.refreshControl?.endRefreshing()
+                self.tableView.mj_header.endRefreshing()
             case .failure(let error):
                 printLog(message: "\(error)")
-                self.refreshControl?.endRefreshing()
+//                self.refreshControl?.endRefreshing()
+                self.tableView.mj_header.endRefreshing()
+            }
+        }
+    }
+    
+    @objc private func loadMoreStatuses() {
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        var parameters:[String: Any] = [:]
+        parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token as String?
+        
+        if let id = self.status.last?.id {
+            parameters["max_id"] =  String(Int64(id as String)! - 1)
+        }
+        
+        Alamofire.request(urlString, method: .get, parameters: parameters).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                let newStatus = json["statuses"].arrayObject
+                for object in newStatus!{
+                    self.status.append(WBStatus.mj_object(withKeyValues: object))
+                }
+                self.tableView.reloadData()
+                //                self.refreshControl?.endRefreshing()
+                self.tableView.mj_footer.endRefreshing()
+            case .failure(let error):
+                printLog(message: "\(error)")
+                //                self.refreshControl?.endRefreshing()
+                self.tableView.mj_footer.endRefreshing()
             }
         }
     }
     
     private func setupRefresh() {
-        let refreshControl = UIRefreshControl()
-        self.tableView.addSubview(refreshControl)
-        self.refreshControl = refreshControl
-        refreshControl.addTarget(self, action: #selector(self.loadNewStatuses), for: UIControlEvents.valueChanged)
+//        let refreshControl = UIRefreshControl()
+//        self.tableView.addSubview(refreshControl)
+//        self.refreshControl = refreshControl
+//        refreshControl.addTarget(self, action: #selector(self.loadNewStatuses), for: UIControlEvents.valueChanged)
+//        
+//        self.refreshControl?.beginRefreshing()
+//        
+//        self.loadNewStatuses()
         
-        refreshControl.beginRefreshing()
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(self.loadNewStatuses))
+//        header?.setTitle("正在加载", for: MJRefreshState.refreshing)
+        self.tableView.mj_header = header
         
-        self.loadNewStatuses()
+        
+        let footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(self.loadMoreStatuses))
+        footer?.setTitle("", for: MJRefreshState.idle)
+        self.tableView.mj_footer = footer
+        
+        
+        self.tableView.mj_header.beginRefreshing()
+        
     }
 
     

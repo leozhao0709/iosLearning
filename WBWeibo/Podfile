@@ -12,4 +12,5 @@ target 'WBWeibo' do
   pod 'SwiftyJSON'
   pod 'MJExtension'
   pod 'SDWebImage'
+  pod 'MJRefresh'
 end
