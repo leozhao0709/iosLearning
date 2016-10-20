@@ -135,6 +135,8 @@ class WBHomeViewController: WBBaseTableViewController {
         var parameters:[String: Any] = [:]
         parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token as String?
         
+        printLog(message: "loading more")
+        
         if let id = self.status.last?.id {
             parameters["max_id"] =  String(Int64(id as String)! - 1)
         }
@@ -157,17 +159,8 @@ class WBHomeViewController: WBBaseTableViewController {
     }
     
     private func setupRefresh() {
-//        let refreshControl = UIRefreshControl()
-//        self.tableView.addSubview(refreshControl)
-//        self.refreshControl = refreshControl
-//        refreshControl.addTarget(self, action: #selector(self.loadNewStatuses), for: UIControlEvents.valueChanged)
-//        
-//        self.refreshControl?.beginRefreshing()
-//        
-//        self.loadNewStatuses()
         
         let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(self.loadNewStatuses))
-//        header?.setTitle("正在加载", for: MJRefreshState.refreshing)
         self.tableView.mj_header = header
         
         

@@ -31,7 +31,15 @@ class WBStatus: NSObject {
             if createDate.year == now.year {
                 //This year
                 if createDate.isToday {
-                    
+                    if (now.hour - createDate.hour)>=1{
+                        //其他小时
+                        return String("\(now.hour-createDate.hour)分钟以前") as NSString?
+                    } else if(now.minute - createDate.minute)>1 {
+                        //within 1 hour
+                        return String("\(now.minute-createDate.minute)分钟以前") as NSString?
+                    } else {
+                        return "刚刚"
+                    }
                 } else if createDate.isYesterday {
                     return createDate.string(custom: "昨天 HH时:mm分") as NSString?
                 } else {
@@ -39,7 +47,7 @@ class WBStatus: NSObject {
                 }
                 
             } else {
-                return createDate.string(custom: "") as NSString?
+                return createDate.string(custom: "yy年MM月dd日 HH时:mm分") as NSString?
             }
             
             printLog(message: "\(createDate)")
