@@ -45,9 +45,22 @@ class WBTabBar: UIView {
         
         btn.setBackgroundImage(UIImage(named: "tabbar_compose_button")!, highlightImage: UIImage(named: "tabbar_compose_button_highlighted")!)
         btn.sizeToFit()
+        
+        btn.addTarget(self, action: #selector(self.plusBtnClick), for: .touchUpInside)
+        
         self.plusButton = btn
         
         self.addSubview(btn)
+    }
+    
+    @objc private func plusBtnClick() {
+        
+        let window = UIApplication.shared.keyWindow
+        let composeVc = WBComposeViewController()
+        let nav = WBNavigationController(rootViewController: composeVc)
+        
+        window?.rootViewController?.present(nav, animated: true, completion: nil)
+        
     }
     
     /**
