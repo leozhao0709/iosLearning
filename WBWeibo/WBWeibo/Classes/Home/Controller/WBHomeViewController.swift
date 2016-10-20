@@ -123,11 +123,49 @@ class WBHomeViewController: WBBaseTableViewController {
                 }
                 self.tableView.reloadData()
                 self.tableView.mj_header.endRefreshing()
+                
+                self.showNewStatus(count: newStatus?.count)
+                
             case .failure(let error):
                 printLog(message: "\(error)")
                 self.tableView.mj_header.endRefreshing()
             }
         }
+    }
+    
+    private func showNewStatus(count: Int?) {
+        let infoLabel = UILabel()
+        infoLabel.textAlignment = .center
+        infoLabel.backgroundColor = UIColor.orange
+        
+        let infoLabelW = self.view.width
+        let infoLabelH: CGFloat = 25
+        let infoLabelX: CGFloat = 0
+        let infoLabelY: CGFloat = 64 - infoLabelH
+        
+        infoLabel.frame = CGRect(x: infoLabelX, y: infoLabelY, width: infoLabelW, height: infoLabelH)
+        
+        if count == nil || count == 0 {
+            infoLabel.text = "没有更多微博"
+        } else {
+            infoLabel.text = "更新到\(count!)条新微博数据"
+        }
+        
+        let navigationbar = self.navigationController?.navigationBar
+        self.navigationController?.view.insertSubview(infoLabel, belowSubview: navigationbar!)
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            infoLabel.transform = CGAffineTransform(translationX: 0, y: infoLabel.height)
+            }) { (finished) in
+                
+                UIView.animate(withDuration: 0.5, delay: 1, options: [], animations: {
+                    infoLabel.transform = CGAffineTransform.identity
+                    }, completion: { (finished) in
+                        infoLabel.removeFromSuperview()
+                })
+                
+        }
+        
     }
     
     @objc private func loadMoreStatuses() {

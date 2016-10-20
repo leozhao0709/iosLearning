@@ -17,13 +17,6 @@ class WBStatus: NSObject {
     var created_at: NSString? {
         get {
             
-//            let formatter = DateFormatter()
-//            formatter.locale = NSLocale(localeIdentifier: "en_US") as Locale!
-//            formatter.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
-//            let createDate = formatter.date(from: _create_at as! String)
-//            
-//            let now = NSDate()
-            
             let createDate = try! DateInRegion(string: _create_at as! String, format: .custom("EEE MMM dd HH:mm:ss Z yyyy"))
             
             let now = DateInRegion()
@@ -50,10 +43,6 @@ class WBStatus: NSObject {
                 return createDate.string(custom: "yy年MM月dd日 HH时:mm分") as NSString?
             }
             
-            printLog(message: "\(createDate)")
-            printLog(message: "\(now)")
-            
-            return _create_at
         }
         set {
             _create_at = newValue
