@@ -33,7 +33,7 @@ class WBStatus: NSObject {
                 if createDate.isToday {
                     if (now.hour - createDate.hour)>=1{
                         //其他小时
-                        return String("\(now.hour-createDate.hour)分钟以前") as NSString?
+                        return String("\(now.hour-createDate.hour)小时以前") as NSString?
                     } else if(now.minute - createDate.minute)>1 {
                         //within 1 hour
                         return String("\(now.minute-createDate.minute)分钟以前") as NSString?
