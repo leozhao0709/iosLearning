@@ -122,11 +122,9 @@ class WBHomeViewController: WBBaseTableViewController {
                     self.status.insert(WBStatus.mj_object(withKeyValues: object) , at: 0)
                 }
                 self.tableView.reloadData()
-//                self.refreshControl?.endRefreshing()
                 self.tableView.mj_header.endRefreshing()
             case .failure(let error):
                 printLog(message: "\(error)")
-//                self.refreshControl?.endRefreshing()
                 self.tableView.mj_header.endRefreshing()
             }
         }
@@ -150,11 +148,9 @@ class WBHomeViewController: WBBaseTableViewController {
                     self.status.append(WBStatus.mj_object(withKeyValues: object))
                 }
                 self.tableView.reloadData()
-                //                self.refreshControl?.endRefreshing()
                 self.tableView.mj_footer.endRefreshing()
             case .failure(let error):
                 printLog(message: "\(error)")
-                //                self.refreshControl?.endRefreshing()
                 self.tableView.mj_footer.endRefreshing()
             }
         }
@@ -227,7 +223,11 @@ class WBHomeViewController: WBBaseTableViewController {
         
         let user = status.user
         cell?.textLabel?.text = user?.name as String?
-        cell?.detailTextLabel?.text = status.text as String?
+//        cell?.detailTextLabel?.text = status.text as String?
+//        cell?.detailTextLabel?.text = status.source as String?
+        cell?.detailTextLabel?.text = status.created_at as String?
+        
+        
         
         let url = URL(string: (user?.profile_image_url)! as String)
         cell?.imageView?.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "avatar_default"))

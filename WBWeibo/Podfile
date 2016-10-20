@@ -13,4 +13,5 @@ target 'WBWeibo' do
   pod 'MJExtension'
   pod 'SDWebImage'
   pod 'MJRefresh'
+  pod 'SwiftDate'
 end

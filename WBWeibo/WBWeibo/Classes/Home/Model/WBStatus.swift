@@ -7,12 +7,62 @@
 //
 
 import Foundation
+import SwiftDate
 
 class WBStatus: NSObject {
     var id: NSString?
     var text: NSString?
-    var created_at: NSString?
-    var source: NSString?
+    
+    var _create_at: NSString?
+    var created_at: NSString? {
+        get {
+            
+//            let formatter = DateFormatter()
+//            formatter.locale = NSLocale(localeIdentifier: "en_US") as Locale!
+//            formatter.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
+//            let createDate = formatter.date(from: _create_at as! String)
+//            
+//            let now = NSDate()
+            
+            let createDate = try! DateInRegion(string: _create_at as! String, format: .custom("EEE MMM dd HH:mm:ss Z yyyy"))
+            
+            let now = DateInRegion()
+            
+            if createDate.year == now.year {
+                //This year
+                if createDate.isToday {
+                    
+                } else if createDate.isYesterday {
+                    return createDate.string(custom: "昨天 HH时:mm分") as NSString?
+                } else {
+                    return createDate.string(custom: "MM月dd日 HH时:mm分") as NSString?
+                }
+                
+            } else {
+                return createDate.string(custom: "") as NSString?
+            }
+            
+            printLog(message: "\(createDate)")
+            printLog(message: "\(now)")
+            
+            return _create_at
+        }
+        set {
+            _create_at = newValue
+        }
+    }
+    
+    var source: NSString? {
+        didSet{
+            if (self.source != nil) && (self.source != ""){
+                let startRange = self.source?.range(of: ">")
+                let startIndex = (startRange?.location)! + 1
+                let endRange = self.source?.range(of: "</")
+                let length = (endRange?.location)! - startIndex
+                self.source = self.source?.substring(with: NSMakeRange(startIndex, length)) as NSString?
+            }
+        }
+    }
     var reposts_count: NSNumber?
     var comments_count: NSNumber?
     var attitudes_count: NSNumber?
