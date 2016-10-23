@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+import KRProgressHUD
 
 class WBComposeViewController: UIViewController, UITextViewDelegate {
 
+    weak var input: WBInputTextView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +29,8 @@ class WBComposeViewController: UIViewController, UITextViewDelegate {
         inputView.alwaysBounceVertical = true
         inputView.delegate = self
         self.view.addSubview(inputView)
+        self.input = inputView
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
     @objc private func close() {
@@ -32,7 +38,24 @@ class WBComposeViewController: UIViewController, UITextViewDelegate {
     }
     
     @objc private func compose() {
+        var parameters:[String: Any] = [:]
+        parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token
+        parameters["status"] = self.input?.text
+        let url = "https://api.weibo.com/2/statuses/update.json"
         
+        Alamofire.request(url, method: .post, parameters: parameters).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                printLog(message: "\(value)")
+                self.inputView?.resignFirstResponder()
+                self.dismiss(animated: true, completion: { 
+                    KRProgressHUD.showSuccess(message: "发送成功")
+                })
+            case .failure(let error):
+                printLog(message: "\(error)")
+                KRProgressHUD.showError(message: "发送失败")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +66,10 @@ class WBComposeViewController: UIViewController, UITextViewDelegate {
     // MARK: - UITextView delegate
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.view.endEditing(true)
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        self.navigationItem.rightBarButtonItem?.isEnabled = textView.text.characters.count > 0
     }
     
 }

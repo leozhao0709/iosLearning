@@ -22,7 +22,9 @@ class WBNavigationController: UINavigationController {
 
         let hightlightedTitleAttribute: [String: AnyObject]? = [NSForegroundColorAttributeName: UIColor.green]
         item.setTitleTextAttributes(hightlightedTitleAttribute, for: UIControlState.highlighted)
+        
+        let disabledTitleAttribute: [String: AnyObject]? = [NSForegroundColorAttributeName: UIColor.lightGray]
+        item.setTitleTextAttributes(disabledTitleAttribute, for: UIControlState.disabled)
     }
-
 
 }

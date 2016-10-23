@@ -35,10 +35,11 @@ extension UIButton {
         self.setBackgroundImage(selectedImage, for: .selected)
     }
     
-    func setTitleColor(_ normalColor: UIColor?, highlightColor: UIColor?, selectedColor: UIColor? = nil) {
+    func setTitleColor(_ normalColor: UIColor?, highlightColor: UIColor?, selectedColor: UIColor? = nil, disabledColor: UIColor? = nil) {
         self.setTitleColor(normalColor, for: UIControlState())
         self.setTitleColor(highlightColor, for: .highlighted)
         self.setTitleColor(selectedColor, for: .selected)
+        self.setTitleColor(disabledColor, for: .disabled)
     }
     
 }
