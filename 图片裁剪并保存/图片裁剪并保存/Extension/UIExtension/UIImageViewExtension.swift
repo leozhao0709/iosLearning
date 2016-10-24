@@ -13,7 +13,7 @@ extension UIImageView {
     /**
      Fade a new Image in ImageView
      */
-    func fadeImageIn(image: UIImage?, closure: ((image: UIImage?) -> ())? = nil) {
+    func fadeImageIn(_ image: UIImage?, closure: ((_ image: UIImage?) -> ())? = nil) {
         if let image = image {
             self.image = image
             
@@ -22,9 +22,9 @@ extension UIImageView {
             transition.duration = 0.5
             transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
             transition.type = kCATransitionFade
-            self.layer.addAnimation(transition, forKey: nil)
+            self.layer.add(transition, forKey: nil)
             
-            closure?(image:image)
+            closure?(image)
             
         } else {
             return

@@ -35,16 +35,16 @@ class AppCell: UICollectionViewCell {
         let iconWidth = cellSize.width * 0.6
         let iconX = (cellSize.width - iconWidth) / 2
         
-        let iconImageView = UIImageView(frame: CGRectMake(iconX, 0, iconWidth, iconWidth))
+        let iconImageView = UIImageView(frame: CGRect(x: iconX, y: 0, width: iconWidth, height: iconWidth))
         
         self.iconImageView = iconImageView
         
         self.contentView.addSubview(self.iconImageView!)
         
-        let nameLabel = UILabel(frame: CGRectMake(0, CGRectGetMaxY(iconImageView.frame), cellSize.width, 20))
-        nameLabel.font = UIFont.systemFontOfSize(13)
-        nameLabel.textAlignment = .Center
-        nameLabel.textColor = UIColor.blackColor()
+        let nameLabel = UILabel(frame: CGRect(x: 0, y: iconImageView.frame.maxY, width: cellSize.width, height: 20))
+        nameLabel.font = UIFont.systemFont(ofSize: 13)
+        nameLabel.textAlignment = .center
+        nameLabel.textColor = UIColor.black
         
 //        nameLabel.text = "爸爸去哪"
         

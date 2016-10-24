@@ -13,7 +13,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     let identifier = "collectionCell"
     
     lazy var dataArray: [AppModel]! = {
-        let path = NSBundle.mainBundle().pathForResource("app.plist", ofType: nil)
+        let path = Bundle.main.path(forResource: "app.plist", ofType: nil)
         let tempArray = NSArray(contentsOfFile: path!)
         
         var appModelArray:[AppModel] = []
@@ -33,13 +33,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let flowLayout = UICollectionViewFlowLayout()
         
-        flowLayout.itemSize = CGSizeMake(100, 100)
+        flowLayout.itemSize = CGSize(width: 100, height: 100)
         
         flowLayout.sectionInset = UIEdgeInsetsMake(40, 10, 0, 10)
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: flowLayout)
         
-        collectionView.registerClass(AppCell.self, forCellWithReuseIdentifier: identifier)
+        collectionView.register(AppCell.self, forCellWithReuseIdentifier: identifier)
         
         collectionView.dataSource = self
         
@@ -47,7 +47,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         self.view.addSubview(collectionView)
         
-        collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.backgroundColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,28 +55,28 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.dataArray.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! AppCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! AppCell
         
-        let appModel = self.dataArray[indexPath.item]
+        let appModel = self.dataArray[(indexPath as NSIndexPath).item]
         cell.appModel = appModel
         
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        NSLog("----\(indexPath.item)")
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        NSLog("----\((indexPath as NSIndexPath).item)")
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 

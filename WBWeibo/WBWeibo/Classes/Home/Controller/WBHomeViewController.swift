@@ -29,8 +29,6 @@ class WBHomeViewController: WBBaseTableViewController {
         } else {
             self.setupUserInfo()
             
-//            self.loadNewStatuses()
-            
             self.setupRefresh()
         }
     }
@@ -48,7 +46,6 @@ class WBHomeViewController: WBBaseTableViewController {
         Alamofire.request(urlString, method: .get, parameters: parameters).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
-//                printLog(message: "\(value)")
                 let json = JSON(value)
                 
                 if account?.profile_image_url == json["profile_image_url"].string {
@@ -173,8 +170,6 @@ class WBHomeViewController: WBBaseTableViewController {
         var parameters:[String: Any] = [:]
         parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token as String?
         
-//        printLog(message: "loading more start")
-        
         if let id = self.status.last?.id {
             parameters["max_id"] =  String(Int64(id as String)! - 1)
         }
@@ -187,7 +182,6 @@ class WBHomeViewController: WBBaseTableViewController {
                 for object in newStatus!{
                     self.status.append(WBStatus.mj_object(withKeyValues: object))
                 }
-//                printLog(message: "\(value)")
                 self.tableView.reloadData()
                 self.tableView.mj_footer.endRefreshing()
             case .failure(let error):
@@ -196,7 +190,6 @@ class WBHomeViewController: WBBaseTableViewController {
             }
         }
         
-//        printLog(message: "loading more finish")
     }
     
     private func setupRefresh() {

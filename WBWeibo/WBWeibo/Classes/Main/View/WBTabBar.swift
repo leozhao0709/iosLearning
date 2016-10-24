@@ -56,7 +56,8 @@ class WBTabBar: UIView {
     @objc private func plusBtnClick() {
         
         let window = UIApplication.shared.keyWindow
-        let composeVc = WBComposeViewController()
+        let composeVc = WBComposeViewController(nibName: "WBComposeViewController", bundle: nil)
+//        let composeVc = WBComposeViewController()
         let nav = WBNavigationController(rootViewController: composeVc)
         
         window?.rootViewController?.present(nav, animated: true, completion: nil)
