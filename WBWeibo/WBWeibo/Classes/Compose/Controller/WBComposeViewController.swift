@@ -100,7 +100,66 @@ class WBComposeViewController: UIViewController, UITextViewDelegate, UICollectio
     
     // MARK: - compose with/without image
     private func composeStatusWithImage() {
+        var parameters:[String: String?] = [:]
+        parameters["access_token"] = WBAccount.accountFromSandbox()?.access_token as String??
+        parameters["status"] = self.input?.text
         
+        let url = "https://upload.api.weibo.com/2/statuses/upload.json"
+        
+//        Alamofire.request(url, method: .post, parameters: parameters).validate().responseJSON { (response) in
+//            switch response.result {
+//            case .success(let value):
+//                printLog(message: "\(value)")
+//                self.inputView?.resignFirstResponder()
+//                self.dismiss(animated: true, completion: {
+//                    KRProgressHUD.showSuccess(message: "发送成功")
+//                })
+//            case .failure(let error):
+//                printLog(message: "\(error)")
+//                KRProgressHUD.showError(message: "发送失败")
+//            }
+//        }
+        
+        KRProgressHUD.show(message: "Uploading...")
+        
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            let image = self.images[0]
+            let data = UIImagePNGRepresentation(image)
+            multipartFormData.append(data!, withName: "pic", fileName: "xxoo.png", mimeType: "image/png")
+            
+            for (key, value) in parameters {
+                multipartFormData.append((value?.data(using: String.Encoding.utf8))! , withName: key)
+            }
+            
+            }, to: url) { (encodingResult) in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.uploadProgress(closure: { (progress) in
+                        printLog(message: "uploading now")
+                        printLog(message: "\(progress.fractionCompleted)")
+                    })
+                    
+                    upload.responseJSON { response in
+                        switch response.result {
+                        case .success(let value):
+                            printLog(message: "\(value)")
+                            self.inputView?.resignFirstResponder()
+                            self.dismiss(animated: true, completion: {
+                                KRProgressHUD.showSuccess(message: "发送成功")
+                            })
+                        case .failure(let error):
+                            printLog(message: "\(error)")
+                            KRProgressHUD.showError(message: "发送失败")
+                        }
+                        
+                    }
+                case .failure(let error):
+                    printLog(message: "\(error)")
+                    KRProgressHUD.showError(message: "发送失败")
+                }
+        }
+        
+
     }
     
     private func composeStatusWithoutImage() {
@@ -172,16 +231,12 @@ class WBComposeViewController: UIViewController, UITextViewDelegate, UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! WBComposeCollectionViewCell
         cell.delegate = self
         
-//        printLog(message: "dequeue index: \(cell.itemIndex)")
         if self.images.count == indexPath.item {
             cell.iconImage = nil
         } else {
             cell.iconImage = self.images[indexPath.item]
             cell.itemIndex = indexPath.item
         }
-        
-//        printLog(message: "\(indexPath.item)")
-//        printLog(message: "\(cell.iconImage)")
         
         return cell
     }
