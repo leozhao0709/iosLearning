@@ -16,7 +16,7 @@
 		D47F91921DB5FABC001D205C /* WBPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47F91911DB5FABC001D205C /* WBPhoto.swift */; };
 		D47F91941DB5FAF9001D205C /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47F91931DB5FAF9001D205C /* WBStatus.swift */; };
 		D47F91961DBD2BC8001D205C /* WBInputToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47F91951DBD2BC8001D205C /* WBInputToolbarView.swift */; };
-		D4B803B41D93738800E13F6D /* WBSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B803B31D93738800E13F6D /* WBSearchBar.swift */; };
+		D4982F6B1DBE81C50061FCE7 /* WBSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4982F6A1DBE81C50061FCE7 /* WBSearchBar.swift */; };
 		D4B803B61D948A6F00E13F6D /* WBDefaultCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B803B51D948A6F00E13F6D /* WBDefaultCenterView.swift */; };
 		D4B803B81D948A8800E13F6D /* WBDefaultCenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B803B71D948A8800E13F6D /* WBDefaultCenterView.xib */; };
 		D4D656BE1D8E32D200260C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D656BD1D8E32D200260C77 /* Assets.xcassets */; };
@@ -79,7 +79,7 @@
 		D47F91911DB5FABC001D205C /* WBPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPhoto.swift; sourceTree = "<group>"; };
 		D47F91931DB5FAF9001D205C /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		D47F91951DBD2BC8001D205C /* WBInputToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBInputToolbarView.swift; sourceTree = "<group>"; };
-		D4B803B31D93738800E13F6D /* WBSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WBSearchBar.swift; path = WBWeibo/Extension/UIExtension/WBSearchBar.swift; sourceTree = SOURCE_ROOT; };
+		D4982F6A1DBE81C50061FCE7 /* WBSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBSearchBar.swift; sourceTree = "<group>"; };
 		D4B803B51D948A6F00E13F6D /* WBDefaultCenterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDefaultCenterView.swift; sourceTree = "<group>"; };
 		D4B803B71D948A8800E13F6D /* WBDefaultCenterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBDefaultCenterView.xib; sourceTree = "<group>"; };
 		D4D656B31D8E32D200260C77 /* WBWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,7 +249,7 @@
 		D4D656CD1D8E33A300260C77 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D4B803B31D93738800E13F6D /* WBSearchBar.swift */,
+				D4982F6A1DBE81C50061FCE7 /* WBSearchBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -809,6 +809,7 @@
 				D4D9816C1DB9778A00641329 /* WBInputTextView.swift in Sources */,
 				D4D657111D8E33AB00260C77 /* UIImageViewExtension.swift in Sources */,
 				D4D657351D92576F00260C77 /* WBPopMenu.swift in Sources */,
+				D4982F6B1DBE81C50061FCE7 /* WBSearchBar.swift in Sources */,
 				D4F687BB1DAEDE7B00C1ADB4 /* windowExtension.swift in Sources */,
 				D4D657221D8F89DB00260C77 /* WBScanNavigationController.swift in Sources */,
 				D4B803B61D948A6F00E13F6D /* WBDefaultCenterView.swift in Sources */,
@@ -818,7 +819,6 @@
 				D4D6572A1D8F9DF300260C77 /* CIImageExtension.swift in Sources */,
 				D47F91901DB5F9FF001D205C /* WBUser.swift in Sources */,
 				D4D656FD1D8E33A300260C77 /* WBMessageViewController.swift in Sources */,
-				D4B803B41D93738800E13F6D /* WBSearchBar.swift in Sources */,
 				D4D657261D8F8A1700260C77 /* WBMyCardViewController.swift in Sources */,
 				D4D6570D1D8E33AB00260C77 /* Utils.swift in Sources */,
 				D4D6570C1D8E33AB00260C77 /* NSTimeIntervalExtension.swift in Sources */,
