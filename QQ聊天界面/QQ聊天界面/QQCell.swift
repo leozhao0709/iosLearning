@@ -55,7 +55,9 @@ class QQCell: UITableViewCell {
             
             if qqModel.type == .Me  {
                 
-                let resizeImage = self.resizeImageWith(imageName: "chat_send_nor")
+//                let resizeImage = self.resizeImageWith(imageName: "chat_send_nor")
+                
+                let resizeImage = UIImage(named: "chat_send_nor")
                 
                 self.contentButton.setBackgroundImage(resizeImage, forState: .Normal)
             }
