@@ -21,7 +21,7 @@ class FlagView: UIView {
     }
     
     static func flagView()->FlagView {
-        let flagView = NSBundle.mainBundle().loadNibNamed("FlagView", owner: nil, options: nil).first as! FlagView
+        let flagView = Bundle.main.loadNibNamed("FlagView", owner: nil, options: nil)?.first as! FlagView
         
         return flagView
     }
