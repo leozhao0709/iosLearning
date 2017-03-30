@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var timer: NSTimer?
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +39,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func initImageTimer() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(self.didClickButton(_:)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.didClickButton(_:)), userInfo: nil, repeats: true)
         
-        let mainLoop = NSRunLoop.mainRunLoop()
-        mainLoop.addTimer(self.timer!, forMode: NSRunLoopCommonModes)
+        let mainLoop = RunLoop.main
+        mainLoop.add(self.timer!, forMode: RunLoopMode.commonModes)
     }
     
     func setupScrollView() {
@@ -53,7 +53,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             
             let imageViewX: CGFloat = CGFloat(i) * scrollViewSize.width
             
-            let imageView = UIImageView(frame: CGRectMake(imageViewX, 0, scrollViewSize.width, scrollViewSize.height))
+            let imageView = UIImageView(frame: CGRect(x: imageViewX, y: 0, width: scrollViewSize.width, height: scrollViewSize.height))
             
             
             imageView.image = UIImage(named: String(format: "img_%02d", i + 1))
@@ -61,11 +61,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             scrollView.addSubview(imageView)
         }
         
-        scrollView.contentSize = CGSizeMake(CGFloat(kImageCount) * scrollViewSize.width, 0)
+        scrollView.contentSize = CGSize(width: CGFloat(kImageCount) * scrollViewSize.width, height: 0)
         
         scrollView.showsHorizontalScrollIndicator = false
         
-        scrollView.pagingEnabled = true
+        scrollView.isPagingEnabled = true
     }
     
     /**
@@ -73,23 +73,23 @@ class ViewController: UIViewController, UIScrollViewDelegate {
      */
     func setupPageControl() {
         pageControl.numberOfPages = kImageCount
-        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
-        pageControl.currentPageIndicatorTintColor = UIColor.redColor()
+        pageControl.pageIndicatorTintColor = UIColor.lightGray
+        pageControl.currentPageIndicatorTintColor = UIColor.red
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.width)
     }
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.timer?.invalidate()
     }
     
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         self.initImageTimer()
     }
 
-    @IBAction func didClickButton(sender: UIButton) {
+    @IBAction func didClickButton(_ sender: UIButton) {
         var offset = scrollView.contentOffset
         
         var currentPage = pageControl.currentPage
