@@ -97,6 +97,7 @@
 					D437147A1D6BB7E700065E0E = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = U3G53LBLG6;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -260,6 +261,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "lzhao.exercise.MapView-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -275,6 +277,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "lzhao.exercise.MapView-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -297,6 +300,7 @@
 				D437148F1D6BB7E700065E0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

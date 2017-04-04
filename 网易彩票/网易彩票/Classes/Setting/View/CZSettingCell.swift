@@ -72,6 +72,7 @@ class CZSettingCell: UITableViewCell {
         
         if cell == nil {
             cell = CZSettingCell(style: .value1, reuseIdentifier: cellIdentity)
+            print("1111111");
         }
         
         return cell!

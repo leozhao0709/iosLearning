@@ -25,7 +25,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
         
         //2. 显示用户位置 -->获取经纬度 --> 定位
-        self.mapView.userTrackingMode = .Follow
+        self.mapView.userTrackingMode = .follow
         
         //3. 设置代理
         self.mapView.delegate = self
@@ -59,28 +59,28 @@ class ViewController: UIViewController, MKMapViewDelegate {
 //        NSLog("localtion: \(userLocation.location!)")
 //    }
 
-    @IBAction func switchMapTypeClick(sender: UISegmentedControl) {
+    @IBAction func switchMapTypeClick(_ sender: UISegmentedControl) {
         
         switch sender.selectedSegmentIndex {
         case 0:
-            self.mapView.mapType = .Standard
+            self.mapView.mapType = .standard
         case 1:
-            self.mapView.mapType = .Satellite
+            self.mapView.mapType = .satellite
         case 2:
-            self.mapView.mapType = .Hybrid
+            self.mapView.mapType = .hybrid
         case 3:
             if #available(iOS 9.0, *) {
-                self.mapView.mapType = .SatelliteFlyover
+                self.mapView.mapType = .satelliteFlyover
             }
         case 4:
             if #available(iOS 9.0, *) {
-                self.mapView.mapType = .HybridFlyover
+                self.mapView.mapType = .hybridFlyover
             }
         default: break
         }
     }
     
-    @IBAction func backUserLocationClick(sender: UIButton) {
+    @IBAction func backUserLocationClick(_ sender: UIButton) {
         
         //只能设置坐标
 //        self.mapView.centerCoordinate = self.mapView.userLocation.coordinate
