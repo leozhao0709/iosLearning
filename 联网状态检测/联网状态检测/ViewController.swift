@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ReachabilitySwift
 
 class ViewController: UIViewController {
     
@@ -21,7 +20,7 @@ class ViewController: UIViewController {
             // https://cocoapods.org/
             self.reach = try Reachability(hostname: "cocoapods.org")
             
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.reachabilityChanged), name: ReachabilityChangedNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged), name: ReachabilityChangedNotification, object: nil)
             
             //开始监听
             do {
@@ -38,14 +37,14 @@ class ViewController: UIViewController {
         
     }
     
-    @objc private func reachabilityChanged() {
+    @objc fileprivate func reachabilityChanged() {
         //状态
         switch self.reach.currentReachabilityStatus {
-        case .NotReachable:
+        case .notReachable:
             NSLog("没有连接")
-        case .ReachableViaWiFi:
+        case .reachableViaWiFi:
             NSLog("不用花钱")
-        case .ReachableViaWWAN:
+        case .reachableViaWWAN:
             NSLog("要流量")
             
         }
@@ -53,7 +52,7 @@ class ViewController: UIViewController {
     
     deinit {
         self.reach.stopNotifier()
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 
 

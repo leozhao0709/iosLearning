@@ -25,14 +25,16 @@ class WBPopMenu: NSObject {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.isHidden = false
-        window.windowLevel = UIWindowLevelAlert
+//        window.windowLevel = UIWindowLevelAlert //根据情况,可以不添加
+        let viewController = UIViewController();
+        window.rootViewController = viewController;
         WBPopMenu.popMenuWindow = window
         
         
         let cover = UIButton(frame: UIScreen.main.bounds)
         cover.backgroundColor = UIColor.clear
         cover.addTarget(self, action: #selector(coverClick), for: UIControlEvents.touchUpInside)
-        window.addSubview(cover)
+        viewController.view.addSubview(cover);
         
         cover.addSubview(contentView)
         
